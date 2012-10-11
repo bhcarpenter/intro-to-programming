@@ -375,6 +375,107 @@ However, if you want to explicitly set a variable to "nothing", instead of setti
 #Common Programming Scenarios
 
 ---
+#Math
+
+Javascript provides us with a global Math object that has several useful methods.
+
+Here are a few of them
+
+    !javascript
+    var num = 2.5;
+    var x = -3;
+    var y = 2;
+    var z = 4;
+
+    print(Math.abs(x));     // absolute value
+    print(Math.ceil(num));  // ceiling.. rounds up
+    print(Math.floor(num)); // rounds down
+    print(Math.round(num)); // "normal" round
+    print(Math.pow(x,y));   // power... x^y
+    print(Math.random());   // a float between 0 and 1.
+    print(Math.sqrt(z));    // square root
+    print(Math.max(x,y));   // largest number
+    print(Math.min(x,y));   // smallest number
+    print(Math.PI);         // PI
+
+All of the typical trig functions are on Math also
+
+---
+#Random Numbers
+
+Random numbers are useful to add variability to your programs, especially if you are developing games (assignment 2 w00t!).
+
+The Math.random() method returns a random float from 0 up to (but not including) 1.
+
+##Generate a random number from 0 up to 10.
+
+    !javascript
+    var rnd = Math.random();
+    print(rnd);
+
+    rnd = rnd * 10;
+    print(rnd);
+
+    rnd = Math.floor(rnd);
+    print( rnd );
+
+---
+#Doing something every X seconds.
+
+We'll talk about this more after we know how to write our own functions.
+
+If you're really curious, check out these functions:
+
+- [setTimeout](https://developer.mozilla.org/en-US/docs/DOM/window.setTimeout)
+- [setInterval](https://developer.mozilla.org/en-US/docs/DOM/window.setInterval)
+
+---
+#Working With Numbers
+
+- Numbers have a few helpful methods that help with displaying them
+- Number.toPrecision(*precision*) produces a string with the number of significant figures specified.
+- Number.toFixed(*digits*) allows you to specify the number of digit to appear after the decimal place.
+
+.
+
+    !javascript
+    var x = 513.05456;
+    print(x.toPrecision(1));
+    print(x.toPrecision(4));  // notice rounding
+    print(x.toPrecision(10)); // extra zeroes
+
+    print(x.toFixed(1));
+    print(x.toFixed(2));
+    print(x.toFixed(8));
+
+    print(3.14159.toFixed(2));
+    print(typeof 5.0.toFixed());
+
+---
+#Working With Strings
+
+- Like numbers, Strings have several helpful functions to aid in working with them
+
+.
+
+    !javascript
+    var s = "Creative Circus";
+
+    print(s.charAt(3));
+    print(s.indexOf('r'));
+    print(s.lastIndexOf('r'));
+    print(s.replace("Creative", "Barnum & Bailey"));
+    print(s.search("tive"));
+    print(s.slice(2,4));
+
+    // Working with ASCII codes.
+    var code = s.charCodeAt(0);
+    print(code);
+
+    var character = String.fromCharCode(code);
+    print(character);
+
+---
 #Converting Strings to Numbers
 
 - It is a very common task to convert a string into a Number in JavaScript, because all input that can be given by a user is presented as a string in JavaScript
@@ -424,78 +525,6 @@ However, if you want to explicitly set a variable to "nothing", instead of setti
     !javascript
     print("3.14159" + 2);
     print(parseFloat("3.14159") + 2);
-
----
-#Math
-
-Javascript provides us with a global Math object that has several useful methods.
-
-Here are a few of them
-
-    !javascript
-    var num = 2.5;
-    var x = -3;
-    var y = 2;
-    var z = 4;
-
-    print(Math.abs(x));     // absolute value
-    print(Math.ceil(num));  // ceiling.. rounds up
-    print(Math.floor(num)); // rounds down
-    print(Math.round(num)); // "normal" round
-    print(Math.pow(x,y));   // power... x^y
-    print(Math.random());   // a float between 0 and 1.
-    print(Math.sqrt(z));    // square root
-    print(Math.max(x,y));   // largest number
-    print(Math.min(x,y));   // smallest number
-    print(Math.PI);         // PI
-
-All of the typical trig functions are on Math also
-
----
-#Number Methods
-
-- Numbers have a few helpful methods that help with displaying them
-- Number.toPrecision(*precision*) produces a string with the number of significant figures specified.
-- Number.toFixed(*digits*) allows you to specify the number of digit to appear after the decimal place.
-
-.
-
-    !javascript
-    var x = 513.05456;
-    print(x.toPrecision(1));
-    print(x.toPrecision(4));  // notice rounding
-    print(x.toPrecision(10)); // extra zeroes
-
-    print(x.toFixed(1));
-    print(x.toFixed(2));
-    print(x.toFixed(8));
-
-    print(3.14159.toFixed(2));
-    print(typeof 5.0.toFixed());
-
----
-#String methods
-
-- Like numbers, Strings have several helpful functions to aid in working with them
-
-.
-
-    !javascript
-    var s = "Creative Circus";
-
-    print(s.charAt(3));
-    print(s.indexOf('r'));
-    print(s.lastIndexOf('r'));
-    print(s.replace("Creative", "Barnum & Bailey"));
-    print(s.search("tive"));
-    print(s.slice(2,4));
-
-    // Working with ASCII codes.
-    var code = s.charCodeAt(0);
-    print(code);
-
-    var character = String.fromCharCode(code);
-    print(character);
 
 ---
 #Final Notes
