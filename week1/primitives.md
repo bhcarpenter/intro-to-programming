@@ -6,7 +6,7 @@
     var message = "hello, world";
 
     // Displays hello, world on the screen
-    print(message);
+    show(message);
 
 ---
 #Statements
@@ -19,7 +19,7 @@ Although it isn't required, statements should each be on their own line for read
 
     !javascript
     var message = "hello, world";
-    print(message); // Displays hello, world on the screen
+    show(message); // Displays hello, world on the screen
 
 ---
 #Comments
@@ -97,19 +97,19 @@ The last one up there, NaN, is a special number that means "Not a Number". More 
 .
 
     !javascript
-    print("Strings are \"important\".");
+    show("Strings are \"important\".");
 
 ---
 #Data Types: String Examples
 
     !javascript
-    print("hello");
-    print("Tim said, 'hello'");
-    print("I am a line\nI am a line too");
+    show("hello");
+    show("Tim said, 'hello'");
+    show("I am a line\nI am a line too");
 
-    print("\t\ttwo tabs for me");
-    print(""); //empty string
-    print("\u00BFQue pasa?");
+    show("\t\ttwo tabs for me");
+    show(""); //empty string
+    show("\u00BFQue pasa?");
 
 ---
 #Data Types: Booleans
@@ -126,8 +126,8 @@ Functions store a series of operations together so that they can be run over and
       return num * num;
     }
 
-    print( squared(3) )
-    print( squared(5) )
+    show( squared(3) )
+    show( squared(5) )
 
 Right now, the important thing is that you can "call" a function by adding parenthesis after it's name, optionally including any values that the function needs inside of the parenthesis.
 
@@ -138,8 +138,8 @@ Finally, Javascript has one more data type: objects. Objects are simply compilat
 
     !javascript
 
-    print( Math.sqrt(9) )
-    print( Math.sqrt(25) )
+    show( Math.sqrt(9) )
+    show( Math.sqrt(25) )
 
 Right now the important thing is that you can access the primitive values and functions by adding a period and the related data value or method's name after the name of the object.
 
@@ -153,10 +153,10 @@ But data types aren't really any use until we do something with them. JavaScript
 One of the main ways of telling the computer to do something is through operators. Some of the most basic operators do simple arithmatic.
 
     !javascript
-    print(5 + 5); //add
-    print(10 / 2); //divide
-    print(52 % 10); //modulos
-    print(5 * 5); //multiply
+    show(5 + 5); //add
+    show(10 / 2); //divide
+    show(52 % 10); //modulos
+    show(5 * 5); //multiply
 
 The precedence of the operators is just like you learned in math class. 
 
@@ -170,7 +170,7 @@ The precedence of the operators is just like you learned in math class.
 What does this print?
 
     !javascript
-    print( 11 % 3 + 3 * 2 - 8 + (12 * 1) );
+    show( 11 % 3 + 3 * 2 - 8 + (12 * 1) );
 
 ---
 #Operations: Concatenation
@@ -178,8 +178,8 @@ What does this print?
 The + operator has another meaning when it is used in between strings. It joins the two strings together into a single string. This is called concatenation.
 
     !javascript
-    print('hello' + ', ' + 'world');
-    print('5' + 55);
+    show('hello' + ', ' + 'world');
+    show('5' + 55);
 
 Note above that even when only one of the two values is a string, concatenation is performed instead of addition (the other value is converted to a string, and then the two values are joined together).
 
@@ -195,11 +195,11 @@ Comparing two values is something that you will do a lot of when writing program
 .
 
     !javascript
-    print(5 > 6);
-    print(5 < 6);
-    print(5 === 6);
-    print(5 !== 6);
-    print(6 >= 6);
+    show(5 > 6);
+    show(5 < 6);
+    show(5 === 6);
+    show(5 !== 6);
+    show(6 >= 6);
 
 ---
 #Operations > Logical
@@ -213,9 +213,9 @@ Sometimes comparing two values is not enough. These are logical operators that a
 .
 
     !javascript
-    print( 5 < 6 && 6 < 7 );
-    print( !(2 == 3) );
-    print( 2 > 3 || "red" == "red" );
+    show( 5 < 6 && 6 < 7 );
+    show( !(2 == 3) );
+    show( 2 > 3 || "red" == "red" );
 
 ---
 #Variables
@@ -240,15 +240,15 @@ You can substitute variables anywhere that you would normally use the actual dat
     !javascript
     var tomsAge = 25;
     var toddsAge = 30;
-    print( tomsAge < toddsAge );
+    show( tomsAge < toddsAge );
 
     tomsAge = 35;
-    print( tomsAge < toddsAge );
+    show( tomsAge < toddsAge );
 
     // Our arithmatic example from earlier.
     var part1 = 11 % 3 + 3 * 2 - 8;
     var part2 = 12 * 1;
-    print( part1 + part2 );
+    show( part1 + part2 );
 
 ---
 #Variables: Identifiers
@@ -329,8 +329,8 @@ Note that just because an identifier is valid doesn't mean that it's a good one 
     ++x;       // x += 1;
     --y;       // y -= 1;
 
-    print("x: " + x);
-    print("y: " + y);
+    show("x: " + x);
+    show("y: " + y);
 
 ---
 #Variables: Types
@@ -340,18 +340,18 @@ In JavaScript, (unlike many other progamming languages), any data value type can
     !javascript
     var x = 4;
 
-    print( typeof x );
+    show( typeof x );
 
     x = 'Test';
 
-    print( typeof x );
+    show( typeof x );
 
     x = '5';
 
-    print( typeof x );
+    show( typeof x );
 
     var y;
-    print( typeof y );
+    show( typeof y );
 
 ---
 #Variables: undefined and null
@@ -364,12 +364,12 @@ However, if you want to explicitly set a variable to "nothing", instead of setti
     var x;
     x = 4;
 
-    print( typeof x );
+    show( typeof x );
 
     x = null;
 
-    print( typeof x );
-    print( x );
+    show( typeof x );
+    show( x );
 
 ---
 #Common Programming Scenarios
@@ -387,16 +387,16 @@ Here are a few of them
     var y = 2;
     var z = 4;
 
-    print(Math.abs(x));     // absolute value
-    print(Math.ceil(num));  // ceiling.. rounds up
-    print(Math.floor(num)); // rounds down
-    print(Math.round(num)); // "normal" round
-    print(Math.pow(x,y));   // power... x^y
-    print(Math.random());   // a float between 0 and 1.
-    print(Math.sqrt(z));    // square root
-    print(Math.max(x,y));   // largest number
-    print(Math.min(x,y));   // smallest number
-    print(Math.PI);         // PI
+    show(Math.abs(x));     // absolute value
+    show(Math.ceil(num));  // ceiling.. rounds up
+    show(Math.floor(num)); // rounds down
+    show(Math.round(num)); // "normal" round
+    show(Math.pow(x,y));   // power... x^y
+    show(Math.random());   // a float between 0 and 1.
+    show(Math.sqrt(z));    // square root
+    show(Math.max(x,y));   // largest number
+    show(Math.min(x,y));   // smallest number
+    show(Math.PI);         // PI
 
 All of the typical trig functions are on Math also
 
@@ -411,13 +411,13 @@ The Math.random() method returns a random float from 0 up to (but not including)
 
     !javascript
     var rnd = Math.random();
-    print(rnd);
+    show(rnd);
 
     rnd = rnd * 10;
-    print(rnd);
+    show(rnd);
 
     rnd = Math.floor(rnd);
-    print( rnd );
+    show( rnd );
 
 ---
 #Doing something every X seconds.
@@ -440,16 +440,16 @@ If you're really curious, check out these functions:
 
     !javascript
     var x = 513.05456;
-    print(x.toPrecision(1));
-    print(x.toPrecision(4));  // notice rounding
-    print(x.toPrecision(10)); // extra zeroes
+    show(x.toPrecision(1));
+    show(x.toPrecision(4));  // notice rounding
+    show(x.toPrecision(10)); // extra zeroes
 
-    print(x.toFixed(1));
-    print(x.toFixed(2));
-    print(x.toFixed(8));
+    show(x.toFixed(1));
+    show(x.toFixed(2));
+    show(x.toFixed(8));
 
-    print(3.14159.toFixed(2));
-    print(typeof 5.0.toFixed());
+    show(3.14159.toFixed(2));
+    show(typeof 5.0.toFixed());
 
 ---
 #Working With Strings
@@ -461,19 +461,19 @@ If you're really curious, check out these functions:
     !javascript
     var s = "Creative Circus";
 
-    print(s.charAt(3));
-    print(s.indexOf('r'));
-    print(s.lastIndexOf('r'));
-    print(s.replace("Creative", "Barnum & Bailey"));
-    print(s.search("tive"));
-    print(s.slice(2,4));
+    show(s.charAt(3));
+    show(s.indexOf('r'));
+    show(s.lastIndexOf('r'));
+    show(s.replace("Creative", "Barnum & Bailey"));
+    show(s.search("tive"));
+    show(s.slice(2,4));
 
     // Working with ASCII codes.
     var code = s.charCodeAt(0);
-    print(code);
+    show(code);
 
     var character = String.fromCharCode(code);
-    print(character);
+    show(character);
 
 ---
 #Converting Strings to Numbers
@@ -488,8 +488,8 @@ If you're really curious, check out these functions:
     !javascript
     var x = "2";
     var y = "2";
-    print(x+y);
-    print(Number(x) + Number(y));
+    show(x+y);
+    show(Number(x) + Number(y));
 
 ---
 #Converting Strings to Numbers
@@ -503,14 +503,14 @@ If you're really curious, check out these functions:
 .
 
     !javascript
-    print("100" + 10);
-    print(parseInt("100",10) + 10);
-    print(parseInt("0377"));
-    print(parseInt("0377",10));
-    print(parseInt("kitty"));
-    print(parseInt("999hello",10));
-    print(parseInt("3.75",10));
-    print(parseInt("-27",10));
+    show("100" + 10);
+    show(parseInt("100",10) + 10);
+    show(parseInt("0377"));
+    show(parseInt("0377",10));
+    show(parseInt("kitty"));
+    show(parseInt("999hello",10));
+    show(parseInt("3.75",10));
+    show(parseInt("-27",10));
 
 ---
 #Converting Strings to Numbers
@@ -523,8 +523,8 @@ If you're really curious, check out these functions:
 .
 
     !javascript
-    print("3.14159" + 2);
-    print(parseFloat("3.14159") + 2);
+    show("3.14159" + 2);
+    show(parseFloat("3.14159") + 2);
 
 ---
 #Final Notes

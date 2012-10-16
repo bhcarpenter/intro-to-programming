@@ -95,7 +95,7 @@
             
             
             <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&quot;hello, world&quot;</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -291,9 +291,9 @@
 <span class="kd">var</span> <span class="nx">number_of_people</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
 
 <span class="k">if</span> <span class="p">(</span> <span class="nx">number_of_cookies</span> <span class="o">&lt;</span> <span class="nx">number_of_people</span> <span class="p">)</span> <span class="p">{</span>
-  <span class="nx">print</span><span class="p">(</span> <span class="s1">&#39;Not enough cookies!&#39;</span> <span class="p">);</span>
+  <span class="nx">show</span><span class="p">(</span> <span class="s1">&#39;Not enough cookies!&#39;</span> <span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">print</span><span class="p">(</span> <span class="s1">&#39;Nom nom nom.&#39;</span> <span class="p">);</span>
+  <span class="nx">show</span><span class="p">(</span> <span class="s1">&#39;Nom nom nom.&#39;</span> <span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -430,7 +430,7 @@
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&quot;hello, world&quot;</span><span class="p">;</span>
 
 <span class="c1">// Displays hello, world on the screen</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -461,7 +461,7 @@
 <p>Statments (usually) end with a semi-colon.</p>
 <p>Although it isn't required, statements should each be on their own line for readability's sake.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&quot;hello, world&quot;</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span> <span class="c1">// Displays hello, world on the screen</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span> <span class="c1">// Displays hello, world on the screen</span>
 </pre></div>
 </section>
             
@@ -617,7 +617,7 @@
 <li>to create a unicode character use: \uFFFF (where FFFF is the unicode sequence)</li>
 </ul>
 <p>.</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Strings are \&quot;important\&quot;.&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;Strings are \&quot;important\&quot;.&quot;</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -644,13 +644,13 @@
             <header><h1>Data Types: String Examples</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Tim said, &#39;hello&#39;&quot;</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;I am a line\nI am a line too&quot;</span><span class="p">);</span>
+            <section><div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;Tim said, &#39;hello&#39;&quot;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;I am a line\nI am a line too&quot;</span><span class="p">);</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;\t\ttwo tabs for me&quot;</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="c1">//empty string</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;\u00BFQue pasa?&quot;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;\t\ttwo tabs for me&quot;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="c1">//empty string</span>
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;\u00BFQue pasa?&quot;</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -709,8 +709,8 @@
   <span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="nx">num</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nx">print</span><span class="p">(</span> <span class="nx">squared</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
-<span class="nx">print</span><span class="p">(</span> <span class="nx">squared</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">squared</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">squared</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 <p>Right now, the important thing is that you can "call" a function by adding parenthesis after it's name, optionally including any values that the function needs inside of the parenthesis.</p></section>
@@ -739,8 +739,8 @@
             
             
             <section><p>Finally, Javascript has one more data type: objects. Objects are simply compilations of primitives and functions. We'll talk more about objects in a few weeks as well. </p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="p">)</span>
-<span class="nx">print</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="p">)</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="p">)</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="p">)</span>
 </pre></div>
 
 <p>Right now the important thing is that you can access the primitive values and functions by adding a period and the related data value or method's name after the name of the object.</p></section>
@@ -794,10 +794,10 @@
             
             
             <section><p>One of the main ways of telling the computer to do something is through operators. Some of the most basic operators do simple arithmatic.</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">//add</span>
-<span class="nx">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//divide</span>
-<span class="nx">print</span><span class="p">(</span><span class="mi">52</span> <span class="o">%</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//modulos</span>
-<span class="nx">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">//multiply</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">//add</span>
+<span class="nx">show</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//divide</span>
+<span class="nx">show</span><span class="p">(</span><span class="mi">52</span> <span class="o">%</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">//modulos</span>
+<span class="nx">show</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">);</span> <span class="c1">//multiply</span>
 </pre></div>
 
 <p>The precedence of the operators is just like you learned in math class. </p>
@@ -832,7 +832,7 @@
             
             
             <section><p>What does this print?</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span> <span class="mi">11</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">+</span> <span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="p">);</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span> <span class="mi">11</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">+</span> <span class="p">(</span><span class="mi">12</span> <span class="o">*</span> <span class="mi">1</span><span class="p">)</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -860,8 +860,8 @@
             
             
             <section><p>The + operator has another meaning when it is used in between strings. It joins the two strings together into a single string. This is called concatenation.</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="s1">&#39;world&#39;</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="s1">&#39;5&#39;</span> <span class="o">+</span> <span class="mi">55</span><span class="p">);</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span> <span class="o">+</span> <span class="s1">&#39;, &#39;</span> <span class="o">+</span> <span class="s1">&#39;world&#39;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="s1">&#39;5&#39;</span> <span class="o">+</span> <span class="mi">55</span><span class="p">);</span>
 </pre></div>
 
 <p>Note above that even when only one of the two values is a string, concatenation is performed instead of addition (the other value is converted to a string, and then the two values are joined together).</p></section>
@@ -896,11 +896,11 @@
 <li><code>!=, !==</code> not equal</li>
 </ul>
 <p>.</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">===</span> <span class="mi">6</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">!==</span> <span class="mi">6</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="mi">6</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">);</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="mi">5</span> <span class="o">===</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="mi">5</span> <span class="o">!==</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="mi">6</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -934,9 +934,9 @@
 <li><code>||</code> logical or</li>
 </ul>
 <p>.</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span> <span class="o">&amp;&amp;</span> <span class="mi">6</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">||</span> <span class="s2">&quot;red&quot;</span> <span class="o">==</span> <span class="s2">&quot;red&quot;</span> <span class="p">);</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span> <span class="o">&amp;&amp;</span> <span class="mi">6</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">||</span> <span class="s2">&quot;red&quot;</span> <span class="o">==</span> <span class="s2">&quot;red&quot;</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1003,15 +1003,15 @@
             <section><p>You can substitute variables anywhere that you would normally use the actual data value.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">tomsAge</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">toddsAge</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span> <span class="nx">tomsAge</span> <span class="o">&lt;</span> <span class="nx">toddsAge</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">tomsAge</span> <span class="o">&lt;</span> <span class="nx">toddsAge</span> <span class="p">);</span>
 
 <span class="nx">tomsAge</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span> <span class="nx">tomsAge</span> <span class="o">&lt;</span> <span class="nx">toddsAge</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">tomsAge</span> <span class="o">&lt;</span> <span class="nx">toddsAge</span> <span class="p">);</span>
 
 <span class="c1">// Our arithmatic example from earlier.</span>
 <span class="kd">var</span> <span class="nx">part1</span> <span class="o">=</span> <span class="mi">11</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">8</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">part2</span> <span class="o">=</span> <span class="mi">12</span> <span class="o">*</span> <span class="mi">1</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span> <span class="nx">part1</span> <span class="o">+</span> <span class="nx">part2</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">part1</span> <span class="o">+</span> <span class="nx">part2</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1173,8 +1173,8 @@ while, with</p>
 <span class="o">++</span><span class="nx">x</span><span class="p">;</span>       <span class="c1">// x += 1;</span>
 <span class="o">--</span><span class="nx">y</span><span class="p">;</span>       <span class="c1">// y -= 1;</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;x: &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="s2">&quot;y: &quot;</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;x: &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;y: &quot;</span> <span class="o">+</span> <span class="nx">y</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1204,18 +1204,18 @@ while, with</p>
             <section><p>In JavaScript, (unlike many other progamming languages), any data value type can be assigned to any variables. This is called "loosly typed". The current data type of a variable can be determined using the "typeof" keyword.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
 
 <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;Test&#39;</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
 
 <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">y</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">y</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">y</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1247,12 +1247,12 @@ while, with</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span><span class="p">;</span>
 <span class="nx">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
 
 <span class="nx">x</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span> <span class="nx">x</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">x</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">x</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1309,16 +1309,16 @@ while, with</p>
 <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>     <span class="c1">// absolute value</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span>  <span class="c1">// ceiling.. rounds up</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="c1">// rounds down</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="c1">// &quot;normal&quot; round</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// power... x^y</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>   <span class="c1">// a float between 0 and 1.</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">z</span><span class="p">));</span>    <span class="c1">// square root</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// largest number</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// smallest number</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>         <span class="c1">// PI</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>     <span class="c1">// absolute value</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span>  <span class="c1">// ceiling.. rounds up</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="c1">// rounds down</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="c1">// &quot;normal&quot; round</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// power... x^y</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>   <span class="c1">// a float between 0 and 1.</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">z</span><span class="p">));</span>    <span class="c1">// square root</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// largest number</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// smallest number</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>         <span class="c1">// PI</span>
 </pre></div>
 
 <p>All of the typical trig functions are on Math also</p></section>
@@ -1350,13 +1350,13 @@ while, with</p>
 <p>The Math.random() method returns a random float from 0 up to (but not including) 1.</p>
 <h2>Generate a random number from 0 up to 10.</h2>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">rnd</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">rnd</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">rnd</span><span class="p">);</span>
 
 <span class="nx">rnd</span> <span class="o">=</span> <span class="nx">rnd</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">rnd</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">rnd</span><span class="p">);</span>
 
 <span class="nx">rnd</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">rnd</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span> <span class="nx">rnd</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">rnd</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1420,16 +1420,16 @@ while, with</p>
 </ul>
 <p>.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">513.05456</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toPrecision</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toPrecision</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>  <span class="c1">// notice rounding</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toPrecision</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// extra zeroes</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toPrecision</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toPrecision</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>  <span class="c1">// notice rounding</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toPrecision</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// extra zeroes</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="k">typeof</span> <span class="mf">5.0</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">());</span>
+<span class="nx">show</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="k">typeof</span> <span class="mf">5.0</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">());</span>
 </pre></div>
 </section>
             
@@ -1462,19 +1462,19 @@ while, with</p>
 <p>.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;Creative Circus&quot;</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;Creative&quot;</span><span class="p">,</span> <span class="s2">&quot;Barnum &amp; Bailey&quot;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">&quot;tive&quot;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;Creative&quot;</span><span class="p">,</span> <span class="s2">&quot;Barnum &amp; Bailey&quot;</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">&quot;tive&quot;</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
 
 <span class="c1">// Working with ASCII codes.</span>
 <span class="kd">var</span> <span class="nx">code</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">code</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">code</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">character</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nx">fromCharCode</span><span class="p">(</span><span class="nx">code</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">character</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">character</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1511,8 +1511,8 @@ while, with</p>
 <p>.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="o">+</span><span class="nx">y</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">y</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="o">+</span><span class="nx">y</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">y</span><span class="p">));</span>
 </pre></div>
 </section>
             
@@ -1547,14 +1547,14 @@ while, with</p>
 <li>parsing of the integer stops if a non digit is encountered but the number so far is returned. This means parseInt cannot be used to determine if a string is an integer. It also means that decimals are truncated. </li>
 </ul>
 <p>.</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;100&quot;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;100&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0377&quot;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0377&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;kitty&quot;</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;999hello&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;3.75&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;-27&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;100&quot;</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;100&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0377&quot;</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0377&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;kitty&quot;</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;999hello&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;3.75&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;-27&quot;</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
 </pre></div>
 </section>
             
@@ -1588,8 +1588,8 @@ while, with</p>
 <li>a float is a way to represtent decimals in computers</li>
 </ul>
 <p>.</p>
-<div class="highlight"><pre><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;3.14159&quot;</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
-<span class="nx">print</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;3.14159&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;3.14159&quot;</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="s2">&quot;3.14159&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </section>
             

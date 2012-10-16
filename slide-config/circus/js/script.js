@@ -1,9 +1,9 @@
 $(function(){
-    
+
     window.slides = {};
     slides.outputBox = null;
 
-    window.print = function(toPrint){
+    window.show = function(toPrint){
         if(slides.outputBox != null){
             slides.outputBox.append(toPrint + "\n");
         }

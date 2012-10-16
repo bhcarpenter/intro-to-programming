@@ -4,7 +4,7 @@
 
     !javascript
     var message = "hello, world";
-    print(message);
+    show(message);
 
 ---
 #A Little About Computers
@@ -79,9 +79,9 @@ The ideas behind modern programming languages were developed during the 1960s an
     var number_of_people = 30;
     
     if ( number_of_cookies < number_of_people ) {
-      print( 'Not enough cookies!' );
+      show( 'Not enough cookies!' );
     } else {
-      print( 'Nom nom nom.' );
+      show( 'Nom nom nom.' );
     }
 
 Hooray!
