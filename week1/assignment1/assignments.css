@@ -1,0 +1,19 @@
+body { 
+  margin: 0 40px;
+  font-family: sans-serif;
+  background: #f0f0f0;
+  color: #737373;
+}
+
+h1 { 
+  font-weight: normal;
+}
+
+pre {
+  font-family: monospace;
+  background: #fcfcfc;
+  padding: 20px;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px #999; 
+}
