@@ -26,14 +26,14 @@ Here are some of the most important features of the document object:
 ---
 # Traversing the DOM
 
-Once we have a DOM element (either document.body or one that we have found using document.getElementById()), we can *traverse* the dom tree using some functions that all element objects have.
+Once we have a DOM element (either document.body or one that we have found using document.getElementById()), we can *traverse* the dom tree using some properties that all element objects have.
 
-* el.parentNode()
-* el.firstChild()
-* el.lastChild()
-* el.nextSibling()
-* el.previousSibling()
-* el.childNodes() (Returns an array of nodes that are immediate children of el)
+* el.parentNode
+* el.firstChild
+* el.lastChild
+* el.nextSibling
+* el.previousSibling
+* el.childNodes (An array of nodes that are immediate children of el)
 
 We can also add and remove DOM elements from the tree.
 
