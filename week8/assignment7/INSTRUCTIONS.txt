@@ -9,9 +9,10 @@ worry, I started you out with a completely working version.
 PART 0 - Perpare
 ----------------
 1. Go ahead and copy the CSS that you wrote for the last assignment into the 
-CSS file for this assignment.
+CSS file for this assignment. IF YOU DIDN'T DO THIS LAST TIME, MAKE SURE YOU DO IT THIS
+TIME.
 
-2. Then complete the warmup exercises in assignment7warmup.js
+2. Then complete the warmup exercises in assignment7a.js
 
 PART 1 - Add Birth Date
 -----------------------
