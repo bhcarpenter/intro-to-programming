@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Scope</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="../slide-config/circus/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="../slide-config/circus/css/screen.css">
+    
+    
+      
+      <link rel="stylesheet" href="../slide-config/circus/css/pygment-themes/vs.css">
+      
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="../slide-config/circus/js/slides.js"></script>
+    
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/jquery-1.6.2.min.js"></script>
+      
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/script.js"></script>
+      
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Scope</h1></header>
+            
+            
+            <section><p>Scope is whether or not a particular line of code can access a particular variable.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Global Scope</h1></header>
+            
+            
+            <section><ul>
+<li>When a variable is declared outside of a function in the <strong>top level</strong> (more on this later) it is said to be a global variable</li>
+<li>Variables that are <strong>not</strong> declared before they are assigned a value are automatically global variables.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="nx">iAmGlobal</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
+
+<p>.</p>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="nx">iAmGlobal</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Block Scope</h1></header>
+            
+            
+            <section><ul>
+<li>Some programming languages also have "block scope", meaning that any time you have a "block" of code (surrounded by {}), the variables you declare inside of that block can only be accessed inside of that block.</li>
+<li>Javascript doesn't have this.</li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>File Scope</h1></header>
+            
+            
+            <section><ul>
+<li>In addition, some programming languages have a scope of variables for each file (if your program is split among multiple files).</li>
+<li>Javascript doesn't have this either.</li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Function scope</h1></header>
+            
+            
+            <section><ul>
+<li>Javascript has this!</li>
+<li>Variables declared inside of a function can only be accessed inside of that function.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span><span class="p">;</span>
+    <span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">hello</span><span class="p">();</span>
+<span class="nx">show</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">greeting</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Variable Shadowing</h1></header>
+            
+            
+            <section><p>When a variable is declared in a child scope that is already available in a parent scope it is said to "shadow" or "mask" the other variable.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;goodbye&#39;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">;</span>
+  <span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">hello</span><span class="p">();</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Lexical Scoping</h1></header>
+            
+            
+            <section><ul>
+<li>JavaScript's approach to variable scope is called lexical scoping</li>
+<li>Essentially this means that variables defined in a parent scope are available in the child scope too</li>
+<li>THIS IS WHY THE VAR KEYWORD IS IMPORTANT</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;goodbye&#39;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">;</span>
+  <span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">hello</span><span class="p">();</span>
+
+<span class="c1">// The above function call modified the </span>
+<span class="c1">// global greeting variable!</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Advanced Topics: Creating Scope</h1></header>
+            
+            
+            <section><p>One trick that advanced Javascript programmers often use is to create a new variable scope using an anonymous function that is executed immediately.</p>
+<div class="highlight"><pre><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">// Protect &quot;myvalue&quot; so no one else can edit it!</span>
+  <span class="kd">var</span> <span class="nx">myvalue</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+  <span class="nx">show</span><span class="p">(</span><span class="nx">myvalue</span><span class="p">);</span>
+
+<span class="p">})();</span>
+</pre></div>
+
+<p>The above is equivalent to:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">newscope</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">// Protect &quot;myvalue&quot; so no one else can edit it!</span>
+  <span class="kd">var</span> <span class="nx">myvalue</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+  <span class="nx">show</span><span class="p">(</span><span class="nx">myvalue</span><span class="p">);</span>
+
+<span class="p">};</span>
+
+<span class="nx">newscope</span><span class="p">();</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: scope.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Scope: More Resources</h1></header>
+            
+            
+            <section><p>For more scope examples in Javascript check out: <a href="http://stackoverflow.com/questions/500431/javascript-variable-scope">this post on Stack Overflow</a>.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="scope.md">scope.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/9
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Scope</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Global Scope</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Block Scope</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">File Scope</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Function scope</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Variable Shadowing</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Lexical Scoping</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Advanced Topics: Creating Scope</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Scope: More Resources</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

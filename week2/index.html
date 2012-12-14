@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Homework Review</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="../slide-config/circus/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="../slide-config/circus/css/screen.css">
+    
+    
+      
+      <link rel="stylesheet" href="../slide-config/circus/css/pygment-themes/vs.css">
+      
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="../slide-config/circus/js/slides.js"></script>
+    
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/jquery-1.6.2.min.js"></script>
+      
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/script.js"></script>
+      
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: week2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Homework Review</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="week2.md">week2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: week2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Let's review</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="week2.md">week2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: week2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Data Types</h1></header>
+            
+            
+            <section><h2>Primitive Data Types</h2>
+<p>The three basic data types in Javascript are:</p>
+<ul>
+<li>numbers</li>
+<li>strings</li>
+<li>booleans</li>
+</ul>
+<p>These three data types are called "primitive" data types.</p>
+<h2>Functions and Objects</h2>
+<p>In addition to the primitive data types, Javascript has two other data types: functions and objects. Sometimes these are called "composite" or "complex" data types.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="week2.md">week2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: week2.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Data Types: Functions</h1></header>
+            
+            
+            <section><p>Functions store a series of operations together so that they can be run over and over again. We'll cover functions more in a few weeks. </p>
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">squared</span><span class="p">(</span> <span class="nx">num</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="nx">num</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">squared</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">squared</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+<p>Right now, the important thing is that you can "call" a function by adding parenthesis after it's name, optionally including any values that the function needs inside of the parenthesis.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="week2.md">week2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: week2.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Data Types: Objects</h1></header>
+            
+            
+            <section><p>Finally, Javascript has one more data type: objects. Objects are simply compilations of primitives and functions. We'll talk more about objects in a few weeks as well. </p>
+<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="p">)</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+<p>Right now the important thing is that you can access the primitive values and functions by adding a period and the related data value or method's name after the name of the object.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="week2.md">week2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: week2.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Variables</h1></header>
+            
+            
+            <section><p>Think of variables as containers to hold your data. You can store data into variables using the assignment operator (=).</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">name</span><span class="p">;</span>   <span class="c1">// This is call &quot;declaring&quot; the variable.</span>
+<span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Jon&quot;</span><span class="p">;</span>
+<span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Tim&quot;</span><span class="p">;</span>
+
+<span class="c1">// You can also assign a value to a variable at the same time you declare it.</span>
+<span class="kd">var</span> <span class="nx">name2</span> <span class="o">=</span> <span class="s2">&quot;Sarah&quot;</span><span class="p">;</span>
+</pre></div>
+
+<ul>
+<li>You only need to declare a variable once.</li>
+<li>If you don't declare your variables <strong>BAD THINGS WILL HAPPEN</strong>.</li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="week2.md">week2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Making Decisions</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>if statements</h1></header>
+            
+            
+            <section><ul>
+<li><code>if</code> statements are used for "branching" in code.</li>
+<li>If the expression given to <code>if</code> is <em>truthy</em> then the block following it will be executed</li>
+<li>The <code>if</code> statement has an optional <code>else</code> statement that is executed if the expression given to <code>if</code> is falsey</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;x is greater than 3&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;x is not greater than 3&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Truthiness and Falsiness</h1></header>
+            
+            
+            <section><ul>
+<li>When something other than a boolean is used in a boolean context it is coerced into a boolean</li>
+<li>Falsey: <code>0, null, undefined, "", false, NaN</code></li>
+<li>Truthy: everything else including <code>true</code> and the string 'false'</li>
+</ul>
+<p>. </p>
+<div class="highlight"><pre><span class="c1">// Falsey. Won&#39;t show.</span>
+<span class="k">if</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">null</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">undefined</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">NaN</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="kc">NaN</span><span class="p">);</span>
+
+<span class="c1">// Truthy. Will show.</span>
+<span class="k">if</span> <span class="p">(</span><span class="s2">&quot;false&quot;</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;false&quot;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="mi">1234</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="mi">1234</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span> <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Combining if/else Statements</h1></header>
+            
+            
+            <section><p>You can combine if else statements to test several different conditions that are mutually exclusive</p>
+<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">isRobot</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">say</span><span class="p">(</span><span class="s2">&quot;10101010101&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isHuman</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">say</span><span class="p">(</span><span class="s2">&quot;hello!&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isDog</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">say</span><span class="p">(</span><span class="s2">&quot;woof woof&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">say</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Doing the Same Thing<br />Over and Over</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>While Loops</h1></header>
+            
+            
+            <section><ul>
+<li>A <code>while</code> loop is the most basic looping construct</li>
+<li>It repeats a given block of code "while" a given expression is truthy.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&lt;</span> <span class="mf">0.7</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">show</span><span class="p">(</span><span class="nx">num</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+    <span class="nx">num</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;Greater than 0.7: &quot;</span> <span class="o">+</span> <span class="nx">num</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>For loop</h1></header>
+            
+            
+            <section><ul>
+<li>For loops are used when the number of loops that need to be done can be determined</li>
+<li>
+<p>The <code>for</code> loop is made of three parts:</p>
+<pre><code>for (intialization; condition; increment) {
+    //code to execute
+}
+</code></pre>
+</li>
+<li>
+<p>First the intialization expression is executed, usually to set a loop counter</p>
+</li>
+<li>Next the condition is checked. If it is truthy then the code block is executed</li>
+<li>Finally the increment expression is executed and then it begins again with the condtion</li>
+<li>Notice intiailization only happens once</li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>For loop examples</h1></header>
+            
+            
+            <section><p>A simple for loop</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">show</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>These are called nested loops</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">show</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span> <span class="nx">j</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Loop Example</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">show</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Is just a shorter way of writing:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">show</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+  <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Break Statement</h1></header>
+            
+            
+            <section><ul>
+<li>The <code>break</code> statement can be used to exit out of a loop</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+    <span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Continue Statement</h1></header>
+            
+            
+            <section><ul>
+<li>The <code>continue</code> statement is similar to the break statement, except that instead of leaving the loop altogether it goes immediately to the next iteration.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+
+    <span class="c1">// Skip to the next one when x is 2!</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">show</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Some examples</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Countdown</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">show</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">show</span><span class="p">(</span><span class="s1">&#39;BLAST OFF!!!&#39;</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Tic-tac-toe</h1></header>
+            
+            
+            <section><p>This code simulates a random tic-tac-toe board that doesn't take turns into account</p>
+<div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">row</span> <span class="o">=</span> <span class="nx">row</span> <span class="o">+</span> <span class="s2">&quot;X&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">row</span> <span class="o">=</span> <span class="nx">row</span> <span class="o">+</span> <span class="s2">&quot;O&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">show</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Tic-tac-toe</h1></header>
+            
+            
+            <section><p>Here's a (slightly) better version.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">remainingXs</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">remainingOs</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">row</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">){</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">remainingOs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">row</span> <span class="o">=</span> <span class="nx">row</span> <span class="o">+</span> <span class="s2">&quot;X&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">remainingXs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">row</span> <span class="o">=</span> <span class="nx">row</span> <span class="o">+</span> <span class="s2">&quot;O&quot;</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">row</span> <span class="o">=</span> <span class="nx">row</span> <span class="o">+</span> <span class="s2">&quot;X&quot;</span><span class="p">;</span>
+          <span class="nx">remainingXs</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">row</span> <span class="o">=</span> <span class="nx">row</span> <span class="o">+</span> <span class="s2">&quot;O&quot;</span><span class="p">;</span>
+          <span class="nx">remainingOs</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">show</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Advanced Topics: Ternary Operator</h1></header>
+            
+            
+            <section><ul>
+<li>JavaScript has a ternary operator to do quick one line if/else statements</li>
+<li>The word <em>ternary</em> just means <em>composed of three items</em></li>
+<li>In this case, three expressions, <strong>condition</strong> <code>?</code> <strong>if true</strong> <code>:</code> <strong>if false</strong></li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">isBoy</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">isBoy</span> <span class="o">?</span> <span class="s2">&quot;blue&quot;</span> <span class="o">:</span> <span class="s2">&quot;pink&quot;</span><span class="p">;</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Advanced Topics: Do/While Loops</h1></header>
+            
+            
+            <section><ul>
+<li>a <code>do while</code> loop is essentially the same as a <code>while</code> loop except that the block of the loop will always execute at least once.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="k">do</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Enter your age&quot;</span><span class="p">);</span>
+    <span class="nx">age</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">age</span><span class="p">));</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: control_flow.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Advanced Topics: Do/While Loops</h1></header>
+            
+            
+            <section><p>The previous example could have been written as a while loop like this:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Enter your age&quot;</span><span class="p">);</span>
+<span class="nx">age</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">age</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">age</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Enter your age&quot;</span><span class="p">);</span>
+    <span class="nx">age</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="control_flow.md">control_flow.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/24
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Homework Review</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Let's review</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Data Types</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Data Types: Functions</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Data Types: Objects</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Variables</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Making Decisions</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">if statements</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Truthiness and Falsiness</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Combining if/else Statements</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Doing the Same Thing<br />Over and Over</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">While Loops</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">For loop</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">For loop examples</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide15">Loop Example</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Break Statement</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">Continue Statement</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Some examples</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">Countdown</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">Tic-tac-toe</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">Tic-tac-toe</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">Advanced Topics: Ternary Operator</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide23">Advanced Topics: Do/While Loops</a></th>
+        <td><a href="#slide23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide24">Advanced Topics: Do/While Loops</a></th>
+        <td><a href="#slide24">24</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Arrays</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="../slide-config/circus/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="../slide-config/circus/css/screen.css">
+    
+    
+      
+      <link rel="stylesheet" href="../slide-config/circus/css/pygment-themes/vs.css">
+      
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="../slide-config/circus/js/slides.js"></script>
+    
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/jquery-1.6.2.min.js"></script>
+      
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/script.js"></script>
+      
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: arrays.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Arrays</h1></header>
+            
+            
+            <section><ul>
+<li>Javascript has a special type of object called an array.</li>
+<li>Arrays are objects that store lists of data values.</li>
+<li>Array are <em>indexed</em> by integers. The integer that represents a particular item is called an <em>index</em>. Basically it just means the position in the list.</li>
+<li>After creation, values may be retrieved or added using <code>[]</code></li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jim&quot;</span><span class="p">,</span> <span class="s2">&quot;Jimmy&quot;</span><span class="p">,</span> <span class="s2">&quot;Jill&quot;</span><span class="p">];</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
+
+<span class="nx">names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Jan&quot;</span><span class="p">;</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">names</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="arrays.md">arrays.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: arrays.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Iterating Over Arrays</h1></header>
+            
+            
+            <section><p>Arrays have a built-in property called <code>length</code>. The <code>length</code> property will always equal the number of objects in the array.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jim&quot;</span><span class="p">,</span> <span class="s2">&quot;Jimmy&quot;</span><span class="p">,</span> <span class="s2">&quot;Jill&quot;</span><span class="p">];</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">names</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span> <span class="p">);</span>
+</pre></div>
+
+<script>
+// Store on the global window object for the example below.
+window.names = ["Jim", "Jimmy", "Jill"];
+</script>
+
+<p>The <code>length</code> property is useful when you want to iterate over each item in the array.</p>
+<div class="highlight"><pre><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">show</span><span class="p">(</span> <span class="nx">names</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="arrays.md">arrays.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: arrays.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Built-In Array Methods</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">companies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sony&#39;</span><span class="p">,</span><span class="s1">&#39;hp&#39;</span><span class="p">,</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;nintendo&#39;</span><span class="p">,</span><span class="s1">&#39;microsoft&#39;</span><span class="p">];</span>
+</pre></div>
+
+<p><br />
+<script>
+// Store on the global window object for the example below.
+window.companies = ['sony','hp','apple','nintendo','microsoft'];
+</script></p>
+<div class="highlight"><pre><span class="c1">// pop removes the last item and returns it</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+<span class="kd">var</span> <span class="nx">lastItem</span> <span class="o">=</span> <span class="nx">companies</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">lastItem</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+</pre></div>
+
+<p><br /></p>
+<div class="highlight"><pre><span class="c1">// push adds an item to the end</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+<span class="nx">companies</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;intel&#39;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="arrays.md">arrays.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: arrays.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>More Array Methods</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="c1">// shift removes the first item in the array and</span>
+<span class="c1">// returns it</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span><span class="p">.</span><span class="nx">shift</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+</pre></div>
+
+<p><br /></p>
+<div class="highlight"><pre><span class="c1">// unshift adds an item to the beginning</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+<span class="nx">companies</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s1">&#39;dell&#39;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="arrays.md">arrays.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: arrays.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>More Array Methods</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="c1">// join concatenates every item as a string,</span>
+<span class="c1">// connecting them with the specified parameter,</span>
+<span class="c1">// and returns the result</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+</pre></div>
+
+<p><br /></p>
+<div class="highlight"><pre><span class="c1">// reverse reverses the array</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">companies</span> <span class="p">);</span>
+<span class="nx">companies</span><span class="p">.</span><span class="nx">reverse</span><span class="p">();</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">companies</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="arrays.md">arrays.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source:  -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="page_number">
+              /12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dictionaries.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Dictionaries</h1></header>
+            
+            
+            <section><ul>
+<li>Dictionaries (like arrays) also store data values.</li>
+<li>Instead of indexing by integers, dictionaries index by strings. We call those strings <code>keys</code>.</li>
+<li>The key can be any string (including the empty string).</li>
+<li>The value can be anything that can be stored in a variable: number, string, boolean, null, object, array, function, regular expression.</li>
+<li>Each key corresponds to one value.</li>
+</ul>
+<p>Sometimes dictionaries are also called key-value stores or hash maps.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dictionaries.md">dictionaries.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dictionaries.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Dictionaries</h1></header>
+            
+            
+            <section><p>The simplist way to make a dictionary is using the object literal syntax.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">cat</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sprinkles&#39;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;female&#39;</span>
+<span class="p">};</span>
+</pre></div>
+
+<h2>Surprise!</h2>
+<p>In Javascript, dictionaries are just objects.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dictionaries.md">dictionaries.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dictionaries.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Key Names</h1></header>
+            
+            
+            <section><ul>
+<li>You can actually have keys that aren't valid variable identifiers!</li>
+<li>To do this when initializing an object, use quotes around your key name.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="s2">&quot;first-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Joe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Shmoe&quot;</span>
+<span class="p">};</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dictionaries.md">dictionaries.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dictionaries.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>[] Notation</h1></header>
+            
+            
+            <section><ul>
+<li>The <code>.</code> operator that we used for accessing object properties earlier only works if the property name (aka key) is a valid variable identifier.</li>
+<li>To access or set properties whose names are not valid variable identifiers, we use the square bracket syntax:</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
+<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;first-name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Joe&quot;</span><span class="p">;</span>
+<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;last-name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Shmoe&quot;</span><span class="p">;</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">person</span><span class="p">[</span><span class="s2">&quot;first-name&quot;</span><span class="p">]</span> <span class="p">);</span>
+</pre></div>
+
+<p>This is similar to the <code>[]</code> syntax we use with arrays.</p>
+<p><em>Note: The <code>.</code> notation is preferred when you can use it (i.e. the key is a valid identifier)</em></p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dictionaries.md">dictionaries.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dictionaries.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>[] Notation</h1></header>
+            
+            
+            <section><p>One other nifty use of [] when dealing with dictionaries:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>
+    <span class="s2">&quot;first-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Joe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Shmoe&quot;</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">nameKey</span> <span class="o">=</span> <span class="s2">&quot;first-name&quot;</span><span class="p">;</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">person</span><span class="p">[</span><span class="nx">nameKey</span><span class="p">]</span> <span class="p">);</span>
+</pre></div>
+
+<p>This is particularly useful on the next slide...</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dictionaries.md">dictionaries.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dictionaries.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>For In Loop</h1></header>
+            
+            
+            <section><ul>
+<li>There is a special looping construct for objects that allows you to iterate over their properties.</li>
+<li>It is called a <code>for in</code> loop</li>
+</ul>
+<p>The <code>for in</code> loop looks like this:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">shape</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span> <span class="mi">50</span> <span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">shape</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;Key: &quot;</span> <span class="o">+</span> <span class="nx">key</span><span class="p">);</span>
+    <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;Value: &quot;</span> <span class="o">+</span> <span class="nx">shape</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
+    <span class="nx">show</span><span class="p">(</span><span class="s2">&quot;----------------------&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>Notice that the <code>key</code> variable simply holds a string containing the property name.</li>
+<li><code>key</code> is not a special name. Call the variable whatever you want (<code>propertyName</code> for example).</li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dictionaries.md">dictionaries.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dictionaries.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>One Last Thing</h1></header>
+            
+            
+            <section><ul>
+<li>When comparing objcts, the <code>===</code> operator will only return true if values being compared reference the <em>same exact object</em>.</li>
+<li>If you need to see if two objects store identical properties then you must perform a <em>deep comparison</em>. Basically this just means that you have to check each property individually to see if they are equal.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">coord1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">5</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">coord2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">5</span> <span class="p">};</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">coord1</span> <span class="o">===</span> <span class="nx">coord2</span><span class="p">);</span>
+</pre></div>
+
+<p>Contrast the example above with:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">coord1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">5</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">coord2</span> <span class="o">=</span> <span class="nx">coord1</span><span class="p">;</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">coord1</span> <span class="o">===</span> <span class="nx">coord2</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dictionaries.md">dictionaries.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source:  -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="page_number">
+              /12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Arrays</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Iterating Over Arrays</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Built-In Array Methods</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">More Array Methods</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">More Array Methods</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Dictionaries</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Dictionaries</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Key Names</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">[] Notation</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">[] Notation</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">For In Loop</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">One Last Thing</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

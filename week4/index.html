@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Review</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="../slide-config/circus/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="../slide-config/circus/css/screen.css">
+    
+    
+      
+      <link rel="stylesheet" href="../slide-config/circus/css/pygment-themes/vs.css">
+      
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="../slide-config/circus/js/slides.js"></script>
+    
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/jquery-1.6.2.min.js"></script>
+      
+    
+      
+      <script type="text/javascript" src="../slide-config/circus/js/script.js"></script>
+      
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: review.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Review</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="review.md">review.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: review.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Objects</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+    <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;male&#39;</span>
+<span class="p">};</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">me</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">me</span><span class="p">.</span><span class="nx">age</span> <span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span> <span class="nx">me</span><span class="p">.</span><span class="nx">gender</span> <span class="p">);</span>
+
+<span class="nx">me</span><span class="p">.</span><span class="nx">occupation</span> <span class="o">=</span> <span class="s1">&#39;Programmer&#39;</span><span class="p">;</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">me</span><span class="p">.</span><span class="nx">occupation</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="review.md">review.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: review.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Objects</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">kaiti</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Kaiti&#39;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">26</span><span class="p">,</span>
+    <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;female&#39;</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+    <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;male&#39;</span><span class="p">,</span>
+    <span class="nx">wife</span><span class="o">:</span> <span class="nx">kaiti</span>
+<span class="p">};</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">me</span><span class="p">.</span><span class="nx">wife</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="review.md">review.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: review.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Objects</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">27</span><span class="p">,</span>
+    <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;male&#39;</span><span class="p">,</span>
+    <span class="nx">wife</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Kaiti&#39;</span><span class="p">,</span>
+      <span class="nx">age</span><span class="o">:</span> <span class="mi">26</span><span class="p">,</span>
+      <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;female&#39;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">show</span><span class="p">(</span> <span class="nx">me</span><span class="p">.</span><span class="nx">wife</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="review.md">review.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: graphs.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Programming Topics: Graphs</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="graphs.md">graphs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: graphs.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Programming Topics: Graphs</h1></header>
+            
+            
+            <section><p>A graph is made up of verticies (aka nodes) and edges.</p>
+<div style="text-align: center">
+<br /><br /><br /><br />
+<img src="img/6n-graf.svg" />
+</div></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="graphs.md">graphs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: graphs.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Programming Topics: Trees</h1></header>
+            
+            
+            <section><p>A tree is a graph that has no <em>cycles</em>.</p>
+<div style="text-align: center">
+<img src="img/Binary_tree.svg" />
+</div>
+
+<p>Trees come so much in programming that there are some special terms we use when talking about them:</p>
+<ul>
+<li>Root node</li>
+<li>Leaf nodes</li>
+<li>Sibling</li>
+<li>Parent</li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="graphs.md">graphs.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>The Document-Object Model</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>The Document-Object Model</h1></header>
+            
+            
+            <section><p>The Document-Object Model is the 'glue' that connects Javascript to the data on web pages.</p>
+<p>It consists of several different components for interacting with web pages, but the most important of these is the "element heirarchy", a tree which consists of "elements" (think HTML tags) and "text nodes".</p>
+<div style="text-align: center">
+<img src="img/html.png" />
+</div></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>The document Object</h1></header>
+            
+            
+            <section><p>There is a global object in Javascript called "document" that contains all of the data and methods that we need to work with the DOM.</p>
+<p>Here are some of the most important features of the document object:</p>
+<ul>
+<li>document.getElementById('some-element-id') // Gets a dom element by it's id</li>
+<li>document.documentElement // The &lt;html&gt; element</li>
+<li>document.body // The &lt;body&gt; element.</li>
+<li>document.createElement('div') // Creates a new DOM element</li>
+<li>document.createTextNode('Some random text.') // Creates a new text node.</li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Traversing the DOM</h1></header>
+            
+            
+            <section><p>Once we have a DOM element (either document.body or one that we have found using document.getElementById()), we can <em>traverse</em> the dom tree using some properties that all element objects have.</p>
+<ul>
+<li>el.parentNode</li>
+<li>el.firstChild</li>
+<li>el.lastChild</li>
+<li>el.nextSibling</li>
+<li>el.previousSibling</li>
+<li>el.childNodes (An array of nodes that are immediate children of el)</li>
+</ul>
+<p>We can also add and remove DOM elements from the tree.</p>
+<ul>
+<li>el.appendChild(anElement)</li>
+<li>el.removeChild(anElement)</li>
+</ul>
+<p>anElement can be created using document.createElement() or document.createTextNode()</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Manipulating DOM Elements</h1></header>
+            
+            
+            <section><p>Once we have a DOM element, we can use them to manipulate the web page! Most element attributes can be accessed directly by name on the object. <a href="http://bhcarpenter.com" id="test_link">Test Link</a></p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;test_link&#39;</span><span class="p">);</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">linkEl</span><span class="p">.</span><span class="nx">href</span><span class="p">);</span>
+
+<span class="nx">linkEl</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s1">&#39;http://creativecircus.edu&#39;</span>
+<span class="nx">show</span><span class="p">(</span><span class="nx">linkEl</span><span class="p">.</span><span class="nx">href</span><span class="p">);</span>
+</pre></div>
+
+<p>There are a few special attributes as well.</p>
+<ul>
+<li>el.className = 'my_class_name' // "class" is a reserved word</li>
+<li>el.style // Another object. Use it to set CSS styles!</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;test_link&#39;</span><span class="p">);</span>
+<span class="nx">linkEl</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;#ff0000&#39;</span><span class="p">;</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>DOM Events</h1></header>
+            
+            
+            <section><p>Another important aspect of the DOM is <em>event handling</em>.</p>
+<p>Events let Javascript programs respond to user interactions such as clicks, mouse movements, etc. <a href="#" id="test_link_2">Test Link 2</a></p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;test_link_2&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">clickCallback</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">show</span><span class="p">(</span><span class="s1">&#39;The link was clicked.&#39;</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">clickCallback</span><span class="p">);</span>
+</pre></div>
+
+<p>Or, more commonly, an <em>anonymous function</em> is used instead of storing the function in a variable first.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;test_link_2&#39;</span><span class="p">);</span>
+
+<span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">show</span><span class="p">(</span><span class="s1">&#39;From an anonymous function!&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Available Events</h1></header>
+            
+            
+            <section><div style="width: 48%; float: left;">
+
+<h2>Mouse events</h2>
+<ul>
+<li>click</li>
+<li>dblclick</li>
+<li>mousedown</li>
+<li>mouseup</li>
+<li>mousemove</li>
+<li>mouseover</li>
+<li>mouseout</li>
+</ul>
+<h2>Keyboard Events</h2>
+<ul>
+<li>keydown</li>
+<li>keypress</li>
+<li>keyup
+</div>
+<div style="width: 48%; float: right;"></li>
+</ul>
+<h2>Form Element Events</h2>
+<ul>
+<li>submit</li>
+<li>reset</li>
+</ul>
+<h2>input/select/button Events</h2>
+<ul>
+<li>select</li>
+<li>change</li>
+<li>submit</li>
+<li>focus</li>
+<li>blur</li>
+</ul>
+<h2>document Object Events</h2>
+<ul>
+<li>load</li>
+<li>unload
+</div></li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>The Event obect</h1></header>
+            
+            
+            <section><p>Event callback functions receive an <em>event object</em> as an argument. These objects provide information about the event that happened, and let you control whether or not other event callbacks continue to run. <a href="http://facebook.com" id="test_link_3">Go to Facebook</a></p>
+<ul>
+<li>event.target - The DOM element that the event happened to</li>
+<li>event.preventDefault() - Stops the default action from happening. This can be used to stop the browser from following a link that was clicked on.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;test_link_3&#39;</span><span class="p">);</span>
+
+<span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">show</span><span class="p">(</span><span class="s1">&#39;Get off of Facebook&#39;</span><span class="p">)</span>
+  <span class="nx">show</span><span class="p">(</span><span class="s1">&#39;and pay attention!&#39;</span><span class="p">);</span>
+
+  <span class="c1">// Stop the browser from opening the window.</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="p">});</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: dom.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Events</h1></header>
+            
+            
+            <section><h2>Mouse Events</h2>
+<p>Mouse events have some more information available to them.</p>
+<ul>
+<li>event.screenX</li>
+<li>event.screenY</li>
+<li>event.button (Left button=0, middle button=1, right button=2)</li>
+<li><a href="https://developer.mozilla.org/en/DOM/MouseEvent">more mouse events</a></li>
+</ul>
+<h2>Keyboard Events</h2>
+<p>Keyboard events also have some more information.</p>
+<ul>
+<li>event.charCode</li>
+<li>event.keyCode</li>
+<li>event.ctrlKey, event.altKey, event.metaKey, event.shiftKey</li>
+<li><a href="https://developer.mozilla.org/en/DOM/KeyboardEvent">more keyboard events</a></li>
+</ul></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="dom.md">dom.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: jquery_intro.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Oh noes!</h1></header>
+            
+            
+            <section><p>Not all browsers have the same DOM!</p>
+<div style="text-align: center">
+<br /><br /><br /><br />
+<img src="img/Oh_noes_by_MichelleBurnette.jpg" />
+<br /><br /><br /><br />
+</div>
+
+<p>The situation is actually better than it used to be, but some browsers still have different ways of adding event listeners, changing the styles of elements, etc.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="jquery_intro.md">jquery_intro.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: jquery_intro.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>jQuery</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="jquery_intro.md">jquery_intro.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: jquery_intro.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>jQuery</h1></header>
+            
+            
+            <section><p>jQuery is a Javascript library that was written by John Resig. It provides an <em>abstraction layer</em> around the DOM to make your live easier:</p>
+<ol>
+<li>It smooths out the differences between browsers.</li>
+<li>It simplifies finding DOM element objects to manipulate.</li>
+<li>It simplifies working with AJAX (Web Dev 4).</li>
+<li>It provides some basic animation funcionality.</li>
+</ol>
+<p>...and much, much more!</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="jquery_intro.md">jquery_intro.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: jquery_intro.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>jQuery</h1></header>
+            
+            
+            <section><p id="test_paragraph">We'll talk more about jQuery next week, but here's a sample.</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;#test_paragraph&#39;</span><span class="p">);</span>
+
+<span class="c1">// el is now a jQuery object that *represents* </span>
+<span class="c1">// the dom element of the paragraph above.</span>
+
+<span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">);</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;background&#39;</span><span class="p">,</span> <span class="s1">&#39;#777777&#39;</span><span class="p">);</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;padding&#39;</span><span class="p">,</span> <span class="s1">&#39;40px&#39;</span><span class="p">);</span>
+<span class="nx">el</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;500px&#39;</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="jquery_intro.md">jquery_intro.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: jquery_intro.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>jQuery</h1></header>
+            
+            
+            <section><div style="height: 300px; position: relative;">
+  <p style="position: absolute; text-align: center; width: 500px; height: 30px; line-height: 30px; padding: 5px; color: #333; background: #e0e0e0; border: solid 2px #ccc" id="move_me">A simple animation example.</p>
+</div>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">&#39;#move_me&#39;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">newStyles</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;300px&#39;</span><span class="p">,</span>
+    <span class="nx">top</span><span class="o">:</span> <span class="s1">&#39;50px&#39;</span><span class="p">,</span>
+    <span class="nx">left</span><span class="o">:</span> <span class="s1">&#39;300px&#39;</span>
+<span class="p">};</span>
+
+<span class="nx">el</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span> <span class="nx">newStyles</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="jquery_intro.md">jquery_intro.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/21
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Review</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Objects</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Objects</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Objects</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Programming Topics: Graphs</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Programming Topics: Graphs</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Programming Topics: Trees</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">The Document-Object Model</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">The Document-Object Model</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">The document Object</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Traversing the DOM</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Manipulating DOM Elements</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">DOM Events</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">Available Events</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide15">The Event obect</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Events</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">Oh noes!</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">jQuery</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">jQuery</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">jQuery</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">jQuery</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
