@@ -3,7 +3,7 @@ $(function(){
     window.slides = {};
     slides.outputBox = null;
 
-    window.show = function(toPrint){
+    window.log = function(toPrint){
         if(slides.outputBox != null){
             slides.outputBox.append(toPrint + "\n");
         }
