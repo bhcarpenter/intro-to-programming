@@ -26,9 +26,10 @@ Alice is in this class
 Without a doubt Alice is working on this homework
 
 Rather than mentioning your name directly, assign a variable to hold your name
-(i.e. name = ... ; ), then use that name variable within the console.log statements to
-insert your name. It should be possible to assign a different string to the variable,
-"Bob" or "Abby" or whatever, and then that name will appear in the printout when run.
+(i.e. var name = ... ; ), then use that name variable within the console.log 
+statements to insert your name. It should be possible to assign a different 
+string to the variable, "Bob" or "Abby" or whatever, and then that name will
+appear in the console when run.
 */
 console.log("\n------ PROBLEM 2 ------\n");
 
@@ -70,9 +71,6 @@ of pancakes require 2 cups of Bisquick, 1 cup of milk, and 2 eggs.
 Print the number of servings of pancakes that you can make if you start with the amounts
 given by the variables below. I want to see you calculate this number in code.
 
-Then print the amount of each ingredient you have left after making as many pancakes
-as possible.
-
 The Math.min() function may come in handy:
 https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math/min#Examples
 */
@@ -82,6 +80,8 @@ var cupsOfMilk = 16;      // 1 gallon of milk
 var eggs = 24;            // two dozen eggs
 
 // TODO: Your code goes here!
+
+
 
 /*
 Problem #6
@@ -100,6 +100,7 @@ from the prompt() since it returns a string.
 console.log("\n------ PROBLEM 6 ------\n");
 
 // TODO: Your code goes here!
+
 
 /*
 Problem #7
@@ -125,6 +126,7 @@ false
 console.log("\n------ PROBLEM 7 ------\n");
 
 // TODO: Your code goes here!
+
 
 /*
 Problem #8
