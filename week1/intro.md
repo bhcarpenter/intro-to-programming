@@ -4,7 +4,7 @@
 
     !javascript
     var message = "hello, world";
-    show(message);
+    log(message);
 
 ---
 #A Little About Computers
@@ -49,7 +49,7 @@ This sucked.
 ---
 #Assembly Language
 
-Somewhere during the 40s and 50s people realized that writing the machine code directly was boring and error prone, so they developed "Assembly Languages", a way of writing computer operation sequences (programs) that were easier to read and understand by humans.
+Early on people realized that writing the machine code directly was boring and error prone, so they developed "Assembly Languages", a way of writing computer operation sequences (programs) that were easier to read and understand by humans.
 
 These programs were then "compiled" into machine code so that they could be run by the processors.
 
@@ -79,9 +79,9 @@ The ideas behind modern programming languages were developed during the 1960s an
     var number_of_people = 30;
     
     if ( number_of_cookies < number_of_people ) {
-      show( 'Not enough cookies!' );
+      log( 'Not enough cookies!' );
     } else {
-      show( 'Nom nom nom.' );
+      log( 'Nom nom nom.' );
     }
 
 Hooray!

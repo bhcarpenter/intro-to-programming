@@ -1,12 +1,4 @@
 /*
-Ignore this function definition. It gives you the "printLine" function that you'll
-use through the reset of the assignment. "printLine" is like "print" in the lecture
-slides.
-*/
-function printLine(s){var d=document;d.getElementById('output').appendChild(d.createTextNode(s+"\n"));}
-
-
-/*
 Problem #1
 ----------
 Write code that prints the following.
@@ -17,9 +9,9 @@ Easy does it. Easy does it. Easy does it.
 Easy does it. Easy does it. Easy does it. Easy does it.
 
 Rather than repeat "Easy does it." many times in the code, assign a variable --
-var x = "Easy does it."; -- then use that variable within the calls to printLine
+var x = "Easy does it."; -- then use that variable within the calls to console.log
 */
-printLine("------ PROBLEM 1 ------\n");
+console.log("------ PROBLEM 1 ------\n");
 
 // TODO: Your code goes here!
 
@@ -34,11 +26,11 @@ Alice is in this class
 Without a doubt Alice is working on this homework
 
 Rather than mentioning your name directly, assign a variable to hold your name
-(i.e. name = ... ; ), then use that name variable within the printLine statements to
+(i.e. name = ... ; ), then use that name variable within the console.log statements to
 insert your name. It should be possible to assign a different string to the variable,
 "Bob" or "Abby" or whatever, and then that name will appear in the printout when run.
 */
-printLine("\n------ PROBLEM 2 ------\n");
+console.log("\n------ PROBLEM 2 ------\n");
 
 // TODO: Your code goes here!
 
@@ -49,7 +41,7 @@ Problem #3
 Given variables x and y below write code to print their sum, difference, and product on
 exactly 3 seperate lines with a label indicating what is what.
 */
-printLine("\n------ PROBLEM 3 ------\n");
+console.log("\n------ PROBLEM 3 ------\n");
 var x = 38;
 var y = 67;
 
@@ -61,7 +53,7 @@ Problem #4
 ----------
 Use the hours, minutes, and seconds variables to print the total number of seconds
 */
-printLine("\n------ PROBLEM 4 ------\n");
+console.log("\n------ PROBLEM 4 ------\n");
 var hours = 2;
 var minutes = 13;
 var seconds = 2;
@@ -84,7 +76,7 @@ as possible.
 The Math.min() function may come in handy:
 https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math/min#Examples
 */
-printLine("\n------ PROBLEM 5 ------\n");
+console.log("\n------ PROBLEM 5 ------\n");
 var cupsOfBisquick = 32;  // 2 boxes of bisquick
 var cupsOfMilk = 16;      // 1 gallon of milk
 var eggs = 24;            // two dozen eggs
@@ -100,12 +92,12 @@ for example:
 var num = prompt("please enter a number");
 
 Use the prompt function to take in a temperature in Fahrenheit and convert it to Celsius.
-Print out the result using the printLine() function.
+Print out the result using the console.log() function.
 
 You will need to use the parseFloat() or Number() function to convert the value returned
 from the prompt() since it returns a string.
 */
-printLine("\n------ PROBLEM 6 ------\n");
+console.log("\n------ PROBLEM 6 ------\n");
 
 // TODO: Your code goes here!
 
@@ -130,7 +122,7 @@ false
 /abc/
 
 */
-printLine("\n------ PROBLEM 7 ------\n");
+console.log("\n------ PROBLEM 7 ------\n");
 
 // TODO: Your code goes here!
 
@@ -147,7 +139,7 @@ one argument and returns true if the value is NaN.
 Prompt the user to enter a number, convert the user input to a number using parseFloat()
 and then print whether or not the number is NaN.
 */
-printLine("\n------ PROBLEM 8 ------\n");
+console.log("\n------ PROBLEM 8 ------\n");
 
 // TODO: Your code goes here!
 
