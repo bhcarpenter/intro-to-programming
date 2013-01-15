@@ -4,7 +4,7 @@
 ---
 #Showing Information
 
-## prompt()
+## alert()
 The easiest (and ugliest) way to show something to the person viewing your web page is by using `alert()`.
 
     !javascript
@@ -59,8 +59,8 @@ Note that whatever the user types in is always given back to you as a STRING...
     log( parseInt("kitty", 10) );
 
     // Danger!
-    log( parseInt("0377") );
-    log( parseInt("0377", 10) );
+    log( parseInt("0890") );
+    log( parseInt("0890", 10) );
 
 ---
 #parseFloat
@@ -68,7 +68,6 @@ Note that whatever the user types in is always given back to you as a STRING...
 - parseFloat is another global function that converts strings to numbers
 - as you might gather from its name it parses floats.
 - parseFloat takes one argument: the string to be parsed
-- a float is a way to represtent decimals in computers
 
 .
 
@@ -89,16 +88,16 @@ Here are a few of them
     var y = 2;
     var z = 4;
 
-    log(Math.abs(x));     // absolute value
-    log(Math.ceil(num));  // ceiling.. rounds up
-    log(Math.floor(num)); // rounds down
-    log(Math.round(num)); // "normal" round
-    log(Math.pow(x,y));   // power... x^y
-    log(Math.random());   // random number between 0 and 1.
-    log(Math.sqrt(z));    // square root
-    log(Math.max(x,y));   // largest number
-    log(Math.min(x,y));   // smallest number
-    log(Math.PI);         // PI
+    log( Math.abs(x) );     // absolute value
+    log( Math.ceil(num) );  // ceiling.. rounds up
+    log( Math.floor(num) ); // rounds down
+    log( Math.round(num) ); // "normal" round
+    log( Math.pow(x,y) );   // power... x^y
+    log( Math.random() );   // random number between 0 and 1.
+    log( Math.sqrt(z) );    // square root
+    log( Math.max(x,y) );   // largest number
+    log( Math.min(x,y) );   // smallest number
+    log( Math.PI );         // PI
 
 There's a [full list here](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math#Methods).  We'll use some of these methods in this week's homework, and more next week.
 

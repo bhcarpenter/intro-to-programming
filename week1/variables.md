@@ -52,7 +52,7 @@ if, implements, import, in, instanceof, int, interface,
 long, 
 native, new, null, 
 package, private, protected, public, 
-return, short, static, super, withch, syncrhonized, 
+return, short, static, super, which, synchronized, 
 this, throw, throws, transient, true, try, typeof, 
 var, volatile, void, 
 while, with
@@ -114,7 +114,7 @@ Note that just because an identifier is valid doesn't mean that it's a good one 
     log("y: " + y);
 
 ---
-#Variables: Types
+#Variables: typeof
 
 In JavaScript, (unlike many other progamming languages), any data value type can be assigned to any variables. This is called "loosly typed". The current data type of a variable can be determined using the `typeof` keyword.
 

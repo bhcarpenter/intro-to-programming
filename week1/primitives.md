@@ -116,6 +116,12 @@ The last one up there, NaN, is a special number that means "Not a Number". More 
 
 - A boolean is a value that is either _true_ or _false_.
 
+.
+
+    !javascript
+    log( true );
+    log( false );
+
 ---
 #Data Types: Functions
 

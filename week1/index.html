@@ -667,7 +667,7 @@
       
       <!-- slide source: primitives.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Data Types: Booleans</h1></header>
@@ -675,7 +675,12 @@
             
             <section><ul>
 <li>A boolean is a value that is either <em>true</em> or <em>false</em>.</li>
-</ul></section>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="nx">log</span><span class="p">(</span> <span class="kc">true</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="kc">false</span> <span class="p">);</span>
+</pre></div>
+</section>
             
           </div>
             
@@ -995,7 +1000,7 @@ if, implements, import, in, instanceof, int, interface,
 long, 
 native, new, null, 
 package, private, protected, public, 
-return, short, static, super, withch, syncrhonized, 
+return, short, static, super, which, synchronized, 
 this, throw, throws, transient, true, try, typeof, 
 var, volatile, void, 
 while, with</p>
@@ -1137,7 +1142,7 @@ while, with</p>
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Variables: Types</h1></header>
+            <header><h1>Variables: typeof</h1></header>
             
             
             <section><p>In JavaScript, (unlike many other progamming languages), any data value type can be assigned to any variables. This is called "loosly typed". The current data type of a variable can be determined using the <code>typeof</code> keyword.</p>
@@ -1258,7 +1263,7 @@ while, with</p>
             <header><h1>Showing Information</h1></header>
             
             
-            <section><h2>prompt()</h2>
+            <section><h2>alert()</h2>
 <p>The easiest (and ugliest) way to show something to the person viewing your web page is by using <code>alert()</code>.</p>
 <div class="highlight"><pre><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hi there. I&#39;m annoying.&quot;</span><span class="p">);</span>
 </pre></div>
@@ -1371,8 +1376,8 @@ while, with</p>
 <span class="nx">log</span><span class="p">(</span> <span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;kitty&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">);</span>
 
 <span class="c1">// Danger!</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0377&quot;</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0377&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0890&quot;</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">parseInt</span><span class="p">(</span><span class="s2">&quot;0890&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -1403,7 +1408,6 @@ while, with</p>
 <li>parseFloat is another global function that converts strings to numbers</li>
 <li>as you might gather from its name it parses floats.</li>
 <li>parseFloat takes one argument: the string to be parsed</li>
-<li>a float is a way to represtent decimals in computers</li>
 </ul>
 <p>.</p>
 <div class="highlight"><pre><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;3.14159&quot;</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span>
@@ -1441,16 +1445,16 @@ while, with</p>
 <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">z</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
 
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>     <span class="c1">// absolute value</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span>  <span class="c1">// ceiling.. rounds up</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="c1">// rounds down</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">num</span><span class="p">));</span> <span class="c1">// &quot;normal&quot; round</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// power... x^y</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>   <span class="c1">// random number between 0 and 1.</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">z</span><span class="p">));</span>    <span class="c1">// square root</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// largest number</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">));</span>   <span class="c1">// smallest number</span>
-<span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">);</span>         <span class="c1">// PI</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">);</span>     <span class="c1">// absolute value</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">);</span>  <span class="c1">// ceiling.. rounds up</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// rounds down</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">);</span> <span class="c1">// &quot;normal&quot; round</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">);</span>   <span class="c1">// power... x^y</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="p">);</span>   <span class="c1">// random number between 0 and 1.</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">z</span><span class="p">)</span> <span class="p">);</span>    <span class="c1">// square root</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">);</span>   <span class="c1">// largest number</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">);</span>   <span class="c1">// smallest number</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span> <span class="p">);</span>         <span class="c1">// PI</span>
 </pre></div>
 
 <p>There's a <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Math#Methods">full list here</a>.  We'll use some of these methods in this week's homework, and more next week.</p></section>
@@ -1767,7 +1771,7 @@ while, with</p>
       
       
       <tr id="toc-row-32">
-        <th><a href="#slide32">Variables: Types</a></th>
+        <th><a href="#slide32">Variables: typeof</a></th>
         <td><a href="#slide32">32</a></td>
       </tr>
       
