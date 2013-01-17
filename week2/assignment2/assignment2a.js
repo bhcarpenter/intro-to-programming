@@ -1,103 +1,136 @@
-/*
-Ignore this function definition. It gives you the "show" function that you'll
-use through the rest of the assignment.
-*/
-function show(text) {
-    var node = document.createTextNode(text + "\n");
-    document.getElementById('output').appendChild(node);
-}
+/* ****************************************
+ * REVIEW
+ * ************************************** */
 
 /*
 Problem #1
 ----------
-Use a for loop to print the numbers 1 to 10.
+Convert the value in variable 'x' into a number, and 10 to it, and then
+display it in the console.
 */
-show("------ PROBLEM 1 ------\n");
+console.log("------ PROBLEM 1 ------\n");
+var x = '100';
 
 // TODO: Your code goes here!
+
 
 
 /*
 Problem #2
 ----------
-Print a random integer between 1 and 10 until you hit 4.
+Write some JavaScript code to take the variables defined below, and create
+a variable (call it personHTML) that holds a string of HTML that would
+display all of the values. Then log the string of HTML to the console.
+
+In Part B, you will do something like this, but you'll actually insert the HTML
+into the page instead of displaying it in the console.
 */
-show("------ PROBLEM 2 ------\n");
+console.log("------ PROBLEM 2 ------\n");
+var name = 'Johnny Coder';
+var title = 'Software Engineer';
+var company = 'ABC Corp';
+var emailAddress = 'johnny@abccorp.com';
+var phoneNumber = '555-555-5555';
 
 // TODO: Your code goes here!
 
+
+
+
+/* ****************************************
+ * OBJECTS (or, the ballad of Johnny Coder)
+ * ************************************** */
 
 /*
 Problem #3
 ----------
-Ask the user for a number between 2 and 10. use the given number and print a
-box on the screen using #.
-
-For example if the user enters 2 you would print:
-
-##
-##
-
-If they enter 4 you would print:
-
-####
-####
-####
-####
-
-and so on...
-
+The console can display objects, just like it can display primitive values. Use
+console.log to display the "aWorker" object below.
 */
-show("------ PROBLEM 3 ------\n");
+console.log("------ PROBLEM 3 ------\n");
+
+var aWorker = {
+    name: 'Johnny',
+    position: 'Software Engineer',
+    salary: 68000,
+    boss: {
+        name: 'Fred',
+        position: 'VP of Sales'
+    }
+};
 
 // TODO: Your code goes here!
+
 
 
 /*
 Problem #4
 ----------
-For problem 4 do the same as problem three except make a triangle like the
-examples below.
-
-If the user enters 2 you would print:
-#
-##
-
-If the they enter 4 you would print:
-#
-##
-###
-####
-
+Johnny's boss, Fred, just got fired for stealing erasers. Set the boss property
+of aWorker to be the newVP object defined below. Then use console.log to
+display aWorker again.
 */
-show("------ PROBLEM 4 ------\n");
+console.log("------ PROBLEM 4 ------\n");
+
+var newVP = {
+    name: 'Sally',
+    position: 'VP of Sales'
+};
 
 // TODO: Your code goes here!
+
 
 
 /*
 Problem #5
 ----------
-Ask the user for a number less than 20. Print whether or not that number
-is prime.
+Johnny's new boss, Sally, has noticed that Johnny's JavaScript skills are a
+huge asset for ABC Corp. Give Johnny a 10% raise!
 
-A number is prime if it is not evenly divisible by any numbers betweeen
-(but not including) 1 and itself. http://en.wikipedia.org/wiki/Prime_number
+I want to see you calculate this in code using the current value of aWorker's
+salary property. Then assign the result back to aWorker's salary property.
 */
-show("------ PROBLEM 5 ------\n");
+console.log("------ PROBLEM 5 ------\n");
 
 // TODO: Your code goes here!
+
+console.log( aWorker.salary ); // This should display 74,800 in the console.
+
 
 
 /*
 Problem #6
 ----------
-Generate 8 numbers between 1 and 100 at random.
+Create a "me" object that represents your contact information, and then log the
+name property of the me object to the console.
 
-- Print them on one line seperated by commas
-- Print the average, max, and min of those numbers
+"me" should have the following properties:
+- name
+- title
+- company
+- emailAddress
+- phoneNumber
+
+Feel free to use fake information.
+
 */
-show("------ PROBLEM 6 ------\n");
+console.log("------ PROBLEM 6 ------\n");
 
 // TODO: Your code goes here!
+
+
+
+/*
+Problem #7
+----------
+Write code that generates a HTML string that displays the contents of the me
+object that you wrote for Problem #6. This will be just like Problem #2, except
+you're going to pull the values out of the me object instead of having a
+different variable for each one. Display it in the console.
+*/
+console.log("------ PROBLEM 7 ------\n");
+
+// TODO: Your code goes here!
+
+
 
