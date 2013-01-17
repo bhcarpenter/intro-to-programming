@@ -25,3 +25,4 @@ Trees come so much in programming that there are some special terms we use when 
 * Leaf nodes
 * Sibling
 * Parent
+

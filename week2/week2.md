@@ -1,6 +1,3 @@
-#Homework Review
-
----
 #Let's review
 
 
@@ -29,23 +26,19 @@ Functions store a series of operations together so that they can be run over and
       return num * num;
     }
 
-    show( squared(3) )
-    show( squared(5) )
+    log( squared(3) )
+    log( squared(5) )
 
 Right now, the important thing is that you can "call" a function by adding parenthesis after it's name, optionally including any values that the function needs inside of the parenthesis.
 
 ---
 #Data Types: Objects
 
-Finally, Javascript has one more data type: objects. Objects are simply compilations of primitives and functions. We'll talk more about objects in a few weeks as well. 
+Finally, Javascript has one more data type: objects. Objects are simply compilations of primitives and functions. We'll talk more about objects today.
 
     !javascript
-
-    show( Math.sqrt(9) )
-    show( Math.sqrt(25) )
-
-Right now the important thing is that you can access the primitive values and functions by adding a period and the related data value or method's name after the name of the object.
-
+    log( Math.sqrt(9) )
+    log( Math.PI )
 
 ---
 #Variables
@@ -62,3 +55,4 @@ Think of variables as containers to hold your data. You can store data into vari
 - You only need to declare a variable once.
 - If you don't declare your variables __BAD THINGS WILL HAPPEN__.
 
+---

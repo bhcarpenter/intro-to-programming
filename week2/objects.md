@@ -2,37 +2,34 @@
 
 ---
 #Objects
-- Objects are simply a collection of properties names and values
-- The property name is used to set or retrieve the associated value
-- Property names can be any string including the empty string
-- Values can be anything that can be stored in a variable: numbers, strings, booleans, null, other objects, arrays, functions, regular expressions.
 
----
-#Object Literals
-This simplist way to make an object is using the object literal syntax
+- Objects are just a way of grouping values together.
+- They work by associating property names (sometimes called "keys") with values.
+
+The simplist way to make an object is using the object literal syntax:
 
     !javascript
     var cat = {
-        name: 'sprinkles',
-        age: 2,
-        gender: 'female'
+      name: 'sprinkles',
+      age: 2,
+      gender: 'female'
     };
 
-You can create an empty object by simple not including any property value pairs
-
-    !javascript
-    var obj = {};
+In the example above, "name" is a property name, and "sprinkles" is the associated value.
 
 ---
 #Retrieving Values
-You can retrieve values from the objects using the "dereferencing operator" (.). That's just a fancy way of saying use a dot.
+You can retrieve values from objects using the "dereferencing operator". That's just a fancy way of saying use a dot.
 
     !javascript
     var cat = {
-      name: 'sprinkles'
+      name: 'sprinkles',
+      age: 2,
+      gender: 'female'
     };
 
-    show(cat.name);
+    log( cat.name );
+    log( cat.color );
 
 ---
 #Setting a value
@@ -46,8 +43,8 @@ You can retrieve values from the objects using the "dereferencing operator" (.).
     truck.type = "tow";
     truck.name = "towmator";
 
-    show(truck.name);
-    show(truck.type + " truck");
+    log( truck.name );
+    log( truck.type + " truck" );
 
 ---
 #In operator
@@ -58,8 +55,9 @@ JavaScript's `in` operator allows you to test whether a property exist on an obj
         category: 'shoes', 
         brand: 'nike' 
     };
-    show("brand" in product);
-    show("price" in product);
+
+    log( "brand" in product );
+    log( "price" in product );
 
 ---
 #Deleting properties
@@ -71,46 +69,60 @@ JavaScript's `delete` operator allows you to remove a property from an object
         wideScreen: true, 
         remote: "missing" 
     };
-    show(tv.remote);
-    show("remote" in tv);
+    log( tv.remote );
+    log( "remote" in tv );
 
     delete tv.remote;
 
-    show(tv.remote);
-    show("remote" in tv);
+    log( tv.remote );
+    log( "remote" in tv );
 
 ---
-#Functions in Objects
+#Objects in Objects
 
-Just like you can assign functions to variables, you can assign them as a property of an object.
+Any value that can be put in a variable (which is to say any data value at all) can also be assigned to a property of an object. *This includes other objects*
 
-Then you can invoke them by using `.` syntax, followed by parenthesis and your arguments.
+    !javascript
+    var aManager = {
+      name: 'Fred',
+      position: 'TPM'
+    };
+
+    var aWorker = {
+      name: 'Johnny',
+      position: 'Software Engineer',
+      boss: aManager
+    };
+
+    log( aWorker.boss.name );
+
+---
+#Objects in Objects
+
+The previous example could also be written like this:
 
     !javascript
 
-    var basicMath = {
-        add: function(num1, num2) {
-            return num1 + num2;
-        }
+    var worker = {
+      name: 'Johnny',
+      position: 'Software Engineer',
+      boss: {
+        name: 'Fred',
+        position: 'TPM'
+      }
     };
 
-    basicMath.subtract = function(num1, num2) {
-        return num1 - num2;
-    }
-
-    show( basicMath.add(5, 10) );
-    show( basicMath.subtract(5, 10) );
+    log( worker.boss.name );
 
 ---
 #Objects: What's the point?
 
-A few reasons:
-- To organize your code.
-- To avoid repeating yourself.
-- To keep your code from conflicting with someone else's code on the same page.
+**To organize your code.**
+
+- Group similar data together.
+- Group data and the functions that work with them together.
+- "Namespace" your code. That just means stick all of your data and functions in an object so that someone else doesn't accidentally overwrite it.
+
+We may talk more about organizing your code at the end of the class.
 
 ---
-#Objects
-
-We'll talk more about objects after the midterm, but expect to be using them
-from here on out.
