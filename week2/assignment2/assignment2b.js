@@ -57,7 +57,7 @@ refresh the page to see your changes!
 Problem #3
 ----------
 Changing styles directly through JavaScript is ugly. More often, we add (and
-remove) CSS classes by manipulating the "class" attribute of objects.
+remove) CSS classes by manipulating the "className" attribute of objects.
 
 1. Get a reference to the DOM node that represents the paragraph on the page by
 using document.getElementById()
