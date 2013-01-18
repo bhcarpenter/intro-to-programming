@@ -5,7 +5,7 @@
 /*
 Problem #1
 ----------
-Convert the value in variable 'x' into a number, and 10 to it, and then
+Convert the value in variable 'x' into a number, add 10 to it, and then
 display it in the console.
 */
 console.log("------ PROBLEM 1 ------\n");
