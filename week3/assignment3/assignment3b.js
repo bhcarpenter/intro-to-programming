@@ -3,7 +3,7 @@
  * For this assignment you will learn about the html5 canvas element by
  * designing a business card template for your very own interactive agency.
  * Your template will essentially be a function that draws a business card when
- * given some parameters (name, email, address, phone number, title, etc...).
+ * given some parameters (name, email, company, title, phone number, etc...).
  *
  * By drawing the card using a function that takes in parameters you can easily
  * create a card for your next hire by simply entering their information.
@@ -16,21 +16,15 @@
  * canvases if you'd like.
  *
  * Your business card function will take the following parameters:
- *  - a canvasID, like "card1", this will be used in to the function to get
+ *  - a "canvasID", like "card1". This will be used in to the function to get
  *    the canvas element like so: var canvas = document.getElementById(cavasID);
- *  - name
- *  - title
- *  - address
- *  - work number
- *  - mobile number
- *  - email address
+ *  - a "person", just like Problem #5 of Part A
  * etc..
  *
  * Your business card should meet the following criteria:
- *  - Display all of the parameters from above on the card (except canvasID
- *    of course).
+ *  - Display all of the parameters the person object on the card
  *  - Use several colors
- *  - Have an aspect drawn using one or more for or while loops
+ *  - Have an aspect drawn using one or more while loops
  *  - Use as many of the canvas functions as you can
  *  - not use the drawImage() function
  *
@@ -48,10 +42,13 @@
 
 
 
+// TODO: Copy and paste your three "person" objects from Problem #1 of Part A.
 
 
-// TODO: Call your function three times to draw card1, card2, and card3.
 
+// TODO: Call your function three times to draw card1, card2, and card3 with
+// your different "person" objects. You should end up with a business card for
+// each one.
 
 
 

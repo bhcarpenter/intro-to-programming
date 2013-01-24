@@ -1,119 +1,73 @@
 /*
-Ignore this function definition. It gives you the "show" function that you'll
-use through the rest of the assignment.
+Problem #1: Review
+------------------
+Create three "people" objects that are just like your "me" object from
+Problem 6 of Assignment 2. Assign them each to a different variable. You're
+going to use these objects for Part B.
 */
-function show(text) {
-    var node = document.createTextNode(text + "\n");
-    document.getElementById('output').appendChild(node);
-}
-
-
-/*
-NOTE: For the functions you write, it would probably be a good idea to invoke
-them a few times with different values to make sure they're working correctly.
-*/
-
-/*
-Problem #1
-----------
-Create a function called "canVote" that takes a person's age and returns
-true if the person is 18 or older, or false if they are younger than 18.
-*/
-show("------ PROBLEM 1 ------\n");
+console.log("------ PROBLEM 1 ------\n");
 
 // TODO: Your code goes here!
 
 
 /*
-Problem #2
-----------
-Write a function that calculates a tip for a restaurant.
+Problem #2: Branching
+---------------------
+Write an if statement that logs "nom nom nom" to the console if numOfCookies is
+greater than numCookiesNeeded, and "aw, sad" to the console if it isn't.
 
-It should take two paramters:
-- The amount of the bill
-- The percentage to tip
-
-It should return the tip amount.
+It should work no matter what numbers are actually in numOfCookies and
+numCookiesNeeded.
 */
-show("------ PROBLEM 2 ------\n");
+console.log("------ PROBLEM 2 ------\n");
+var numOfCookies = 23;
+var numCookiesNeeded = 3;
+
+// TODO: Your code goes here!
+
+
+
+/*
+Problem #3: Looping
+-------------------
+Use a while loop to log every integer from 0 to 10 to the console. I created
+a "counter" variable to get you started.
+*/
+console.log("------ PROBLEM 3 ------\n");
+var counter = 0;
 
 // TODO: Your code goes here!
 
 
 /*
-Problem #3
-----------
-Write a function that calculates a tip for a restaurant AND splits the bill
-among a group of friends.
+Problem #4: Functions
+---------------------
+Write a function called helloWorld that logs the string "hello, world" to
+the console. Invoke it 4 times.
 
-It should take three paramaters:
-- The amount of the bill
-- The percentage to tip
-- The number of people splitting the bill
-
-It should return the amount each person should pay.
-
-Instead of copying and pasting the logic from problem #2, I want you to
-call the function you wrote in problem #2 as part of your solution.
+Extra credit if you use a loop to invoke it 4 times.
 */
-show("------ PROBLEM 3 ------\n");
+console.log("------ PROBLEM 4 ------\n");
 
 // TODO: Your code goes here!
 
 
 /*
-Problem #4
-----------
-Write an email signature function that takes in:
-- name
-- title
-- company
-- email address
-- phone number
+Problem #5: Functions
+---------------------
+Write a function called "emailSignature" that takes in 1 parameter called
+"person". The "person" parameter will be an object with the same properties
+as the objects from Problem #1.
 
-and prints something that looks like an email signature. You won't need to
-return any values, just make calls to show() directly in your email signature
-function.
+emailSignature should create a string that looks like an email signature 
+containing the parameter object's name, title, company, and phoneNumber 
+properties. It should log this string to the console.
 
-Please be creative!
+Invoke the emailSignature three times, once with each of the objects that you
+created in Problem #1. You should see an email signature string for each person
+in the console.
 */
-show("------ PROBLEM 4 ------\n");
-
-// TODO: Your code goes here!
-
-
-/*
-Problem #5
-----------
-Create a "me" object that represents your contact information. It should have
-the following properties:
-- name
-- title
-- company
-- emailAddress
-- phoneNumber
-
-Print out the "me" object's name.
-
-Note: You don't need to write any functions to do this problem. The only
-function you'll use is the show() function (to print the object's name).
-*/
-show("------ PROBLEM 5 ------\n");
-
-// TODO: Your code goes here!
-
-
-/*
-Problem #6
-----------
-Update your email signature function so that instead of taking in 5 different
-values, it only takes in 1 value which will be an object with the same
-properties as the "me" object from Problem #5.
-
-Call your new email function with the "me" object you made in Problem #5. The
-output should look exactly the same as the output from Problem #4.
-*/
-show("------ PROBLEM 6 ------\n");
+console.log("------ PROBLEM 5 ------\n");
 
 // TODO: Your code goes here!
 
