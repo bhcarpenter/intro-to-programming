@@ -25,7 +25,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Functions</title>
+    <title>Untitled Presentation</title>
     <!-- Styles -->
     
     <link rel="stylesheet" media="print" href="../slide-config/circus/css/print.css">
@@ -59,20 +59,52 @@
     </div>
     <div class="slides">
       
-      <!-- slide source: functions.md -->
+      <!-- slide source:  -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
-            
-            <header><h1>Functions</h1></header>
             
             
           </div>
             
           <footer>
             
+            <aside class="page_number">
+              /20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: comparison_operators.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Operations: Comparison</h1></header>
+            
+            
+            <section><p>Comparing two values is something that you will do a lot of when writing programs, especially when we get to branching and looping.  Here are the comparison operators.</p>
+<ul>
+<li><code>&gt;=, &lt;=, &gt;, &lt;</code> inequality</li>
+<li><code>===, ==</code> equality</li>
+<li><code>!==, !=</code> not equal</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="nx">log</span><span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="mi">5</span> <span class="o">===</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="mi">5</span> <span class="o">!==</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="mi">6</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
             <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
+              Source: <a href="comparison_operators.md">comparison_operators.md</a>
             </aside>
             
             <aside class="page_number">
@@ -82,26 +114,24 @@
         </div>
       </div>
       
-      <!-- slide source: functions.md -->
+      <!-- slide source: comparison_operators.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Functions</h1></header>
+            <header><h1>Operations &gt; Logical</h1></header>
             
             
-            <section><ul>
-<li>Functions are a way of creating a reusable block of code that either has side effects and/or returns a value</li>
-<li>You have already been using lots of functions like <code>parseInt</code>, <code>prompt</code>, <code>show</code>, <code>alert</code>, etc..</li>
-<li><code>parseInt</code> and <code>prompt</code> are examples of functions that have a return value</li>
-<li><code>show</code> and <code>alert</code> are examples of functions that have a side effect</li>
-<li>A side effect is anything that affects the state of the program including showing something to a user</li>
+            <section><p>Sometimes comparing two values is not enough. These are logical operators that are used to combine booleans.</p>
+<ul>
+<li><code>!</code> not</li>
+<li><code>&amp;&amp;</code> logical and</li>
+<li><code>||</code> logical or</li>
 </ul>
-<p>This add function simply returns the result off adding its two parameters.</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">show</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
+<p>.</p>
+<div class="highlight"><pre><span class="nx">log</span><span class="p">(</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span> <span class="o">&amp;&amp;</span> <span class="mi">6</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">||</span> <span class="s2">&quot;red&quot;</span> <span class="o">==</span> <span class="s2">&quot;red&quot;</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -110,7 +140,7 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
+              Source: <a href="comparison_operators.md">comparison_operators.md</a>
             </aside>
             
             <aside class="page_number">
@@ -120,38 +150,20 @@
         </div>
       </div>
       
-      <!-- slide source: functions.md -->
+      <!-- slide source: branching.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code">
+        <div class="slide">
           <div class="inner">
             
-            <header><h1>Creating a function</h1></header>
+            <header><h1>Making Decisions</h1></header>
             
-            
-            <section><ul>
-<li>A function is made up of 4 parts<ul>
-<li>the <code>function</code> keyword</li>
-<li>the optional name</li>
-<li>the optional function arguments seperated by commas</li>
-<li>the code block to execute when the function is invoked</li>
-</ul>
-</li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">show</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span>
-</pre></div>
-</section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
+              Source: <a href="branching.md">branching.md</a>
             </aside>
             
             <aside class="page_number">
@@ -161,26 +173,25 @@
         </div>
       </div>
       
-      <!-- slide source: functions.md -->
+      <!-- slide source: branching.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Function name</h1></header>
+            <header><h1>if statements</h1></header>
             
             
             <section><ul>
-<li>Choosing a function name is just like choosing a variable name</li>
+<li><code>if</code> statements are used for "branching" in code.</li>
+<li>If the expression given to <code>if</code> is <em>truthy</em> then the block following it will be executed</li>
+<li>The <code>if</code> statement has an optional <code>else</code> statement that is executed if the expression given to <code>if</code> is falsey</li>
 </ul>
 <p>.</p>
-<div class="highlight"><pre><span class="c1">// Valid</span>
-<span class="kd">function</span> <span class="nx">addArguments</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// Invalid function name.</span>
-<span class="kd">function</span> <span class="nx">subract</span><span class="o">-</span><span class="nx">arguments</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;x is greater than 3&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;x is not greater than 3&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </section>
@@ -190,7 +201,7 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
+              Source: <a href="branching.md">branching.md</a>
             </aside>
             
             <aside class="page_number">
@@ -200,27 +211,28 @@
         </div>
       </div>
       
-      <!-- slide source: functions.md -->
+      <!-- slide source: branching.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Function arguments</h1></header>
+            <header><h1>Combining if/else Statements</h1></header>
             
             
-            <section><ul>
-<li>The arguments that a function accepts are special variables that are filled with the values passed to the function when it is invoked</li>
-<li>In this example when the code <code>add(20,5)</code> is executed the the values <code>20</code> and <code>5</code> are stored in the variables <code>a</code> and <code>b</code> then the expression <code>return a+b</code> is executed. </li>
-<li>If we didn't pass any arguments to the <code>add</code> function (for example <code>add()</code>) then the values of <code>a</code> and <code>b</code> would be undefined. As you can see in the example the last line produces the result of <code>undefined + undefined</code> or <code>NaN</code> </li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-<span class="p">}</span>
+            <section><p>You can combine if else statements to test several different conditions that are mutually exclusive</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">isRobot</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">isHuman</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">isDog</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
-<span class="nx">show</span><span class="p">(</span> <span class="nx">add</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">add</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">add</span><span class="p">()</span> <span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">isRobot</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;10101010101&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isHuman</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;hello!&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isDog</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;woof woof&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -229,7 +241,7 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
+              Source: <a href="branching.md">branching.md</a>
             </aside>
             
             <aside class="page_number">
@@ -239,27 +251,32 @@
         </div>
       </div>
       
-      <!-- slide source: functions.md -->
+      <!-- slide source: branching.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Function invocation</h1></header>
+            <header><h1>Truthiness and Falsiness</h1></header>
             
             
             <section><ul>
-<li>Functions can be <em>invoked</em> by adding <code>()</code> after the functions name and optionally passing values to the function.</li>
-<li>When a function is invoked the values passed to the function are stored in the argument variables and control of the program is turned over to the function.</li>
-<li>Control is returned to the invoking statement after a <code>return</code> statement is encountered or the last line of function is executed</li>
+<li>When something other than a boolean is used in a boolean context it is coerced into a boolean</li>
+<li>Falsey: <code>0, null, undefined, "", false, NaN</code></li>
+<li>Truthy: everything else including <code>true</code> and the string <code>'false'</code></li>
 </ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<p>. </p>
+<div class="highlight"><pre><span class="c1">// Falsey. Won&#39;t show.</span>
+<span class="k">if</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> 
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;0 is truthy!&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nx">show</span><span class="p">(</span> <span class="nx">add</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">add</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">add</span><span class="p">()</span> <span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;null is truthy!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;undefined is truthy!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -268,7 +285,7 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
+              Source: <a href="branching.md">branching.md</a>
             </aside>
             
             <aside class="page_number">
@@ -278,31 +295,38 @@
         </div>
       </div>
       
-      <!-- slide source: functions.md -->
+      <!-- slide source: branching.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Return statement</h1></header>
+            <header><h1>Truthiness and Falsiness</h1></header>
             
             
-            <section><ul>
-<li>The <code>return</code> statement is used to return a value to the invoking expression</li>
-<li>In the <em>add</em> function the result of <code>a+b</code> is returned to the caller.</li>
-<li>If a function does not have a return statement then <code>undefined</code> is returned</li>
-<li>A function can have multiple return statements. This is useful in conjuction with branching statements like <code>if, else, or switch</code></li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">blackOrWhite</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">color</span> <span class="o">===</span> <span class="s2">&quot;FFFFFF&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s2">&quot;white&quot;</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">color</span> <span class="o">===</span> <span class="s2">&quot;000000&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s2">&quot;black&quot;</span><span class="p">;</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="s2">&quot;other&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
+            <section><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&quot;&quot; is truthy!&#39;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">blackOrWhite</span><span class="p">(</span><span class="s2">&quot;000000&quot;</span><span class="p">)</span> <span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;false is truthy!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="kc">NaN</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;NaN is truthy!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Truthy. Will show.</span>
+<span class="k">if</span> <span class="p">(</span><span class="s2">&quot;false&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&quot;false&quot; is truthy!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="mi">1234</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;1234 is truthy!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;&quot;hello&quot; is truthy!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </section>
             
@@ -311,11 +335,243 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
+              Source: <a href="branching.md">branching.md</a>
             </aside>
             
             <aside class="page_number">
               7/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: branching.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Advanced Topics: Ternary Operator</h1></header>
+            
+            
+            <section><ul>
+<li>JavaScript has a ternary operator to do quick one line if/else statements</li>
+<li>The word <em>ternary</em> just means <em>composed of three items</em></li>
+<li>In this case, three expressions, <strong>condition</strong> <code>?</code> <strong>if true</strong> <code>:</code> <strong>if false</strong></li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">isBoy</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">isBoy</span> <span class="o">?</span> <span class="s2">&quot;blue&quot;</span> <span class="o">:</span> <span class="s2">&quot;pink&quot;</span><span class="p">;</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">color</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="branching.md">branching.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source:  -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="page_number">
+              /20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: looping.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Doing the Same Thing<br />Over and Over</h1></header>
+            
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="looping.md">looping.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: looping.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>While Loops</h1></header>
+            
+            
+            <section><ul>
+<li>A <code>while</code> loop is the most basic looping construct</li>
+<li>It repeats a given block of code "while" a given expression is truthy.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">counter</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+    <span class="nx">counter</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Final value of counter: &quot;</span> <span class="o">+</span> <span class="nx">counter</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="looping.md">looping.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: looping.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>While Loops</h1></header>
+            
+            
+            <section><p>Here's another example:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&lt;</span> <span class="mf">0.7</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+    <span class="nx">num</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Greater than 0.7: &quot;</span> <span class="o">+</span> <span class="nx">num</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="looping.md">looping.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: looping.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Break Statement</h1></header>
+            
+            
+            <section><ul>
+<li>The <code>break</code> statement can be used to exit out of a loop early.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Final value of x: &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="looping.md">looping.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: looping.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Continue Statement</h1></header>
+            
+            
+            <section><ul>
+<li>The <code>continue</code> statement is similar to the break statement, except that instead of leaving the loop altogether it goes immediately to the next iteration.</li>
+</ul>
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+
+    <span class="c1">// Skip to the next one when x is 2!</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Final value of x: &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="looping.md">looping.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/20
             </aside>
           </footer>
         </div>
@@ -340,28 +596,11 @@
       
       <!-- slide source: functions.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code">
+        <div class="slide">
           <div class="inner">
             
-            <header><h1>Anonymous functions</h1></header>
+            <header><h1>Functions</h1></header>
             
-            
-            <section><p>It's entirely possible to create functions that don't have names. By themselves, they don't do much:</p>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> 
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> 
-<span class="p">}</span>
-</pre></div>
-
-<p>But we can assign them to a variable!</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span> 
-    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> 
-<span class="p">};</span>
-
-<span class="nx">show</span><span class="p">(</span> <span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="p">);</span>
-</pre></div>
-
-<p>Note that when you are assigning a function to a variable like this, you have to have a semicolon at the end (just like when you assign primitive values to variables).</p></section>
             
           </div>
             
@@ -369,179 +608,6 @@
             
             <aside class="source">
               Source: <a href="functions.md">functions.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              8/20
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: functions.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Anonymous functions</h1></header>
-            
-            
-            <section><p>Anonymous functions are also used as "callbacks", a concept we'll discuss next week when we talk about jQuery.</p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              9/20
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: functions.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Functions: What's the point?</h1></header>
-            
-            
-            <section><p>Two main reasons:
-- Organize your code
-- Avoid coding the same sequence of statements over and over again.</p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="functions.md">functions.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              10/20
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: objects.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Objects</h1></header>
-            
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              11/20
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: objects.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Objects</h1></header>
-            
-            
-            <section><ul>
-<li>Objects are simply a collection of properties names and values</li>
-<li>The property name is used to set or retrieve the associated value</li>
-<li>Property names can be any string including the empty string</li>
-<li>Values can be anything that can be stored in a variable: numbers, strings, booleans, null, other objects, arrays, functions, regular expressions.</li>
-</ul></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              12/20
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: objects.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Object Literals</h1></header>
-            
-            
-            <section><p>This simplist way to make an object is using the object literal syntax</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">cat</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sprinkles&#39;</span><span class="p">,</span>
-    <span class="nx">age</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;female&#39;</span>
-<span class="p">};</span>
-</pre></div>
-
-<p>You can create an empty object by simple not including any property value pairs</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              13/20
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: objects.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Retrieving Values</h1></header>
-            
-            
-            <section><p>You can retrieve values from the objects using the "dereferencing operator" (.). That's just a fancy way of saying use a dot.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">cat</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sprinkles&#39;</span>
-<span class="p">};</span>
-
-<span class="nx">show</span><span class="p">(</span><span class="nx">cat</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
             </aside>
             
             <aside class="page_number">
@@ -551,25 +617,28 @@
         </div>
       </div>
       
-      <!-- slide source: objects.md -->
+      <!-- slide source: functions.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Setting a value</h1></header>
+            <header><h1>Functions</h1></header>
             
             
-            <section><ul>
-<li>Setting or changing a value is similar to retrieving a value.</li>
-<li>If you reference a property that does not exist on the object when setting its value it will be created.</li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">truck</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;fire&#39;</span> <span class="p">};</span>
-<span class="nx">truck</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s2">&quot;tow&quot;</span><span class="p">;</span>
-<span class="nx">truck</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;towmator&quot;</span><span class="p">;</span>
+            <section><p>Loops are great if you want to repeat somthing <em>right now</em>. What if you want to save a sequence of steps and execute them later <em>whenever you want</em>?</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">sayHi</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, everybody!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="nx">show</span><span class="p">(</span><span class="nx">truck</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span><span class="nx">truck</span><span class="p">.</span><span class="nx">type</span> <span class="o">+</span> <span class="s2">&quot; truck&quot;</span><span class="p">);</span>
+<span class="c1">// Run the function!</span>
+<span class="c1">// We call this &quot;invoking&quot; the function.</span>
+<span class="nx">sayHi</span><span class="p">();</span>
+
+<span class="c1">// Do some other stuff</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">;</span>
+
+<span class="c1">// Invoke it again!</span>
+<span class="nx">sayHi</span><span class="p">();</span>
 </pre></div>
 </section>
             
@@ -578,7 +647,7 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
+              Source: <a href="functions.md">functions.md</a>
             </aside>
             
             <aside class="page_number">
@@ -588,30 +657,33 @@
         </div>
       </div>
       
-      <!-- slide source: objects.md -->
+      <!-- slide source: functions.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>In operator</h1></header>
+            <header><h1>Creating a Basic Function</h1></header>
             
             
-            <section><p>JavaScript's <code>in</code> operator allows you to test whether a property exist on an object. The expression returns a boolean</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">product</span> <span class="o">=</span> <span class="p">{</span> 
-    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;shoes&#39;</span><span class="p">,</span> 
-    <span class="nx">brand</span><span class="o">:</span> <span class="s1">&#39;nike&#39;</span> 
-<span class="p">};</span>
-<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;brand&quot;</span> <span class="k">in</span> <span class="nx">product</span><span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;price&quot;</span> <span class="k">in</span> <span class="nx">product</span><span class="p">);</span>
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">sayHi</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, everybody!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
-</section>
+
+<ul>
+<li>At first glance, creating a function looks a lot like creating an object. However, instead of putting key: value pairs inside of the braces, we put lines of code to execute!</li>
+<li>Note the <code>function</code> keyword, which lets JavaScript know that you're about to define a function.</li>
+<li>Also, note the parenthesis after the <code>function</code> keyword. We'll talk more about them later.</li>
+<li>When you're ready to run the code inside of the function, "invoke" it by putting the parenthesis after the variable name that holds the function, like this: <code>sayHi();</code></li>
+</ul>
+<p>You have already been using lots of functions like <code>parseInt</code>, <code>prompt</code>, <code>console.log</code>, <code>alert</code>, etc..</p></section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
+              Source: <a href="functions.md">functions.md</a>
             </aside>
             
             <aside class="page_number">
@@ -621,27 +693,32 @@
         </div>
       </div>
       
-      <!-- slide source: objects.md -->
+      <!-- slide source: functions.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Deleting properties</h1></header>
+            <header><h1>Function Parameters</h1></header>
             
             
-            <section><p>JavaScript's <code>delete</code> operator allows you to remove a property from an object</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">tv</span> <span class="o">=</span> <span class="p">{</span> 
-    <span class="nx">highDef</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">wideScreen</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> 
-    <span class="nx">remote</span><span class="o">:</span> <span class="s2">&quot;missing&quot;</span> 
-<span class="p">};</span>
-<span class="nx">show</span><span class="p">(</span><span class="nx">tv</span><span class="p">.</span><span class="nx">remote</span><span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;remote&quot;</span> <span class="k">in</span> <span class="nx">tv</span><span class="p">);</span>
+            <section><p>To make functions more useful, you can set them up to accept values to work with. We call these "parameters", but really they're just variables that automatically get filled with values you specify when you invoke the function.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">sayHiTo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="k">delete</span> <span class="nx">tv</span><span class="p">.</span><span class="nx">remote</span><span class="p">;</span>
+<span class="nx">sayHiTo</span><span class="p">(</span> <span class="s1">&#39;Brandon&#39;</span> <span class="p">);</span>
+<span class="nx">sayHiTo</span><span class="p">(</span> <span class="s1">&#39;Kaiti&#39;</span> <span class="p">);</span>
+</pre></div>
 
-<span class="nx">show</span><span class="p">(</span><span class="nx">tv</span><span class="p">.</span><span class="nx">remote</span><span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span><span class="s2">&quot;remote&quot;</span> <span class="k">in</span> <span class="nx">tv</span><span class="p">);</span>
+<p>You can also make functions that accept multiple parameters:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">sayHiToBoth</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name1</span><span class="p">,</span> <span class="nx">name2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="nx">name1</span><span class="p">;</span>
+  <span class="nx">greeting</span> <span class="o">=</span> <span class="nx">greeting</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="nx">name2</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">;</span>
+  <span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">sayHiToBoth</span><span class="p">(</span><span class="s1">&#39;Brandon&#39;</span><span class="p">,</span> <span class="s1">&#39;Kaiti&#39;</span><span class="p">);</span>
+<span class="nx">sayHiToBoth</span><span class="p">(</span><span class="s1">&#39;Kaiti&#39;</span><span class="p">,</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -650,7 +727,7 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
+              Source: <a href="functions.md">functions.md</a>
             </aside>
             
             <aside class="page_number">
@@ -660,28 +737,27 @@
         </div>
       </div>
       
-      <!-- slide source: objects.md -->
+      <!-- slide source: functions.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Functions in Objects</h1></header>
+            <header><h1>Function Arguments</h1></header>
             
             
-            <section><p>Just like you can assign functions to variables, you can assign them as a property of an object.</p>
-<p>Then you can invoke them by using <code>.</code> syntax, followed by parenthesis and your arguments.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">basicMath</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">add</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">basicMath</span><span class="p">.</span><span class="nx">subtract</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">num1</span> <span class="o">-</span> <span class="nx">num2</span><span class="p">;</span>
+            <section><p>When you invoke a function that has parameters, you should pass values for the function to work with when you invoke it. The technical term for these values are "arguments".</p>
+<p>When you invoke a function, JavaScript takes whatever arguments you specify, sticks them in the function's parameters, and runs the function.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">sayHiToBoth</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name1</span><span class="p">,</span> <span class="nx">name2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="nx">name1</span><span class="p">;</span>
+  <span class="nx">greeting</span> <span class="o">=</span> <span class="nx">greeting</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="nx">name2</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">;</span>
+  <span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nx">show</span><span class="p">(</span> <span class="nx">basicMath</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">basicMath</span><span class="p">.</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">sayHiToBoth</span><span class="p">(</span><span class="s1">&#39;Brandon&#39;</span><span class="p">,</span> <span class="s1">&#39;Kaiti&#39;</span><span class="p">);</span>
+
+<span class="c1">// What do you think will happen if </span>
+<span class="c1">// we leave out the second value?</span>
+<span class="nx">sayHiToBoth</span><span class="p">(</span><span class="s1">&#39;Brandon&#39;</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -690,7 +766,7 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
+              Source: <a href="functions.md">functions.md</a>
             </aside>
             
             <aside class="page_number">
@@ -700,25 +776,24 @@
         </div>
       </div>
       
-      <!-- slide source: objects.md -->
+      <!-- slide source: functions.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Objects: What's the point?</h1></header>
+            <header><h1>Scope</h1></header>
             
             
-            <section><p>A few reasons:
-- To organize your code.
-- To avoid repeating yourself.
-- To keep your code from conflicting with someone else's code on the same page.</p></section>
+            <section><p>One more thing you need to know about functions.</p>
+<p><strong>Variables you define in functions only exist inside of the function.</strong></p>
+<p>This has a lot of implications, which we will hopefully have time to talk about later in this course.</p></section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
+              Source: <a href="functions.md">functions.md</a>
             </aside>
             
             <aside class="page_number">
@@ -728,23 +803,23 @@
         </div>
       </div>
       
-      <!-- slide source: objects.md -->
+      <!-- slide source: functions.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Objects</h1></header>
+            <header><h1>Final Thoughts</h1></header>
             
             
-            <section><p>We'll talk more about objects after the midterm, but expect to be using them
-from here on out.</p></section>
+            <section><p>All of the functions we have made in this lesson have <em>side effects</em>. In other words, they change something about the program or display a value.</p>
+<p>Next week we are going to talk about functions that <em>return values</em>. They can send data back to the code that invokes a function. <code>Math.min()</code>, <code>Math.random()</code>, and <code>prompt()</code> are some examples of built-in functions that return values.</p></section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="objects.md">objects.md</a>
+              Source: <a href="functions.md">functions.md</a>
             </aside>
             
             <aside class="page_number">
@@ -763,121 +838,121 @@ from here on out.</p></section>
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Functions</a></th>
+        <th><a href="#slide1">Operations: Comparison</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">Functions</a></th>
+        <th><a href="#slide2">Operations &gt; Logical</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Creating a function</a></th>
+        <th><a href="#slide3">Making Decisions</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Function name</a></th>
+        <th><a href="#slide4">if statements</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Function arguments</a></th>
+        <th><a href="#slide5">Combining if/else Statements</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Function invocation</a></th>
+        <th><a href="#slide6">Truthiness and Falsiness</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Return statement</a></th>
+        <th><a href="#slide7">Truthiness and Falsiness</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Anonymous functions</a></th>
+        <th><a href="#slide8">Advanced Topics: Ternary Operator</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Anonymous functions</a></th>
+        <th><a href="#slide9">Doing the Same Thing<br />Over and Over</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Functions: What's the point?</a></th>
+        <th><a href="#slide10">While Loops</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Objects</a></th>
+        <th><a href="#slide11">While Loops</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Objects</a></th>
+        <th><a href="#slide12">Break Statement</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">Object Literals</a></th>
+        <th><a href="#slide13">Continue Statement</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Retrieving Values</a></th>
+        <th><a href="#slide14">Functions</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">Setting a value</a></th>
+        <th><a href="#slide15">Functions</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">In operator</a></th>
+        <th><a href="#slide16">Creating a Basic Function</a></th>
         <td><a href="#slide16">16</a></td>
       </tr>
       
       
       <tr id="toc-row-17">
-        <th><a href="#slide17">Deleting properties</a></th>
+        <th><a href="#slide17">Function Parameters</a></th>
         <td><a href="#slide17">17</a></td>
       </tr>
       
       
       <tr id="toc-row-18">
-        <th><a href="#slide18">Functions in Objects</a></th>
+        <th><a href="#slide18">Function Arguments</a></th>
         <td><a href="#slide18">18</a></td>
       </tr>
       
       
       <tr id="toc-row-19">
-        <th><a href="#slide19">Objects: What's the point?</a></th>
+        <th><a href="#slide19">Scope</a></th>
         <td><a href="#slide19">19</a></td>
       </tr>
       
       
       <tr id="toc-row-20">
-        <th><a href="#slide20">Objects</a></th>
+        <th><a href="#slide20">Final Thoughts</a></th>
         <td><a href="#slide20">20</a></td>
       </tr>
       
