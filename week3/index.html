@@ -130,8 +130,8 @@
 </ul>
 <p>.</p>
 <div class="highlight"><pre><span class="nx">log</span><span class="p">(</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">6</span> <span class="o">&amp;&amp;</span> <span class="mi">6</span> <span class="o">&lt;</span> <span class="mi">7</span> <span class="p">);</span>
-<span class="nx">log</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
-<span class="nx">log</span><span class="p">(</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">||</span> <span class="s2">&quot;red&quot;</span> <span class="o">==</span> <span class="s2">&quot;red&quot;</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="o">!</span><span class="p">(</span><span class="mi">2</span> <span class="o">===</span> <span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">||</span> <span class="s2">&quot;red&quot;</span> <span class="o">===</span> <span class="s2">&quot;red&quot;</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -508,7 +508,7 @@
 <span class="k">while</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -548,14 +548,14 @@
 <p>.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
 
     <span class="c1">// Skip to the next one when x is 2!</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">continue</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="nx">x</span><span class="o">++</span><span class="p">;</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Final value of x: &quot;</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span>

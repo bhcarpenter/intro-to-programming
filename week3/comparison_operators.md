@@ -29,6 +29,6 @@ Sometimes comparing two values is not enough. These are logical operators that a
 
     !javascript
     log( 5 < 6 && 6 < 7 );
-    log( !(2 == 3) );
-    log( 2 > 3 || "red" == "red" );
+    log( !(2 === 3) );
+    log( 2 > 3 || "red" === "red" );
 

@@ -41,7 +41,7 @@ Here's another example:
     while (x < 5) {
         log(x);
 
-        if (x == 2) {
+        if (x === 2) {
             break;
         }
 
@@ -59,14 +59,14 @@ Here's another example:
     !javascript
     var x = 0;
     while (x < 5) {
-        log(x);
+        x++;
 
         // Skip to the next one when x is 2!
-        if (x == 2) {
+        if (x === 2) {
             continue;
         }
 
-        x++;
+        log(x);
     }
 
     log("Final value of x: " + x);
