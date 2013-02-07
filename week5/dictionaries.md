@@ -50,7 +50,7 @@ In Javascript, dictionaries are just objects.
     person["first-name"] = "Joe";
     person["last-name"] = "Shmoe";
 
-    show( person["first-name"] );
+    log( person["first-name"] );
 
 This is similar to the `[]` syntax we use with arrays.
 
@@ -70,7 +70,7 @@ One other nifty use of [] when dealing with dictionaries:
 
     var nameKey = "first-name";
 
-    show( person[nameKey] );
+    log( person[nameKey] );
 
 
 This is particularly useful on the next slide...
@@ -85,31 +85,11 @@ The `for in` loop looks like this:
     !javascript
     var shape = { width: 25, height: 50 };
     for (var key in shape) {
-        show("Key: " + key);
-        show("Value: " + shape[key]);
-        show("----------------------");
+        log("Key: " + key);
+        log("Value: " + shape[key]);
+        log("----------------------");
     }
 
 - Notice that the `key` variable simply holds a string containing the property name.
 - `key` is not a special name. Call the variable whatever you want (`propertyName` for example).
 
----
-#One Last Thing
-- When comparing objcts, the `===` operator will only return true if values being compared reference the _same exact object_.
-- If you need to see if two objects store identical properties then you must perform a *deep comparison*. Basically this just means that you have to check each property individually to see if they are equal.
-
-.
-
-    !javascript
-    var coord1 = { x:1, y:5 };
-    var coord2 = { x:1, y:5 };
-    show(coord1 === coord2);
-
-Contrast the example above with:
-
-    !javascript
-    var coord1 = { x:1, y:5 };
-    var coord2 = coord1;
-    show(coord1 === coord2);
-
----

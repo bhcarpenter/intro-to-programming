@@ -1,82 +1,54 @@
 ---
-#Arrays
-- Arrays are a special type of Javascript object that store data values.
-- The data that you add to an array are kept in order, and you can get them back out of the array later by referring to it's position.
-- We call that position the "index".
+#Objects and Arrays
 
-.
+##What can be stored as a property value in an object?
 
-    !javascript
-    var names = [
-        "Jim",
-        "Jimmy",
-        "Jill"
-    ];
-    show( names[1] );
+**Anything that you can put into a variable!**
 
-**Anything that you can put into a variable, you can put into an array!**
+##What can be stored in an array?
+
+**Anything that you can put into a variable!**
 
 ---
-#Dictionaries
+#Objects in Objects
 
-- Dictionaries are objects that are used to store data values as well.
-- Instead of getting the values back out by position number, dictionaries use a *key*. Keys are usually strings.
-- In Javascript, we just use regular objects as dictionaries. The "keys" are our object's property names, and the values are whatever we store into each property.
-
-.
+Remember how we can have objects as properties of an object?
 
     !javascript
-    var person = {
-        firstName: "Brandon",
-        lastName: "Carpenter",
-        occupation: "Software Developer"
+
+    var worker = {
+      name: 'Johnny',
+      position: 'Software Engineer',
+      boss: {
+        name: 'Fred',
+        position: 'TPM'
+      }
     };
 
-    show( person.firstName );
-    show( person['occupation'] );
+    var bossOfWorker = worker.boss;
+    log(bossOfWorker.name);
 
-**Anything that you can put into a variable, you can put into an object property!**
+    // Or write it like this:
+    log( worker.boss.name );
 
 ---
-#Arrays of Arrays
+#Arrays in Arrays
 
-It's entirely possible to have an array that stores a sequence of arrays.
+Just like we can have objects in objects, we can have arrays of arrays
 
     !javascript
+
     var ticTacToe = [
-        ['O', 'X', 'O'],
+        ['X', 'O', 'O'],
         ['O', 'O', 'X'],
-        ['X', 'X', 'X']
+        ['X', 'X', 'O']
     ];
 
     var secondRow = ticTacToe[1];
-    show( secondRow[1] );
+    log( secondRow[1] );
 
     // or write it like this:
-    show( ticTacToe[1][1] );
-
----
-#Dictionaries of Dictionaries
-
-Likewise, it's possible to have an object that has another object as a property.
-
-    !javascript
-    var me = {
-        firstName: "Brandon",
-        lastName: "Carpenter",
-        occupation: "Software Developer",
-        wife: {
-            firstName: "Kaiti",
-            lastName: "Carpenter",
-            occupation: "Mom"
-        }
-    };
-
-    var wifeOfMe = me.wife;
-    show( wifeOfMe.lastName );
-
-    // or write it like this:
-    show( me.wife.lastName );
+    log( ticTacToe[1][1] );
 
 ---
 #Arrays of Objects
@@ -100,10 +72,10 @@ We can have an array that stores objects.
     ];
 
     var secondPerson = people[1];
-    show( secondPerson.firstName );
+    log( secondPerson.firstName );
 
     // or write it like this
-    show( people[1].firstName );
+    log( people[1].firstName );
 
 ---
 #Objects with Arrays
@@ -118,10 +90,30 @@ We can have an object that stores arrays.
     };
 
     var myWebDev2 = allGrades.webDev2;
-    show( myWebDev2[3] );
+    log( myWebDev2[3] );
 
     // or write it like this
-    show( allGrades.webDev2[3] );
+    log( allGrades.webDev2[3] );
+
+---
+#Arrays of Objects with Arrays
+
+    !javascript
+    var students = [
+        {
+            name: 'Julie',
+            grades: [ 100, 69, 92, 88 ]
+        },
+        {
+            name: 'Timothy',
+            grades: [ 77, 79, 86, 92 ]
+        }
+    ];
+
+    log( students[0]['grades'][1] );
+
+    // or
+    log( students[0].grades[1] );
 
 ---
 #A More Complicated Example
@@ -159,5 +151,4 @@ Here are some places that you may run across JSON:
 * As a response from a web service API, such as Twitter, Facebook, etc. (Web Dev 4)
 * If you ever do any backend programming, sometimes people write configuration options in JSON format.
 * And really a lot more.
-
 
