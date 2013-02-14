@@ -39,13 +39,13 @@ You can even target elements like this:
 
 jQuery provides a replacement for most DOM manipulations.
 
-* el.attr('attrName'); // Retrieve an attribute
-* el.attr('attrName', 'new content'); // Set an attribute to a new value.
-* el.css('background', '#ff0000'); // Changes a CSS property
-* el.css('background'); // Retrieves the current value of a CSS property.
-* el.append('&lt;p&gt;Some HTML &lt;strong&gt;content&lt;/strong&gt;&lt;/p&gt;')
-* el.val(); // Returns the value of an input, textarea, or select
-* el.val("A value"); // Sets the value of an input, textarea, or select
+* `el.attr('attrName'); // Retrieve an attribute`
+* `el.attr('attrName', 'new content'); // Set an attribute to a new value.`
+* `el.css('background', '#ff0000'); // Changes a CSS property`
+* `el.css('background'); // Retrieves the current value of a CSS property.`
+* `el.append('&lt;p&gt;Some HTML &lt;strong&gt;content&lt;/strong&gt;&lt;/p&gt;')`
+* `el.val(); // Returns the value of an input, textarea, or select`
+* `el.val("A value"); // Sets the value of an input, textarea, or select`
 
 ---
 #Events
@@ -55,16 +55,17 @@ Finally, jQuery also provides a way to register event listeners. <a href="http:/
     !javascript
     var el = $('#testLink4');
 
-    el.bind('click', function(event) {
+    var handler = function(event) {
 
       // Don't actually follow the link:
       event.preventDefault();
 
       // Instead print out what the link URL is.
       var url = el.attr('href');
-      show(url);
+      log(url);
+    }
 
-    });
+    el.on('click', handler);
 
 You can also fake events! Check this out.
 
@@ -73,11 +74,13 @@ You can also fake events! Check this out.
     el.trigger('click');
 
 ---
-#$(document).bind('ready')
+#$(document).on('ready')
 
 jQuery also creates a special event on the document object called "ready". It is triggered after all of the elements of the DOM have been created.
 
-It's recommended to use this event to kick off your programs instead of $(window).bind('load'). The load event takes longer to fire, because it waits for all of the images and other elements of the page to be downloaded completely first.
+If you put your JavaScript tags in the &lt;head&gt; tag, there's a good chance that the DOM events you want to work with haven't been loaded yet, because your web browser creates the DOM elements as it reads the HTML top-to-bottom. If you put all of your DOM code inside of an event listener attached to the "ready" event of the document object, all of the DOM elements are guaranteed to exist.
+
+We haven't been worrying about this because we include all of our JavaScript at the very bottom of the page, but you'll see this a lot as you work with other people's JavaScript code. See the [jQuery documentation](http://api.jquery.com/ready/) for more information about the "ready" event.
 
 ---
 #Do your research!
@@ -85,3 +88,6 @@ It's recommended to use this event to kick off your programs instead of $(window
 We've only touched the surface of what jQuery can do.
 
 There are numerous tutorials that you can follow to hone your jQuery skills. Also, the [online documentation](http://docs.jquery.com/) is excellent.
+
+For any future DOM-type stuff on your homework, feel free to use jQuery instead of `document.getElementById()`, `addEventListener()`, etc.
+
