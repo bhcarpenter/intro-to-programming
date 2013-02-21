@@ -9,26 +9,9 @@ h1, h2 {
   font-weight: normal;
 }
 
-pre, canvas {
-  background: #fcfcfc;
-  box-shadow: 1px 1px 8px #999; 
+button {
+  width: 100px;
+  height: 100px;
+  font-size: 72px;
 }
 
-pre {
-  padding: 20px;
-  border-radius: 8px;
-
-  font-family: monospace;
-  color: #333;
-}
-
-#business-cards {
-  /* This is just a way to clear the floats of the sections inside #business-cards */
-  position: relative;
-  overflow: hidden;
-}
-
-#business-cards section {
-  float: left;
-  margin: 10px;
-}
