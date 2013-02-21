@@ -101,7 +101,7 @@
 </pre></div>
 
 <p>.</p>
-<div class="highlight"><pre><span class="nx">show</span><span class="p">(</span><span class="nx">iAmGlobal</span><span class="p">);</span>
+<div class="highlight"><pre><span class="nx">log</span><span class="p">(</span><span class="nx">iAmGlobal</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -191,11 +191,11 @@
 <p>For example:</p>
 <div class="highlight"><pre><span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span><span class="p">;</span>
-    <span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nx">hello</span><span class="p">();</span>
-<span class="nx">show</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">greeting</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">greeting</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -227,11 +227,11 @@
 
 <span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">;</span>
-  <span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+  <span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nx">hello</span><span class="p">();</span>
-<span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -268,14 +268,14 @@
 
 <span class="kd">function</span> <span class="nx">hello</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">;</span>
-  <span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+  <span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="nx">hello</span><span class="p">();</span>
 
 <span class="c1">// The above function call modified the </span>
 <span class="c1">// global greeting variable!</span>
-<span class="nx">show</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -307,7 +307,7 @@
 
   <span class="c1">// Protect &quot;myvalue&quot; so no one else can edit it!</span>
   <span class="kd">var</span> <span class="nx">myvalue</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-  <span class="nx">show</span><span class="p">(</span><span class="nx">myvalue</span><span class="p">);</span>
+  <span class="nx">log</span><span class="p">(</span><span class="nx">myvalue</span><span class="p">);</span>
 
 <span class="p">})();</span>
 </pre></div>
@@ -317,7 +317,7 @@
 
   <span class="c1">// Protect &quot;myvalue&quot; so no one else can edit it!</span>
   <span class="kd">var</span> <span class="nx">myvalue</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-  <span class="nx">show</span><span class="p">(</span><span class="nx">myvalue</span><span class="p">);</span>
+  <span class="nx">log</span><span class="p">(</span><span class="nx">myvalue</span><span class="p">);</span>
 
 <span class="p">};</span>
 

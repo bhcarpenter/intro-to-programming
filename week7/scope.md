@@ -15,7 +15,7 @@ Scope is whether or not a particular line of code can access a particular variab
 .
 
     !javascript
-    show(iAmGlobal);
+    log(iAmGlobal);
 
 ---
 #Block Scope
@@ -37,11 +37,11 @@ For example:
     !javascript
     function hello() {
         var greeting = "hello";
-        show(greeting);
+        log(greeting);
     }
 
     hello();
-    show(typeof greeting);
+    log(typeof greeting);
 
 ---
 #Variable Shadowing
@@ -52,11 +52,11 @@ When a variable is declared in a child scope that is already available in a pare
 
     function hello() {
       var greeting = 'hello';
-      show(greeting);
+      log(greeting);
     }
 
     hello();
-    show(greeting);
+    log(greeting);
 
 ---
 #Lexical Scoping
@@ -71,14 +71,14 @@ When a variable is declared in a child scope that is already available in a pare
 
     function hello() {
       greeting = 'hello';
-      show(greeting);
+      log(greeting);
     }
 
     hello();
 
     // The above function call modified the 
     // global greeting variable!
-    show(greeting);
+    log(greeting);
 
 ---
 #Advanced Topics: Creating Scope
@@ -90,7 +90,7 @@ One trick that advanced Javascript programmers often use is to create a new vari
 
       // Protect "myvalue" so no one else can edit it!
       var myvalue = 100;
-      show(myvalue);
+      log(myvalue);
 
     })();
 
@@ -101,7 +101,7 @@ The above is equivalent to:
 
       // Protect "myvalue" so no one else can edit it!
       var myvalue = 100;
-      show(myvalue);
+      log(myvalue);
 
     };
 
