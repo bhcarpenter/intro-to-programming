@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 7 Part B | Intro to Programming</title>
+    <link rel="stylesheet" href="assignments.css">
+</head>
+
+<body>
+    <h1>Todo List</h1>
+
+    <h2>Add a Todo</h2>
+    <form method="get" action="#" id="addTodoForm">
+        <p>
+            <label for="title">What do you need to do?</label>
+            <input type="text" name="title" id="title" />
+        </p>
+        <p>
+            <label for="dueOn">When is it due?</label>
+            <input type="text" name="dueOn" id="dueOn" />
+        </p>
+        <p>
+            <button type="submit">Add Todo</button>
+        </p>
+    </form>
+
+    <h2>Todos</h2>
+    <div id="todos">
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="todos.js"></script>
+</body>
+
+</html>

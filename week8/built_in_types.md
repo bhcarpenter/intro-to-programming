@@ -10,10 +10,10 @@ Javascript provides another way of building objects using the `new` keyword. It 
     // The new object works just as if we had
     // defined it using "var brandon = {};"
 
-    brandon.first_name = 'Brandon';
-    brandon.last_name = 'Carpenter';
+    brandon.firstName = 'Brandon';
+    brandon.lastName = 'Carpenter';
 
-    show(brandon.first_name + ' ' + brandon.last_name);
+    log(brandon.firstName + ' ' + brandon.lastName);
 
 ---
 # Built-in Object Types
@@ -52,7 +52,7 @@ Exactly the same as creating an array using the "array literal" syntax.
     */
 
     for (var i=0; i < chores.length; i++) {
-      show('Brandon needs to ' + chores[i]);
+      log('Brandon needs to ' + chores[i]);
     }
 
 [Methods available to Array objects](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/prototype#Methods)
@@ -66,13 +66,7 @@ The nice thing about string objects is that they have methods to interact with t
 
     !javascript
     var myName = new String('Brandon');
-    show( myName.toUpperCase() );
-
-*But don't string primitives have these as well?*
-
-    !javascript
-    var myName = 'Brandon';
-    show( myName.toUpperCase() );
+    log( myName.toUpperCase() );
 
 [Methods available to String objects](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/prototype#Methods)
 
@@ -85,7 +79,7 @@ The same thing applies for numbers.
 
     !javascript
     var cost = new Number(16.534439432);
-    show( cost.toFixed(2) );
+    log( cost.toFixed(2) );
 
 [Methods available to Number objects](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Number/prototype#Methods)
 
@@ -101,20 +95,38 @@ It is important to note that (since objects are always truthy) any boolean *obje
     !javascript
     var isThisTrue = new Boolean(false);
 
-    show( typeof isThisTrue );
+    log( typeof isThisTrue );
     if ( isThisTrue ) {
-      show('true');
+      log('true');
     } else {
-      show('false');
+      log('false');
     }
 
-    show('------------');
+    log('------------');
 
     // You can retrieve the value stored in the
     // object by calling the `valueOf()` method
-    show( isThisTrue.valueOf() );
+    log( isThisTrue.valueOf() );
 
 Boolean objects are pretty much useless.
+
+---
+# More Shortcuts
+
+JavaScript provides a shortcut for calling methods of these primitive container objects.
+
+If you try to call a method on a primitive, it will automatically convert that primitive to an object behind the scenes so it can call that method.
+
+    !javascript
+    var myName = new String('Brandon');
+    log( myName.toUpperCase() );
+    log( "Brandon".toUpperCase() );
+
+.
+
+    !javascript
+    var pi = 3.14159;
+    log( pi.toFixed(2) );
 
 ---
 # Function
@@ -122,4 +134,73 @@ Boolean objects are pretty much useless.
 Functions in Javascript are actually objects as well, so you can create one using the new keyword.
 
 However, I don't want you to ever do this, so I'm not even going to show how here.
+
+---
+# Date
+
+Dates are super-useful object types in Javascript. You can *construct* a Date works in one of four ways.
+
+##Specifying numbers for year, month, and date (and optionally include hour, minute, and second as well).
+
+    !javascript
+    var date1 = new Date( 2012, 23, 05, 15, 35, 29 ); 
+    log( "Date 1: " + date1 );
+
+##Specifying a date string
+
+    !javascript
+    var date2 = new Date( "05/23/2012 15:35:29" ); 
+    log( "Date 2: " + date2 );
+
+---
+#Date
+
+##Specifying the number of milliseconds since Jan 1, 1970
+
+    !javascript
+    var date3 = new Date( 1337801729000 ); 
+    log( "Date 3: " + date3 );
+
+##The current date
+
+    !javascript
+    // No arguments
+    var now = new Date();
+    log( "Now: " + now );
+
+---
+# Date Methods
+
+    !javascript
+    var now = new Date();
+
+    log( now.toDateString() );
+    log( now.toTimeString() )
+    log( now.toUTCString() );
+
+    log('---------------');
+
+    now.setYear( 2011 );
+    log( now.toDateString() );
+    log( now.getDate() );
+
+
+[Properties and methods available to Date objects](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date#Date_instances)
+
+---
+# RegExp
+
+Regular expressions are a way of matching patterns in strings. They're useful in combination with the `replace()` and `search()` methods of String objects.
+
+    !javascript
+
+    var pattern = new RegExp('[Hh]ello');
+    var s = 'Hello, world!';
+    var edited = s.replace(pattern, 'Goodbye');
+
+    log(edited);
+
+We don't have time to really go into this, but after you've been programming a while I highly recommend learning how to use them.
+
+[Regular Expression Reference](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp)
 

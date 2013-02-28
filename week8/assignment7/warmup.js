@@ -1,16 +1,9 @@
-// You should know enough to understand what this does now!
-function show(text) {
-    var node = document.createTextNode(text + "\n");
-    var outputEl = document.getElementById('output');
-    outputEl.appendChild(node);
-}
-
 /*
 Problem #0
 ----------
 Print the first item in the array below.
 */
-show("------ PROBLEM 0 ------\n");
+console.log("------ PROBLEM 0 ------\n");
 
 var colors = new Array('red', 'blue', 'brown', 'green');
 
@@ -25,7 +18,7 @@ breed: Basset Hound
 name: Homer
 age: 7
 */
-show("------ PROBLEM 1 ------\n");
+console.log("------ PROBLEM 1 ------\n");
 
 var dog = new Object();
 dog.breed = 'Basset Hound';
@@ -39,6 +32,9 @@ dog.age = 7;
 /* **************************************
  * We're going to spend the rest of this warmup
  * working with Date objects.
+ *
+ * You'll probably find the date reference at
+ * MDN helpful: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date
  * ************************************ */
 
 /*
@@ -48,7 +44,7 @@ Using the "currentDateAndTime" variable below, print the current date
 using toDateString() on one line, and then print the current time
 using toTimeString() on another line.
 */
-show("------ PROBLEM 2 ------\n");
+console.log("------ PROBLEM 2 ------\n");
 
 var currentDateAndTime = new Date();
 
@@ -61,7 +57,7 @@ Problem #3
 Create a new variable called "myBirthDate" that holds your birthdate in a
 Date object. Make up a fake birthdate if you wish.
 */
-show("------ PROBLEM 3 ------\n");
+console.log("------ PROBLEM 3 ------\n");
 
 // TODO: Your code goes here!
 
@@ -71,7 +67,7 @@ Problem #4
 Display the year of your "myBirthDate" variable. The getFullYear() method that
 all Date objects have might be helpful.
 */
-show("------ PROBLEM 4 ------\n");
+console.log("------ PROBLEM 4 ------\n");
 
 // TODO: Your code goes here!
 
@@ -82,7 +78,7 @@ Display the month of your "myBirthDate" variable. The getMonth() method that
 all Date objects have might be helpful. For some stupid reason, getMonth()
 returns 0-11 instead of 1-12. That's ok, don't worry about it.
 */
-show("------ PROBLEM 5 ------\n");
+console.log("------ PROBLEM 5 ------\n");
 
 // TODO: Your code goes here!
 
@@ -92,7 +88,7 @@ Problem #6
 Display the day of your "myBirthDate" variable. The getDate() method that
 all Date objects have might be helpful.
 */
-show("------ PROBLEM 6 ------\n");
+console.log("------ PROBLEM 6 ------\n");
 
 // TODO: Your code goes here!
 
@@ -103,7 +99,7 @@ Problem #7
 Complete the following "birthdateToAge" function by following the steps
 outlined in the comments.
 */
-show("------ PROBLEM 7 ------\n");
+console.log("------ PROBLEM 7 ------\n");
 
 function birthdateToAge(birthdate) {
     var age;
@@ -130,7 +126,7 @@ Problem #8
 Call the birthdateToAge() function, passing it your myBirthDate variable,
 and display the result.
 */
-show("------ PROBLEM 8 ------\n");
+console.log("------ PROBLEM 8 ------\n");
 
 // TODO: Your code goes here!
 

@@ -74,10 +74,10 @@
 <span class="c1">// The new object works just as if we had</span>
 <span class="c1">// defined it using &quot;var brandon = {};&quot;</span>
 
-<span class="nx">brandon</span><span class="p">.</span><span class="nx">first_name</span> <span class="o">=</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">;</span>
-<span class="nx">brandon</span><span class="p">.</span><span class="nx">last_name</span> <span class="o">=</span> <span class="s1">&#39;Carpenter&#39;</span><span class="p">;</span>
+<span class="nx">brandon</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">;</span>
+<span class="nx">brandon</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="s1">&#39;Carpenter&#39;</span><span class="p">;</span>
 
-<span class="nx">show</span><span class="p">(</span><span class="nx">brandon</span><span class="p">.</span><span class="nx">first_name</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">brandon</span><span class="p">.</span><span class="nx">last_name</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="nx">brandon</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">brandon</span><span class="p">.</span><span class="nx">lastName</span><span class="p">);</span>
 </pre></div>
 </section>
             
@@ -90,7 +90,7 @@
             </aside>
             
             <aside class="page_number">
-              1/10
+              1/12
             </aside>
           </footer>
         </div>
@@ -128,7 +128,7 @@
             </aside>
             
             <aside class="page_number">
-              2/10
+              2/12
             </aside>
           </footer>
         </div>
@@ -157,7 +157,7 @@
 <span class="cm">*/</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">chores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">show</span><span class="p">(</span><span class="s1">&#39;Brandon needs to &#39;</span> <span class="o">+</span> <span class="nx">chores</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Brandon needs to &#39;</span> <span class="o">+</span> <span class="nx">chores</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -172,7 +172,7 @@
             </aside>
             
             <aside class="page_number">
-              3/10
+              3/12
             </aside>
           </footer>
         </div>
@@ -189,12 +189,7 @@
             <section><p><em>String objects are not the same as string primitives!</em></p>
 <p>The nice thing about string objects is that they have methods to interact with the string.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">myName</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;Brandon&#39;</span><span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">myName</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="p">);</span>
-</pre></div>
-
-<p><em>But don't string primitives have these as well?</em></p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">myName</span> <span class="o">=</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">;</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">myName</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">myName</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="p">);</span>
 </pre></div>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String/prototype#Methods">Methods available to String objects</a></p></section>
@@ -208,7 +203,7 @@
             </aside>
             
             <aside class="page_number">
-              4/10
+              4/12
             </aside>
           </footer>
         </div>
@@ -225,7 +220,7 @@
             <section><p><em>Number objects are not the same as number primitives!</em></p>
 <p>The same thing applies for numbers.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">cost</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Number</span><span class="p">(</span><span class="mf">16.534439432</span><span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">cost</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">cost</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">);</span>
 </pre></div>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Number/prototype#Methods">Methods available to Number objects</a></p></section>
@@ -239,7 +234,7 @@
             </aside>
             
             <aside class="page_number">
-              5/10
+              5/12
             </aside>
           </footer>
         </div>
@@ -258,18 +253,18 @@
 <p>It is important to note that (since objects are always truthy) any boolean <em>object</em> that you create will evaluate as true in an if statement.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">isThisTrue</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
 
-<span class="nx">show</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">isThisTrue</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="k">typeof</span> <span class="nx">isThisTrue</span> <span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span> <span class="nx">isThisTrue</span> <span class="p">)</span> <span class="p">{</span>
-  <span class="nx">show</span><span class="p">(</span><span class="s1">&#39;true&#39;</span><span class="p">);</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;true&#39;</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">show</span><span class="p">(</span><span class="s1">&#39;false&#39;</span><span class="p">);</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;false&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nx">show</span><span class="p">(</span><span class="s1">&#39;------------&#39;</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="s1">&#39;------------&#39;</span><span class="p">);</span>
 
 <span class="c1">// You can retrieve the value stored in the</span>
 <span class="c1">// object by calling the `valueOf()` method</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">isThisTrue</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">isThisTrue</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">()</span> <span class="p">);</span>
 </pre></div>
 
 <p>Boolean objects are pretty much useless.</p></section>
@@ -283,7 +278,43 @@
             </aside>
             
             <aside class="page_number">
-              6/10
+              6/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: built_in_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>More Shortcuts</h1></header>
+            
+            
+            <section><p>JavaScript provides a shortcut for calling methods of these primitive container objects.</p>
+<p>If you try to call a method on a primitive, it will automatically convert that primitive to an object behind the scenes so it can call that method.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">myName</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">&#39;Brandon&#39;</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">myName</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="s2">&quot;Brandon&quot;</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span> <span class="p">);</span>
+</pre></div>
+
+<p>.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="p">;</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">pi</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="built_in_types.md">built_in_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/12
             </aside>
           </footer>
         </div>
@@ -309,30 +340,13 @@
             </aside>
             
             <aside class="page_number">
-              7/10
+              8/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source:  -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="page_number">
-              /10
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: date.md -->
+      <!-- slide source: built_in_types.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
@@ -343,12 +357,12 @@
             <section><p>Dates are super-useful object types in Javascript. You can <em>construct</em> a Date works in one of four ways.</p>
 <h2>Specifying numbers for year, month, and date (and optionally include hour, minute, and second as well).</h2>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">date1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span> <span class="mi">2012</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">05</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">29</span> <span class="p">);</span> 
-<span class="nx">show</span><span class="p">(</span> <span class="s2">&quot;Date 1: &quot;</span> <span class="o">+</span> <span class="nx">date1</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="s2">&quot;Date 1: &quot;</span> <span class="o">+</span> <span class="nx">date1</span> <span class="p">);</span>
 </pre></div>
 
 <h2>Specifying a date string</h2>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">date2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span> <span class="s2">&quot;05/23/2012 15:35:29&quot;</span> <span class="p">);</span> 
-<span class="nx">show</span><span class="p">(</span> <span class="s2">&quot;Date 2: &quot;</span> <span class="o">+</span> <span class="nx">date2</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="s2">&quot;Date 2: &quot;</span> <span class="o">+</span> <span class="nx">date2</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -357,17 +371,17 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="date.md">date.md</a>
+              Source: <a href="built_in_types.md">built_in_types.md</a>
             </aside>
             
             <aside class="page_number">
-              8/10
+              9/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: date.md -->
+      <!-- slide source: built_in_types.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
@@ -377,13 +391,13 @@
             
             <section><h2>Specifying the number of milliseconds since Jan 1, 1970</h2>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">date3</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span> <span class="mi">1337801729000</span> <span class="p">);</span> 
-<span class="nx">show</span><span class="p">(</span> <span class="s2">&quot;Date 3: &quot;</span> <span class="o">+</span> <span class="nx">date3</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="s2">&quot;Date 3: &quot;</span> <span class="o">+</span> <span class="nx">date3</span> <span class="p">);</span>
 </pre></div>
 
 <h2>The current date</h2>
 <div class="highlight"><pre><span class="c1">// No arguments</span>
 <span class="kd">var</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-<span class="nx">show</span><span class="p">(</span> <span class="s2">&quot;Now: &quot;</span> <span class="o">+</span> <span class="nx">now</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="s2">&quot;Now: &quot;</span> <span class="o">+</span> <span class="nx">now</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -392,17 +406,17 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="date.md">date.md</a>
+              Source: <a href="built_in_types.md">built_in_types.md</a>
             </aside>
             
             <aside class="page_number">
-              9/10
+              10/12
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: date.md -->
+      <!-- slide source: built_in_types.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
@@ -412,15 +426,15 @@
             
             <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
 
-<span class="nx">show</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toDateString</span><span class="p">()</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toTimeString</span><span class="p">()</span> <span class="p">)</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toDateString</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toTimeString</span><span class="p">()</span> <span class="p">)</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">()</span> <span class="p">);</span>
 
-<span class="nx">show</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">);</span>
 
 <span class="nx">now</span><span class="p">.</span><span class="nx">setYear</span><span class="p">(</span> <span class="mi">2011</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toDateString</span><span class="p">()</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">toDateString</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span> <span class="p">);</span>
 </pre></div>
 
 <p><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date#Date_instances">Properties and methods available to Date objects</a></p></section>
@@ -430,11 +444,45 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="date.md">date.md</a>
+              Source: <a href="built_in_types.md">built_in_types.md</a>
             </aside>
             
             <aside class="page_number">
-              10/10
+              11/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: built_in_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>RegExp</h1></header>
+            
+            
+            <section><p>Regular expressions are a way of matching patterns in strings. They're useful in combination with the <code>replace()</code> and <code>search()</code> methods of String objects.</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s1">&#39;[Hh]ello&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, world!&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">edited</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">pattern</span><span class="p">,</span> <span class="s1">&#39;Goodbye&#39;</span><span class="p">);</span>
+
+<span class="nx">log</span><span class="p">(</span><span class="nx">edited</span><span class="p">);</span>
+</pre></div>
+
+<p>We don't have time to really go into this, but after you've been programming a while I highly recommend learning how to use them.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp">Regular Expression Reference</a></p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="built_in_types.md">built_in_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/12
             </aside>
           </footer>
         </div>
@@ -485,13 +533,13 @@
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Function</a></th>
+        <th><a href="#slide7">More Shortcuts</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Date</a></th>
+        <th><a href="#slide8">Function</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
@@ -503,8 +551,20 @@
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Date Methods</a></th>
+        <th><a href="#slide10">Date</a></th>
         <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Date Methods</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">RegExp</a></th>
+        <td><a href="#slide12">12</a></td>
       </tr>
       
       
