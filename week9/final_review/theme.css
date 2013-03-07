@@ -1,0 +1,37 @@
+body { 
+  margin: 0 40px;
+  font-family: sans-serif;
+  background: #f0f0f0;
+  color: #737373;
+}
+
+h1, h2 { 
+  font-weight: normal;
+}
+
+h1 {
+  text-align: center;
+}
+
+pre, canvas, article {
+  background: #fcfcfc;
+  box-shadow: 1px 1px 8px #999; 
+}
+
+pre, article {
+  margin: 0 0 40px 0;
+  padding: 20px;
+  border-radius: 8px;
+  color: #333;
+}
+
+pre {
+  font-family: monospace;
+}
+
+article h2 {
+  margin-bottom: 0.5em;
+}
+article ul {
+  margin-top: 0;
+}
