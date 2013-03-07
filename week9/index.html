@@ -70,112 +70,42 @@
           <footer>
             
             <aside class="page_number">
-              /8
+              /11
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: json.md -->
+      <!-- slide source: custom_types.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Arrays</h1></header>
+            <header><h1>Custom Object Types</h1></header>
             
             
-            <section><ul>
-<li>Arrays are a special type of Javascript object that store data values.</li>
-<li>The data that you add to an array are kept in order, and you can get them back out of the array later by referring to it's position.</li>
-<li>We call that position the "index".</li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;Jim&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Jimmy&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Jill&quot;</span>
-<span class="p">];</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
+            <section><p>Just like the <code>Array</code>, <code>Date</code>, and <code>RegExp</code> object types, Javascript allows you to define your own object types for re-use with the new keyword.</p>
+<p>We do this by defining a "constructor" function:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">firstName</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">lastName</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">fullName</span> <span class="o">=</span> <span class="nx">firstName</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">lastName</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
-<p><strong>Anything that you can put into a variable, you can put into an array!</strong></p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              1/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Dictionaries</h1></header>
-            
-            
-            <section><ul>
-<li>Dictionaries are objects that are used to store data values as well.</li>
-<li>Instead of getting the values back out by position number, dictionaries use a <em>key</em>. Keys are usually strings.</li>
-<li>In Javascript, we just use regular objects as dictionaries. The "keys" are our object's property names, and the values are whatever we store into each property.</li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Brandon&quot;</span><span class="p">,</span>
-    <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&quot;Carpenter&quot;</span><span class="p">,</span>
-    <span class="nx">occupation</span><span class="o">:</span> <span class="s2">&quot;Software Developer&quot;</span>
-<span class="p">};</span>
+<p>By convention, constructor functions start with an uppercase letter.</p>
+<p>Then we can create new objects of our custom type using the <code>new</code> keyword, just like with <code>Date</code>s or any of the other built-in types.</p>
+<script>
+var Person = function(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.fullName = firstName + ' ' + lastName;
+}
+</script>
 
-<span class="nx">show</span><span class="p">(</span> <span class="nx">person</span><span class="p">.</span><span class="nx">firstName</span> <span class="p">);</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">person</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">]</span> <span class="p">);</span>
-</pre></div>
-
-<p><strong>Anything that you can put into a variable, you can put into an object property!</strong></p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              2/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Arrays of Arrays</h1></header>
-            
-            
-            <section><p>It's entirely possible to have an array that stores a sequence of arrays.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">ticTacToe</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">]</span>
-<span class="p">];</span>
-
-<span class="kd">var</span> <span class="nx">secondRow</span> <span class="o">=</span> <span class="nx">ticTacToe</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">secondRow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
-
-<span class="c1">// or write it like this:</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">ticTacToe</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">dad</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Brandon&#39;</span><span class="p">,</span> <span class="s1">&#39;Carpenter&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">baby</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Genevieve&#39;</span><span class="p">,</span> <span class="s1">&#39;Carpenter&#39;</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">dad</span><span class="p">.</span><span class="nx">fullName</span> <span class="p">);</span>
 </pre></div>
 </section>
             
@@ -184,41 +114,43 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="json.md">json.md</a>
+              Source: <a href="custom_types.md">custom_types.md</a>
             </aside>
             
             <aside class="page_number">
-              3/8
+              1/11
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: json.md -->
+      <!-- slide source: custom_types.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Dictionaries of Dictionaries</h1></header>
+            <header><h1>this</h1></header>
             
             
-            <section><p>Likewise, it's possible to have an object that has another object as a property.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Brandon&quot;</span><span class="p">,</span>
-    <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&quot;Carpenter&quot;</span><span class="p">,</span>
-    <span class="nx">occupation</span><span class="o">:</span> <span class="s2">&quot;Software Developer&quot;</span><span class="p">,</span>
-    <span class="nx">wife</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">firstName</span><span class="o">:</span> <span class="s2">&quot;Kaiti&quot;</span><span class="p">,</span>
-        <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&quot;Carpenter&quot;</span><span class="p">,</span>
-        <span class="nx">occupation</span><span class="o">:</span> <span class="s2">&quot;Mom&quot;</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+            <section><p>Constructor functions have a "special" variable named <code>this</code> that JavaScript automatically creates for you.</p>
+<p>The value of the <code>this</code> variable is the object that your constructor creates.</p>
+<p>Here's another example:</p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
 
-<span class="kd">var</span> <span class="nx">wifeOfMe</span> <span class="o">=</span> <span class="nx">me</span><span class="p">.</span><span class="nx">wife</span><span class="p">;</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">wifeOfMe</span><span class="p">.</span><span class="nx">lastName</span> <span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">greet</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; says Hello!&#39;</span><span class="p">;</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
 
-<span class="c1">// or write it like this:</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">me</span><span class="p">.</span><span class="nx">wife</span><span class="p">.</span><span class="nx">lastName</span> <span class="p">);</span>
+<span class="kd">var</span> <span class="nx">brandon</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Brandon&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">kaiti</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Kaitlin&#39;</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">brandon</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">kaiti</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+
+<span class="nx">brandon</span><span class="p">.</span><span class="nx">greet</span><span class="p">();</span>
+<span class="nx">kaiti</span><span class="p">.</span><span class="nx">greet</span><span class="p">();</span>
 </pre></div>
 </section>
             
@@ -227,173 +159,338 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="json.md">json.md</a>
+              Source: <a href="custom_types.md">custom_types.md</a>
             </aside>
             
             <aside class="page_number">
-              4/8
+              2/11
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Arrays of Objects</h1></header>
-            
-            
-            <section><p>We can have an array that stores objects.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">people</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">,</span>
-        <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Carpenter&#39;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Kaiti&#39;</span><span class="p">,</span>
-        <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Carpenter&#39;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Genevieve&#39;</span><span class="p">,</span>
-        <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Carpenter&#39;</span>
-    <span class="p">}</span>
-<span class="p">];</span>
-
-<span class="kd">var</span> <span class="nx">secondPerson</span> <span class="o">=</span> <span class="nx">people</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">secondPerson</span><span class="p">.</span><span class="nx">firstName</span> <span class="p">);</span>
-
-<span class="c1">// or write it like this</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">people</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">firstName</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              5/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Objects with Arrays</h1></header>
-            
-            
-            <section><p>We can have an object that stores arrays.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">allGrades</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">introToProgramming</span><span class="o">:</span> <span class="p">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">92</span><span class="p">],</span>
-    <span class="nx">webDev2</span><span class="o">:</span> <span class="p">[</span><span class="mi">89</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">79</span><span class="p">],</span>
-    <span class="nx">design1</span><span class="o">:</span> <span class="p">[</span><span class="mi">94</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
-<span class="p">};</span>
-
-<span class="kd">var</span> <span class="nx">myWebDev2</span> <span class="o">=</span> <span class="nx">allGrades</span><span class="p">.</span><span class="nx">webDev2</span><span class="p">;</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">myWebDev2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">);</span>
-
-<span class="c1">// or write it like this</span>
-<span class="nx">show</span><span class="p">(</span> <span class="nx">allGrades</span><span class="p">.</span><span class="nx">webDev2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              6/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>A More Complicated Example</h1></header>
-            
-            
-            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">tweet</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;Wed Dec 05 18:17:16 +0000 2012&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">276389793724784640</span><span class="p">,</span>
-    <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;I&#39;m pretty sure Genevieve needs this. @kaiticarp https:\/\/t.co\/tLVoSbVY via @scoutmob&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;user&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">23104052</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Brandon Carpenter&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;screen_name&quot;</span><span class="o">:</span> <span class="s2">&quot;bhcarpenter&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;location&quot;</span><span class="o">:</span> <span class="s2">&quot;Atlanta, GA&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;statuses_count&quot;</span><span class="o">:</span> <span class="mi">549</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;retweet_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">&quot;geo&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="mf">33.80940075</span><span class="p">,</span> <span class="o">-</span><span class="mf">84.43679675</span> <span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">};</span>
-</pre></div>
-
-<p><a href="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=bhcarpenter">My Recent Posts Feed</a></p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              7/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
+      <!-- slide source: custom_types.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>JSON</h1></header>
+            <header><h1>Custom Object Types</h1></header>
             
             
-            <section><p>Creating arrays and objects using [] and {} is so easy (and easy to read) that people have started organizing data this way all over the place. They even gave it a name: JavaScript Object Notation.</p>
-<p>Here are some places that you may run across JSON:</p>
+            <section><p>Writing custom type constructors gives you a few perks:</p>
 <ul>
-<li>Embedded into HTML on a web page by a backend programmer. (Web Dev 3 for Developers)</li>
-<li>As a response from a web service API, such as Twitter, Facebook, etc. (Web Dev 4)</li>
-<li>If you ever do any backend programming, sometimes people write configuration options in JSON format.</li>
-<li>And really a lot more.</li>
-</ul></section>
+<li>They give "structure" to your objects. Every object created using the constructor has the same property names.</li>
+<li>They can add the same method to a whole bunch of objects.</li>
+<li>Each object's methods have access to the <code>this</code> var, so in them you can use any properties that the constructor stored in <code>this</code>.</li>
+</ul>
+<p>As you can probably tell, custom types are most useful if you are going to be dealing with a bunch of objects that have the same properties or methods.</p></section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="json.md">json.md</a>
+              Source: <a href="custom_types.md">custom_types.md</a>
             </aside>
             
             <aside class="page_number">
-              8/8
+              3/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: custom_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Custom Object Types</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">Todo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">dueOn</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">text</span> <span class="o">=</span> <span class="nx">text</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">dueOn</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">dueOn</span><span class="p">);</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">render</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">dateString</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dueOn</span><span class="p">.</span><span class="nx">toDateString</span><span class="p">();</span>
+
+    <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="s1">&#39;&lt;article&gt;\n&#39;</span> <span class="o">+</span>
+      <span class="s1">&#39;  &lt;h1&gt;&#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">text</span> <span class="o">+</span> <span class="s1">&#39;&lt;/h1&gt;\n&#39;</span> <span class="o">+</span>
+      <span class="s1">&#39;  &lt;p&gt;&#39;</span> <span class="o">+</span> <span class="nx">dateString</span> <span class="o">+</span> <span class="s1">&#39;&lt;/p&gt;\n&#39;</span> <span class="o">+</span>
+      <span class="s1">&#39;&lt;/article&gt;&#39;</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="nx">html</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">todo1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Todo</span><span class="p">(</span><span class="s1">&#39;Take out the trash&#39;</span><span class="p">,</span> <span class="s1">&#39;3/8/2013&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">todo2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Todo</span><span class="p">(</span><span class="s1">&#39;Wash the dishes&#39;</span><span class="p">,</span> <span class="s1">&#39;3/7/2013&#39;</span><span class="p">);</span>
+
+<span class="nx">alert</span><span class="p">(</span> <span class="nx">todo1</span><span class="p">.</span><span class="nx">render</span><span class="p">()</span> <span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span> <span class="nx">todo2</span><span class="p">.</span><span class="nx">render</span><span class="p">()</span> <span class="p">);</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="custom_types.md">custom_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: custom_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>prototype</h1></header>
+            
+            
+            <section><p>There's one more special feature of custom object types constructors. They have a built-in property called <code>prototype</code>. Any properties or methods set on the <code>prototype</code> property is automatically shared by all objects created by the constructor.</p>
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">greet</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; says Hello!&#39;</span><span class="p">;</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">brandon</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Brandon Carpenter&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">kaiti</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Kaitlin Carpenter&#39;</span><span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">brandon</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+<span class="nx">log</span><span class="p">(</span> <span class="nx">kaiti</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+<span class="nx">brandon</span><span class="p">.</span><span class="nx">greet</span><span class="p">();</span>
+</pre></div>
+
+<p>Note that we're setting the prototype property on the <em>constructor function</em>, not the <code>this</code> variable.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="custom_types.md">custom_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: custom_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Object property resolution.</h1></header>
+            
+            
+            <section><p>Here's how it works:</p>
+<p>When you use the "." operator to get a property from an object, Javascript first checks to see if the object has that property.</p>
+<p><em>If it doesn't,</em> Javascript check's to see if the object's prototype has that property. If it does, Javascript will use that.</p>
+<p><em>If it still doesn't,</em> Javascript will check the prototype's prototype, etc.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="custom_types.md">custom_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: custom_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Constructor vs. Prototype</h1></header>
+            
+            
+            <section><p>Defining methods of object types using prototype instead of just assigning them to "this" within the constructor function has a few advantages:</p>
+<ol>
+<li><em>It's faster.</em>  This way, the method function is only defined once, and all of the objects that are created using the constructor use that function. If you define it inside of the constructor, the code that generates the function is going to be run each time you create an object using that constructor.</li>
+<li><em>It uses up less memory.</em> For the same reason.</li>
+</ol>
+<p>Honestly, it doesn't really matter if you understand the distinction. Just know that whatever you assign to <code>this</code> inside of the constructor is unique to that object, but anything you add to the constructor prototype is shared by all objects created using that constructor.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="custom_types.md">custom_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: custom_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Event Listeners</h1></header>
+            
+            
+            <section><p>One word of warning. Inside of event listeners, JavaScript <em>changes the value of <code>this</code></em> to be the DOM element that triggered the event. So be careful if you try to do something like this:</p>
+<p><a href="#" id="testLink">Test Link</a></p>
+<div class="highlight"><pre><span class="c1">// element is a jQuery object</span>
+<span class="kd">var</span> <span class="nx">MyWidget</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+  <span class="nx">element</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_handleClick</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">MyWidget</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">_handleClick</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+    <span class="c1">// The value of `this` is the element that</span>
+    <span class="c1">// was clicked instead of the object you</span>
+    <span class="c1">// created with the MyWidget constructor.</span>
+    <span class="c1">// So this doesn&#39;t really work.</span>
+    <span class="nx">alert</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyWidget</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#testLink&#39;</span><span class="p">));</span>
+</pre></div>
+</section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="custom_types.md">custom_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: custom_types.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Event Listeners</h1></header>
+            
+            
+            <section><p>There are a couple of (ugly) workarounds to this, as well as a standard (that isn't supported in IE versions &lt; 9). Here are some links if you're interested:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind">The bind method of function objects</a></li>
+<li><a href="http://underscorejs.org/#bind">Underscore.js's bind utility</a></li>
+</ul>
+<p>My recommendation is to just avoid listening to events inside of your custom data types, and keep that code separated somewhere else.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="custom_types.md">custom_types.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: oop.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Object-Oriented Programming</h1></header>
+            
+            
+            <section><p>At the core, OOP is just a way of organizing code.</p>
+<p>The idea is to separate responsibilities of a program into individual components, which can be tested against individually, and define relationships between them to collaborate and get things done.</p>
+<p>When it makes sense, people tend to create object types that correspond to real-world objects. The reasoning for this is that real-world objects automatically have constrained roles and responsibilities, and generally have a natural inheirtance structure as well.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="oop.md">oop.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: oop.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Object-Oriented Programming</h1></header>
+            
+            
+            <section><p>When people talk about OOP, they generally refer to the following topics:</p>
+<ul>
+<li>Inheritance</li>
+<li>Encapsulation</li>
+</ul>
+<p>And to a lesser extent, these topics as well:</p>
+<ul>
+<li>Abstraction</li>
+<li>Polymorphism</li>
+<li>Method overriding</li>
+</ul>
+<p>And these topics, which don't really exist in Javascript:</p>
+<ul>
+<li>Method overloading</li>
+<li>Message passing</li>
+<li>Object collaboration</li>
+<li>Class/Instance</li>
+</ul>
+<p>We don't have time to get into, but I'm listing them here for you to research after you're through with this class. Understanding these topics will help you communicate better with backend developers, and may even help you get a job.</p></section>
+            
+          </div>
+            
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="oop.md">oop.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/11
             </aside>
           </footer>
         </div>
@@ -408,50 +505,68 @@
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Arrays</a></th>
+        <th><a href="#slide1">Custom Object Types</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">Dictionaries</a></th>
+        <th><a href="#slide2">this</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Arrays of Arrays</a></th>
+        <th><a href="#slide3">Custom Object Types</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Dictionaries of Dictionaries</a></th>
+        <th><a href="#slide4">Custom Object Types</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Arrays of Objects</a></th>
+        <th><a href="#slide5">prototype</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Objects with Arrays</a></th>
+        <th><a href="#slide6">Object property resolution.</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">A More Complicated Example</a></th>
+        <th><a href="#slide7">Constructor vs. Prototype</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">JSON</a></th>
+        <th><a href="#slide8">Event Listeners</a></th>
         <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Event Listeners</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Object-Oriented Programming</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Object-Oriented Programming</a></th>
+        <td><a href="#slide11">11</a></td>
       </tr>
       
       
