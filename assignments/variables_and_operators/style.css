@@ -1,0 +1,22 @@
+body { 
+  margin: 0 40px;
+  font-family: monospace;
+  background: #222;
+  color: #999;
+  font-size: 15px;
+}
+
+h1 { 
+  font-weight: normal;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.l { color: red; }
+.u { color: green; }
+div {
+  width: 300px;
+  margin: 40px auto;
+  border: inset 3px;
+  padding: 14px;
+}
