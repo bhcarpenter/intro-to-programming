@@ -52,7 +52,6 @@ var y = 67;
 // TODO: Your code goes here!
 
 
-
 /*
 TASK #3 - More Math
 -------------------
@@ -101,7 +100,7 @@ var imReady = false; // TODO: Set imReady to true
 
 /* ********************************************************* */
 // Don't worry about this line, but don't remove it either.
-var sum,difference,product,totalTime,servingsOfPancakes,imReady,password,__=!1,___=(Math.random()*100).toFixed(2);(function(){var f='createElement',g='appendChild',h='innerHTML',i=atob('OiA8c3BhbiBjbGFzcz0idSI+dW5sb2NrZWQ8L3NwYW4+'),j=atob('OiA8c3BhbiBjbGFzcz0ibCI+bG9ja2VkPC9zcGFuPg=='),k=atob('QmFzaWMgTWF0aA=='),l=atob('TW9yZSBNYXRo'),n=atob('TWF0aCBDaGFsbGVuZ2U='),p=atob('Qm9vbGVhbnM='),t=atob('VGhlIHBhc3N3b3JkIGlzIA=='),u=atob('JmRlZztDIGluIEZhcmVuaGVpdA=='),a=sum,b=difference,c=product,d=document,e=d.body,m=totalTime,o=servingsOfPancakes,q=imReady,w=function(m){var z=d[f]('p');z[h]=m+i;e[g](z);},x=function(m){var z=d[f]('p');z[h]=m+j;e[g](z);__=!0;},y={},r=d[f]('div');y[k]=(a===105&&b===-29&&c===25460);y[l]=(m===7982);y[n]=(o===144);y[p]=q;for(z in y)y[z]?w(z):x(z);r[h]=[t,___,u].join('');__||e[g](r);}());
+var sum,difference,product,totalTime,servingsOfPancakes,imReady,password,__=!1,___=(Math.random()*100).toFixed(2);(function(){var f='createElement',g='appendChild',h='innerHTML',i=atob('OiA8c3BhbiBjbGFzcz0idSI+dW5sb2NrZWQ8L3NwYW4+'),j=atob('OiA8c3BhbiBjbGFzcz0ibCI+bG9ja2VkPC9zcGFuPg=='),k=atob('QmFzaWMgTWF0aA=='),l=atob('TW9yZSBNYXRo'),n=atob('TWF0aCBDaGFsbGVuZ2U='),p=atob('Qm9vbGVhbnM='),t=atob('VGhlIHBhc3N3b3JkIGlzIA=='),u=atob('JmRlZztDIGluIEZhcmVuaGVpdA=='),a=sum,b=difference,c=product,d=document,e=d.body,m=totalTime,o=servingsOfPancakes,q=imReady,w=function(m){var z=d[f]('p');z[h]=m+i;e[g](z);},x=function(m){var z=d[f]('p');z[h]=m+j;e[g](z);__=!0;},y={},r=d[f]('div');y[k]=(a===105&&b===-29&&c===2546);y[l]=(m===7982);y[n]=(o===144);y[p]=q;for(z in y)y[z]?w(z):x(z);r[h]=[t,___,u].join('');__||e[g](r);}());
 /* ********************************************************* */
 
 
@@ -147,6 +146,5 @@ message if the password is correct.
 
 /* ********************************************************* */
 // Don't worry about this line, but don't remove it either.
-var password;(function(){var a=window,b='Number',c=password,d=atob('SW52YWxpZCBDb2RlLiBEZXN0cm95aW5nIG1lc3NhZ2Uu'),e=document,f=e.body,g='innerHTML',h='background',i='#fff',j='style',k=atob('Q29ycmVjdCBDb2RlISBSZWRpcmVjdGluZyB0byBtZXNzYWdlLg=='),l='location',m='assign',n=atob('aHR0cDovL3hrY2QuY29tLw==');((a[b](c)-32)/1.8===___)?(alert(k)||(a[l][m](n))):(c&&(alert(d)||(f[g]='')||(f[j][h]=i)));}());
+var password;(function(){var a=window,b='Number',c=password,d=atob('SW52YWxpZCBDb2RlLiBEZXN0cm95aW5nIG1lc3NhZ2Uu'),e=document,f=e.body,g='innerHTML',h='background',i='#fff',j='style',k=atob('Q29ycmVjdCBDb2RlISBSZWRpcmVjdGluZyB0byBtZXNzYWdlLg=='),l='location',m='assign',n=atob('aHR0cDovL3hrY2QuY29tLw==');(((a[b](c)-32)/1.8).toFixed(2)===___)?(alert(k)||(a[l][m](n))):(c&&(alert(d)||(f[g]='')||(f[j][h]=i)));}());
 /* ********************************************************* */
-
