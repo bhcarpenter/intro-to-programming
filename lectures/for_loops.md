@@ -1,18 +1,5 @@
 #For Loops
 ---
-#Review: While loops
-
-Our basic loop looked like this:
-
-    !javascript
-    var counter = 0;
-    while (counter < 20) {
-        // do something
-
-        counter++; // Increment counter by 1
-    }
-
----
 #Looping a Specific Number of Times
 
 *Note that this loop is an example of a loop that runs a specific number of
@@ -64,4 +51,10 @@ You can use a `for` loop, like this:
 - Notice intiailization only happens once
 
 ---
+#For vs. While
+
+In general:
+
+- Use a `for` loop if you know exactly how many times the loop will run (for example, counting up to 10).
+- Use a `while` loop if you don't know how many times the loop will run (for example, checking the result of a random number, or user input)
 

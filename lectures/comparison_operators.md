@@ -1,11 +1,18 @@
 ---
-#Operations: Comparison
+#Remember Booleans?
 
-Comparing two values is something that you will do a lot of when writing programs, especially when we get to branching and looping.  Here are the comparison operators.
+    !javascript
+    console.log(true);
+    console.log(false);
+
+---
+#Comparison Operations
+
+Javascript gives us a few operators for comparing values.
 
 - `>=, <=, >, <` inequality
-- `===, ==` equality
-- `!==, !=` not equal
+- `===` equality
+- `!==` not equal
 
 .
 
@@ -15,6 +22,8 @@ Comparing two values is something that you will do a lot of when writing program
     log(5 === 6);
     log(5 !== 6);
     log(6 >= 6);
+
+What do comparison operators result in?
 
 ---
 #Operations > Logical
@@ -29,6 +38,8 @@ Sometimes comparing two values is not enough. These are logical operators that a
 
     !javascript
     log( 5 < 6 && 6 < 7 );
+    log('-------------------------');
     log( !(2 === 3) );
+    log('-------------------------');
     log( 2 > 3 || "red" === "red" );
 
