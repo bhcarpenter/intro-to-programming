@@ -34,7 +34,8 @@ The `if` statement has an optional `else` statement that is executed if the expr
     var x = 5;
     if (x > 3) {
         log("x is greater than 3");
-    } else {
+    }
+    else {
         log("x is not greater than 3");
     }
 
@@ -49,11 +50,14 @@ You can combine if else statements to test several different conditions that are
 
     if (isRobot) {
         log("10101010101");
-    } else if (isHuman) {
+    } 
+    else if (isHuman) {
         log("hello!");
-    } else if (isDog) {
+    }
+    else if (isDog) {
         log("woof woof");
-    } else {
+    }
+    else {
         log("...");
     }
 
