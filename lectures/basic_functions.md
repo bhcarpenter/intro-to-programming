@@ -7,17 +7,28 @@ Loops are great if you want to repeat somthing *right now*. What if you want to 
 
     !javascript
     var sayHi = function() {
-      log('Hello, everybody!');
-    }
+      log("Hello, everybody!");
+    };
 
     // Run the function!
     // We call this "invoking" the function.
     sayHi();
 
+<script>
+var sayHi = function() {
+  log("Hello, everybody!");
+};
+</script>
+<br />
+
+    !javascript
     // Do some other stuff
-    var x = 'test';
+    var x = "other stuff";
 
     // Invoke it again!
+    sayHi();
+    sayHi();
+    sayHi();
     sayHi();
 
 ---
@@ -25,15 +36,29 @@ Loops are great if you want to repeat somthing *right now*. What if you want to 
 
     !javascript
     var sayHi = function() {
-      log('Hello, everybody!');
+      log("Hello, everybody!");
+    };
+
+- At first glance, creating a function looks a lot like creating a loop. Here's the general format:
+    1. The `function` keyword 
+    2. Parenthesis (we'll talk about what goes inside of the parenthesis in a bit)
+    3. A block of code
+- Note that unlike loops we actually assign the whole function to a variable. This gives us a name to use when we want to run the function later.
+- When you're ready to run the code inside of the function, "invoke" it by typing the name of the function followed by parenthesis, like this: `sayHi();`
+
+You have already been using lots of built-in functions like `parseInt`, `prompt`, `console.log`, `alert`, etc..
+
+---
+#Aside: Another Way of Writing Functions
+
+There's another way of writing functions that you might see in your textbook. You can actually write the previous example like this:
+
+    !javascript
+    function sayHi() {
+      log("Hello, everybody!");
     }
 
-- At first glance, creating a function looks a lot like creating an object. However, instead of putting key: value pairs inside of the braces, we put lines of code to execute!
-- Note the `function` keyword, which lets JavaScript know that you're about to define a function.
-- Also, note the parenthesis after the `function` keyword. We'll talk more about them later.
-- When you're ready to run the code inside of the function, "invoke" it by putting the parenthesis after the variable name that holds the function, like this: `sayHi();`
-
-You have already been using lots of functions like `parseInt`, `prompt`, `console.log`, `alert`, etc..
+I don't care which way you do it, but to keep things simple I'm always going to write functions the other way.
 
 ---
 #Function Parameters
@@ -42,23 +67,23 @@ To make functions more useful, you can set them up to accept values to work with
 
     !javascript
     var sayHiTo = function(name) {
-      log('Hello, ' + name + '!');
-    }
+      log("Hello, " + name + "!");
+    };
 
-    sayHiTo( 'Brandon' );
-    sayHiTo( 'Kaiti' );
+    sayHiTo( "Brandon" );
+    sayHiTo( "Kaiti" );
 
 You can also make functions that accept multiple parameters:
 
     !javascript
     var sayHiToBoth = function(name1, name2) {
-      var greeting = 'Hello, ' + name1;
-      greeting = greeting + ' and ' + name2 + '!';
+      var greeting = "Hello, " + name1;
+      greeting = greeting + " and " + name2 + "!";
       log(greeting);
-    }
+    };
 
-    sayHiToBoth('Brandon', 'Kaiti');
-    sayHiToBoth('Kaiti', 'Brandon');
+    sayHiToBoth("Brandon", "Kaiti");
+    sayHiToBoth("Kaiti", "Brandon");
 
 ---
 #Function Arguments
@@ -69,16 +94,16 @@ When you invoke a function, JavaScript takes whatever arguments you specify, sti
 
     !javascript
     var sayHiToBoth = function(name1, name2) {
-      var greeting = 'Hello, ' + name1;
-      greeting = greeting + ' and ' + name2 + '!';
+      var greeting = "Hello, " + name1;
+      greeting = greeting + " and " + name2 + "!";
       log(greeting);
-    }
+    };
 
-    sayHiToBoth('Brandon', 'Kaiti');
+    sayHiToBoth("Brandon", "Kaiti");
 
     // What do you think will happen if 
     // we leave out the second value?
-    sayHiToBoth('Brandon');
+    sayHiToBoth("Brandon");
 
 ---
 #Scope
@@ -88,11 +113,4 @@ One more thing you need to know about functions.
 **Variables you define in functions only exist inside of the function.**
 
 This has a lot of implications, which we will hopefully have time to talk about later in this course.
-
----
-#Final Thoughts
-
-All of the functions we have made in this lesson have *side effects*. In other words, they change something about the program or display a value.
-
-Next week we are going to talk about functions that *return values*. They can send data back to the code that invokes a function. `Math.min()`, `Math.random()`, and `prompt()` are some examples of built-in functions that return values.
 

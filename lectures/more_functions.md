@@ -1,40 +1,4 @@
-#Returning a Value from a Function
-
----
-#Review: Functions
-
-Functions are a way of "saving" a set of steps to be run later, possibly more than once.
-
-    !javascript
-    var sayHi = function() {
-      log('Hey there.');
-    }
-
-
-    sayHi();
-    sayHi();
-    sayHi();
-    sayHi();
-
----
-#Review: Getting Values into Functions
-
-Functions optionally let you "pass in" values to work with. We call them "parameters":
-
-    !javascript
-    var greetPerson = function(name) {
-      log('Hey there, ' + name);
-    }
-
-
-    greetPerson( 'Johnny' );
-    greetPerson( 'Sarah' );
-
-    var person3Name = 'Homer';
-    greetPerson( person3Name );
-
-**Very Important!** Parameters, and any variables that you declare inside of a
-function, _only exist inside of that function_.
+#More on Functions
 
 ---
 #Getting Values out of Functions
@@ -64,7 +28,7 @@ The `return` keyword does two things:
         } else {
           return false;
         }
-    }
+    };
 
     var isOldEnough = oldEnoughToDrive( 16 );
     log( isOldEnough );
@@ -73,55 +37,41 @@ We've already been using lots of functions that return values: `Math.random()`,
 `Math.min()`, and `prompt()` for example. This is how you can write your own.
 
 ---
-#An Example
+#Another Example
+
+Let's create a `diceRoll` function that returns a random number between 1 and 6. This is almost identical to the one that I wrote for you to use in your dice game assignment.
 
     !javascript
-    var renderPerson = function(personObj) {
-        var html = '<article>';
-        html += '<h1>' + personObj.name + '</h1>';
-        html += '<dl>';
-        html += '<dt>Age:</dt>';
-        html += '<dd>' + personObj.age + '</dd>';
-        html += '<dt>Hobbies:</dt>';
-        html += '<dd>' + personObj.hobbies + '</dd>';
-        html += '</dl>';
-        html += '</article>';
-        return html;
-    }
+    var diceRoll = function() {
+        var randomNumber = Math.random();       // randomNumber is between 0 and 1
+        randomNumber = randomNumber * 6;        // randomNumber is between 0 and 6
+        randomNumber = Math.ceil(randomNumber); // round up
+        
+        // Now randomNumber is between 1 and 6
+        
+        // Hand the result back to the code that calls the function.
+        return randomNumber;
+    };
 
-
-    var me = {
-        name: 'John',
-        age: '26',
-        hobbies: 'Fly fishing, Camping, Hiking',
-    }
-
-    var personHTML = renderPerson(me);
-    var div = document.getElementById('people');
-    div.innerHTML = personHTML;
-
-<br />
-<div id="people" style="border: solid 1px; padding: 10px">This is the "people" div.</div>
+<script>
+var diceRoll = function() {
+    var randomNumber = Math.random();
+    randomNumber = randomNumber * 6;
+    randomNumber = Math.ceil(randomNumber);
+    return randomNumber;
+};
+</script>
 
 ---
 #Another Example
+Now let's use that function to simulate a simple game.
 
     !javascript
-    /**
-     * Returns a random number between 1 and 6.
-     */
-    var diceRoll = function() {
-        var randomNumber = Math.random();
-        randomNumber = randomNumber * 6;
-        return Math.ceil(randomNumber);
-    }
-
-    // Simulate a simple dice game.
     var roll1 = diceRoll();
-    log( 'Bob rolled a: ' + roll1 );
+    log( "Bob rolled a: " + roll1 );
 
     var roll2 = diceRoll();
-    log( 'Timmy rolled a: ' + roll2 );
+    log( "Timmy rolled a: " + roll2 );
 
     if (roll1 > roll2) {
       log("Bob won!");
@@ -131,3 +81,4 @@ We've already been using lots of functions that return values: `Math.random()`,
       log("It's a tie.");
     }
 
+---

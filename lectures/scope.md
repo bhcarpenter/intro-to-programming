@@ -35,10 +35,10 @@ Scope is whether or not a particular line of code can access a particular variab
 For example:
  
     !javascript
-    function hello() {
+    var hello = function() {
         var greeting = "hello";
         log(greeting);
-    }
+    };
 
     hello();
     log(typeof greeting);
@@ -50,10 +50,10 @@ When a variable is declared in a child scope that is already available in a pare
     !javascript
     var greeting = 'goodbye';
 
-    function hello() {
+    var hello = function() {
       var greeting = 'hello';
       log(greeting);
-    }
+    };
 
     hello();
     log(greeting);
@@ -69,10 +69,10 @@ When a variable is declared in a child scope that is already available in a pare
     !javascript
     var greeting = 'goodbye';
 
-    function hello() {
+    var hello = function() {
       greeting = 'hello';
       log(greeting);
-    }
+    };
 
     hello();
 
@@ -92,7 +92,7 @@ One trick that advanced Javascript programmers often use is to create a new vari
       var myvalue = 100;
       log(myvalue);
 
-    })();
+    }());
 
 The above is equivalent to:
 
