@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping Cart | Intro to Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Shopping Cart</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Item</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="line-item">
+          <td class="cart-item-image">
+            <img alt="Men's Chewbacca Riding a Velociraptor T-Shirt Scoutmob" src="http://s3.amazonaws.com/cloud.scoutmob.com/shoppe/products/11472/product/chewyondino_mens.jpg?1362003869">
+          </td>
+          <td class="cart-item-description">
+            <h4>Men's Chewbacca Riding a Velociraptor T-Shirt</h4>
+            Men's Size: M
+          </td>
+          <td class="cart-item-price">
+            $20.00
+          </td>
+          <td class="cart-item-quantity">
+            <input type="number" value="1" min="0">
+          </td>
+          <td class="cart-item-total">
+          </td>
+        </tr>
+        <tr class="line-item">
+          <td class="cart-item-image">
+            <img alt="Whiskerwax_1" src="http://s3.amazonaws.com/cloud.scoutmob.com/shoppe/products/13737/product/whiskerwax_1.jpg?1365090131">
+          </td>
+          <td class="cart-item-description">
+            <h4>Original Whisker Wax</h4>
+          </td>
+          <td class="cart-item-price">
+            $15.00
+          </td>
+          <td class="cart-item-quantity">
+            <input type="number" value="1" min="0">
+          </td>
+          <td class="cart-item-total">
+          </td>
+        </tr>
+        <tr class="line-item">
+          <td class="cart-item-image">
+              <img alt="Foamhand_blue" src="http://s3.amazonaws.com/cloud.scoutmob.com/shoppe/products/13766/product/foamhand_blue.jpg?1365092956">
+          </td>
+          <td class="cart-item-description">
+            <h4>ATL Foam Hand - Blue</h4>
+          </td>
+          <td class="cart-item-price">
+            $9.00
+          </td>
+          <td class="cart-item-quantity">
+              <input type="number" value="1" min="0">
+          </td>
+          <td class="cart-item-total">
+          </td>
+        </tr>
+        <tr class="line-item">
+          <td class="cart-item-image">
+            <img alt="Obamazombie_magnet1" src="http://s3.amazonaws.com/cloud.scoutmob.com/shoppe/products/735/product/obamazombie_magnet1.jpg?1343159037">
+          </td>
+          <td class="cart-item-description">
+            <h4>Obama vs. Zombies Fridge Magnet </h4>
+          </td>
+          <td class="cart-item-price">
+            $3.00
+          </td>
+          <td class="cart-item-quantity">
+            <input type="number" value="1" min="0">
+          </td>
+          <td class="cart-item-total">
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td rowspan="4" colspan="2">
+            <form method="GET" action="" id="customer-notes-form">
+              <fieldset>
+                <legend>Check Customer Notes</legend>
+                <p>
+                  <label for="customer-notes-form">Customer Name</label><br>
+                  <input type="text" name="customer-name" id="customer-name">
+                  <button type="submit">Check</button>
+                </p>
+              </fieldset>
+            </form>
+          </td>
+          <td colspan="2" class="cart-total-label">Subtotal:</td>
+          <td id="subtotal" class="cart-total-value"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="cart-total-label">Shipping:</td>
+          <td id="shipping" class="cart-total-value"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="cart-total-label">Tax:</td>
+          <td id="tax" class="cart-total-value"></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="cart-total-label">Grand Total:</td>
+          <td id="grand-total" class="cart-total-value grand-total"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <script src="shopping_cart.js"></script>
+  <script src="magic.js"></script>
+</body>
+
+</html>
