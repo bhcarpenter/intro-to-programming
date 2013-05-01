@@ -115,6 +115,41 @@ The previous example could also be written like this:
     log( worker.boss.name );
 
 ---
+#Functions in Objects
+
+You can also assign a function as an object's property.
+
+    !javascript
+    var greet = function() {
+      log('Hello!');
+    };
+
+    var worker = {
+      name: 'Johnny',
+      sayGreeting: greet
+    };
+
+    worker.sayGreeting();
+
+Often, programmers call functions that are stored in objects "methods".
+
+---
+#Functions in Objects
+
+The previous example could also be written like this:
+
+    !javascript
+
+    var worker = {
+      name: 'Johnny',
+      sayGreeting: function() {
+        log('Hello!');
+      }
+    };
+
+    worker.sayGreeting();
+
+---
 #Objects: What's the point?
 
 **To organize your code.**
@@ -126,3 +161,9 @@ The previous example could also be written like this:
 We may talk more about organizing your code at the end of the class.
 
 ---
+#Objects: Built-In Objects
+
+JavaScript comes with a bunch of objects built-in.
+
+*(demonstration)*
+

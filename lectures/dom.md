@@ -8,7 +8,10 @@ The Document-Object Model is the 'glue' that connects Javascript to the data on 
 It consists of several different components for interacting with web pages, but the most important of these is the "element heirarchy", a tree which consists of "elements" (think HTML tags) and "text nodes".
 
 <div style="text-align: center">
+<br />
 <img src="img/html.png" />
+<br />
+<small style="font-size: 0.7em; font-style: italic">graphic from <a href="http://eloquentjavascript.net/">Eloquent Javascript</a> by Marijn Haverbeke</small>
 </div>
 
 ---
