@@ -25,29 +25,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Arrays</title>
+    <title>Untitled Presentation</title>
     <!-- Styles -->
     
-    <link rel="stylesheet" media="print" href="../slide-config/circus/css/print.css">
-    <link rel="stylesheet" media="screen, projection" href="../slide-config/circus/css/screen.css">
+    <link rel="stylesheet" media="print" href="slide-config/circus/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="slide-config/circus/css/screen.css">
     
     
       
-      <link rel="stylesheet" href="../slide-config/circus/css/pygment-themes/vs.css">
+      <link rel="stylesheet" href="slide-config/circus/css/pygment-themes/vs.css">
       
     
     <!-- /Styles -->
     <!-- Javascripts -->
     
-    <script type="text/javascript" src="../slide-config/circus/js/slides.js"></script>
+    <script type="text/javascript" src="slide-config/circus/js/slides.js"></script>
     
     
       
-      <script type="text/javascript" src="../slide-config/circus/js/jquery-1.6.2.min.js"></script>
+      <script type="text/javascript" src="slide-config/circus/js/jquery-1.6.2.min.js"></script>
       
     
       
-      <script type="text/javascript" src="../slide-config/circus/js/script.js"></script>
+      <script type="text/javascript" src="slide-config/circus/js/script.js"></script>
       
     
     <!-- /Javascripts -->
@@ -59,87 +59,6 @@
     </div>
     <div class="slides">
       
-      <!-- slide source: arrays.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Arrays</h1></header>
-            
-            
-            <section><ul>
-<li>Javascript has a special type of object called an array.</li>
-<li>Arrays are objects that store lists of data values.</li>
-<li>Array are <em>indexed</em> by integers. The integer that represents a particular item is called an <em>index</em>. Basically it just means the position in the list.</li>
-<li>After creation, values may be retrieved or added using <code>[]</code></li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jim&quot;</span><span class="p">,</span> <span class="s2">&quot;Jimmy&quot;</span><span class="p">,</span> <span class="s2">&quot;Jill&quot;</span><span class="p">];</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
-
-<span class="nx">names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Jan&quot;</span><span class="p">;</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">names</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="arrays.md">arrays.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              1/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: arrays.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Iterating Over Arrays</h1></header>
-            
-            
-            <section><p>Arrays have a built-in property called <code>length</code>. The <code>length</code> property will always equal the number of objects in the array.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jim&quot;</span><span class="p">,</span> <span class="s2">&quot;Jimmy&quot;</span><span class="p">,</span> <span class="s2">&quot;Jill&quot;</span><span class="p">];</span>
-
-<span class="nx">log</span><span class="p">(</span> <span class="nx">names</span> <span class="p">);</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span> <span class="p">);</span>
-</pre></div>
-
-<script>
-// Store on the global window object for the example below.
-window.names = ["Jim", "Jimmy", "Jill"];
-</script>
-
-<p>The <code>length</code> property is useful when you want to iterate over each item in the array.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">numOfNames</span> <span class="o">=</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numOfNames</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">log</span><span class="p">(</span> <span class="nx">names</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="arrays.md">arrays.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              2/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
       <!-- slide source:  -->
       <div class="slide-wrapper">
         <div class="slide">
@@ -151,214 +70,162 @@ window.names = ["Jim", "Jimmy", "Jill"];
           <footer>
             
             <aside class="page_number">
-              /17
+              /5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: dictionaries.md -->
+      <!-- slide source: dom_events.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Dictionaries</h1></header>
+            <header><h1>DOM Events</h1></header>
             
-            
-            <section><ul>
-<li>Dictionaries (like arrays) also store data values.</li>
-<li>Instead of indexing by integers, dictionaries index by strings. We call those strings <code>keys</code>.</li>
-<li>The key can be any string (including the empty string).</li>
-<li>The value can be anything that can be stored in a variable: number, string, boolean, null, object, array, function, regular expression.</li>
-<li>Each key corresponds to one value.</li>
-</ul>
-<p>Sometimes dictionaries are also called key-value stores or hash maps.</p></section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="dictionaries.md">dictionaries.md</a>
+              Source: <a href="dom_events.md">dom_events.md</a>
             </aside>
             
             <aside class="page_number">
-              3/17
+              1/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: dictionaries.md -->
+      <!-- slide source: dom_events.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Dictionaries</h1></header>
+            <header><h1>Review: The DOM</h1></header>
             
             
-            <section><p>The simplist way to make a dictionary is using the object literal syntax.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">cat</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sprinkles&#39;</span><span class="p">,</span>
-    <span class="nx">age</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="nx">gender</span><span class="o">:</span> <span class="s1">&#39;female&#39;</span>
-<span class="p">};</span>
+            <section><p>The Document-Object Model is the 'glue' that connects Javascript to the data on web pages.</p>
+<p id="para1">So far we've been working with the "element heirarchy", a set 
+of interconnected objects that represent the text and HTML tags on a web page.
+When we change a property of one of these objects, the web page is updated 
+to match.</p>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">theParagraph</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;para1&#39;</span><span class="p">);</span>
+<span class="nx">theParagraph</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span> <span class="o">=</span> <span class="s1">&#39;#333&#39;</span><span class="p">;</span>
+<span class="nx">theParagraph</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;#eee&#39;</span><span class="p">;</span>
+<span class="nx">theParagraph</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">padding</span> <span class="o">=</span> <span class="s1">&#39;10px&#39;</span><span class="p">;</span>
 </pre></div>
 
-<h2>Surprise!</h2>
-<p>In Javascript, dictionaries are just objects.</p></section>
+<p>By itself this is boring and actually bad code! We should just write this
+directly into our HTML/CSS instead of using JavaScript, right?</p>
+<p>What if we change stuff on the page <em>when the person viewing the web page
+does something interesting</em>?</p></section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="dictionaries.md">dictionaries.md</a>
+              Source: <a href="dom_events.md">dom_events.md</a>
             </aside>
             
             <aside class="page_number">
-              4/17
+              2/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: dictionaries.md -->
+      <!-- slide source: dom_events.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Key Names</h1></header>
+            <header><h1>DOM Events</h1></header>
             
             
-            <section><ul>
-<li>You can actually have keys that aren't valid variable identifiers!</li>
-<li>To do this when initializing an object, use quotes around your key name.</li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">age</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>
-    <span class="s2">&quot;first-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Joe&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;last-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Shmoe&quot;</span>
-<span class="p">};</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="dictionaries.md">dictionaries.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              5/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: dictionaries.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>[] Notation</h1></header>
-            
-            
-            <section><ul>
-<li>The <code>.</code> operator that we used for accessing object properties earlier only works if the property name (aka key) is a valid variable identifier.</li>
-<li>To access or set properties whose names are not valid variable identifiers, we use the square bracket syntax:</li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">24</span><span class="p">;</span>
-<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;first-name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Joe&quot;</span><span class="p">;</span>
-<span class="nx">person</span><span class="p">[</span><span class="s2">&quot;last-name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Shmoe&quot;</span><span class="p">;</span>
-
-<span class="nx">log</span><span class="p">(</span> <span class="nx">person</span><span class="p">[</span><span class="s2">&quot;first-name&quot;</span><span class="p">]</span> <span class="p">);</span>
-</pre></div>
-
-<p>This is similar to the <code>[]</code> syntax we use with arrays.</p>
-<p><em>Note: The <code>.</code> notation is preferred when you can use it (i.e. the key is a valid identifier)</em></p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="dictionaries.md">dictionaries.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              6/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: dictionaries.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>[] Notation</h1></header>
-            
-            
-            <section><p>One other nifty use of [] when dealing with dictionaries:</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">age</span><span class="o">:</span> <span class="mi">24</span><span class="p">,</span>
-    <span class="s2">&quot;first-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Joe&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;last-name&quot;</span><span class="o">:</span> <span class="s2">&quot;Shmoe&quot;</span>
+            <section><p>Events are another part of the DOM that we haven't talked about yet. They let 
+Javascript programs respond to user interactions such as clicks, mouse movements, etc. 
+<a href="#" id="testLink">Test Link</a></p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">clickCallback</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The link was clicked.&#39;</span><span class="p">);</span>
 <span class="p">};</span>
 
-<span class="kd">var</span> <span class="nx">nameKey</span> <span class="o">=</span> <span class="s2">&quot;first-name&quot;</span><span class="p">;</span>
-
-<span class="nx">log</span><span class="p">(</span> <span class="nx">person</span><span class="p">[</span><span class="nx">nameKey</span><span class="p">]</span> <span class="p">);</span>
+<span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;testLink&#39;</span><span class="p">);</span>
+<span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">clickCallback</span><span class="p">);</span>
 </pre></div>
 
-<p>This is particularly useful on the next slide...</p></section>
+<p>All we have to do is create a function that we want to run, and then attach it 
+to the DOM using the <code>addEventListener</code> method that's bulit-in to DOM element
+objects.</p>
+<p><em>Note: In IE versions 8 and below, you have to use the <code>attachEvent</code> function
+instead of <code>addEventListener</code>. Don't worry about that for now, because we're
+going to learn jQuery soon, and it handles this detail behind the scenes.</em></p></section>
             
           </div>
             
           <footer>
             
             <aside class="source">
-              Source: <a href="dictionaries.md">dictionaries.md</a>
+              Source: <a href="dom_events.md">dom_events.md</a>
             </aside>
             
             <aside class="page_number">
-              7/17
+              3/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: dictionaries.md -->
+      <!-- slide source: dom_events.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code">
+        <div class="slide">
           <div class="inner">
             
-            <header><h1>For In Loop</h1></header>
+            <header><h1>Available Events</h1></header>
             
             
-            <section><ul>
-<li>There is a special looping construct for objects that allows you to iterate over their properties.</li>
-<li>It is called a <code>for in</code> loop</li>
-</ul>
-<p>The <code>for in</code> loop looks like this:</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">shape</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nx">height</span><span class="o">:</span> <span class="mi">50</span> <span class="p">};</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">shape</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Key: &quot;</span> <span class="o">+</span> <span class="nx">key</span><span class="p">);</span>
-    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Value: &quot;</span> <span class="o">+</span> <span class="nx">shape</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-    <span class="nx">log</span><span class="p">(</span><span class="s2">&quot;----------------------&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+            <section><div style="width: 48%; float: left;">
 
+<h2>Mouse events</h2>
 <ul>
-<li>Notice that the <code>key</code> variable simply holds a string containing the property name.</li>
-<li><code>key</code> is not a special name. Call the variable whatever you want (<code>propertyName</code> for example).</li>
+<li>click</li>
+<li>dblclick</li>
+<li>mousedown</li>
+<li>mouseup</li>
+<li>mousemove</li>
+<li>mouseover</li>
+<li>mouseout</li>
+</ul>
+<h2>Keyboard Events</h2>
+<ul>
+<li>keydown</li>
+<li>keypress</li>
+<li>keyup
+</div>
+<div style="width: 48%; float: right;"></li>
+</ul>
+<h2>Form Element Events</h2>
+<ul>
+<li>submit</li>
+<li>reset</li>
+</ul>
+<h2>input/select/button Events</h2>
+<ul>
+<li>select</li>
+<li>change</li>
+<li>submit</li>
+<li>focus</li>
+<li>blur</li>
+</ul>
+<h2>document Object Events</h2>
+<ul>
+<li>load</li>
+<li>unload
+</div></li>
 </ul></section>
             
           </div>
@@ -366,326 +233,45 @@ window.names = ["Jim", "Jimmy", "Jill"];
           <footer>
             
             <aside class="source">
-              Source: <a href="dictionaries.md">dictionaries.md</a>
+              Source: <a href="dom_events.md">dom_events.md</a>
             </aside>
             
             <aside class="page_number">
-              8/17
+              4/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source:  -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="page_number">
-              /17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Objects and Arrays</h1></header>
-            
-            
-            <section><h2>What can be stored as a property value in an object?</h2>
-<p><strong>Anything that you can put into a variable!</strong></p>
-<h2>What can be stored in an array?</h2>
-<p><strong>Anything that you can put into a variable!</strong></p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              9/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
+      <!-- slide source: dom_events.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>Objects in Objects</h1></header>
+            <header><h1>DOM Events</h1></header>
             
             
-            <section><p>Remember how we can have objects as properties of an object?</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">worker</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Johnny&#39;</span><span class="p">,</span>
-  <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;Software Engineer&#39;</span><span class="p">,</span>
-  <span class="nx">boss</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Fred&#39;</span><span class="p">,</span>
-    <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;TPM&#39;</span>
-  <span class="p">}</span>
+            <section><p>One more detail: JavaScript provides your event handler with an object of
+information about the event that happened. More on this later,
+but for right now you need to know one thing: <code>event.preventDefault()</code></p>
+<p><a href="http://facebook.com/" id="testLink2">Go To Facebook</a></p>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">handler</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Get off of Facebook&#39;</span><span class="p">)</span>
+  <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;and pay attention!&#39;</span><span class="p">);</span>
+
+  <span class="c1">// Stop the browser from following the link.</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
 <span class="p">};</span>
 
-<span class="kd">var</span> <span class="nx">bossOfWorker</span> <span class="o">=</span> <span class="nx">worker</span><span class="p">.</span><span class="nx">boss</span><span class="p">;</span>
-<span class="nx">log</span><span class="p">(</span><span class="nx">bossOfWorker</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-
-<span class="c1">// Or write it like this:</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">worker</span><span class="p">.</span><span class="nx">boss</span><span class="p">.</span><span class="nx">name</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              10/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Arrays in Arrays</h1></header>
-            
-            
-            <section><p>Just like we can have objects in objects, we can have arrays of arrays</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">ticTacToe</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">]</span>
-<span class="p">];</span>
-
-<span class="kd">var</span> <span class="nx">secondRow</span> <span class="o">=</span> <span class="nx">ticTacToe</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">secondRow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
-
-<span class="c1">// or write it like this:</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">ticTacToe</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              11/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Arrays of Objects</h1></header>
-            
-            
-            <section><p>We can have an array that stores objects.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">people</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Brandon&#39;</span><span class="p">,</span>
-        <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Carpenter&#39;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Kaiti&#39;</span><span class="p">,</span>
-        <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Carpenter&#39;</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Genevieve&#39;</span><span class="p">,</span>
-        <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Carpenter&#39;</span>
-    <span class="p">}</span>
-<span class="p">];</span>
-
-<span class="kd">var</span> <span class="nx">secondPerson</span> <span class="o">=</span> <span class="nx">people</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">secondPerson</span><span class="p">.</span><span class="nx">firstName</span> <span class="p">);</span>
-
-<span class="c1">// or write it like this</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">people</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">firstName</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              12/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Objects with Arrays</h1></header>
-            
-            
-            <section><p>We can have an object that stores arrays.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">allGrades</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">introToProgramming</span><span class="o">:</span> <span class="p">[</span><span class="mi">97</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">92</span><span class="p">],</span>
-    <span class="nx">webDev2</span><span class="o">:</span> <span class="p">[</span><span class="mi">89</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">79</span><span class="p">],</span>
-    <span class="nx">design1</span><span class="o">:</span> <span class="p">[</span><span class="mi">94</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
-<span class="p">};</span>
-
-<span class="kd">var</span> <span class="nx">myWebDev2</span> <span class="o">=</span> <span class="nx">allGrades</span><span class="p">.</span><span class="nx">webDev2</span><span class="p">;</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">myWebDev2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">);</span>
-
-<span class="c1">// or write it like this</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">allGrades</span><span class="p">.</span><span class="nx">webDev2</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              13/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Arrays of Objects with Arrays</h1></header>
-            
-            
-            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Julie&#39;</span><span class="p">,</span>
-        <span class="nx">grades</span><span class="o">:</span> <span class="p">[</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">69</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">88</span> <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Timothy&#39;</span><span class="p">,</span>
-        <span class="nx">grades</span><span class="o">:</span> <span class="p">[</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">92</span> <span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">];</span>
-
-<span class="nx">log</span><span class="p">(</span> <span class="nx">students</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;grades&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
-
-<span class="c1">// or</span>
-<span class="nx">log</span><span class="p">(</span> <span class="nx">students</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">grades</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              14/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>A More Complicated Example</h1></header>
-            
-            
-            <section><div class="highlight"><pre><span class="kd">var</span> <span class="nx">tweet</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;Wed Dec 05 18:17:16 +0000 2012&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">276389793724784640</span><span class="p">,</span>
-    <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;I&#39;m pretty sure Genevieve needs this. @kaiticarp https:\/\/t.co\/tLVoSbVY via @scoutmob&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;user&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">23104052</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Brandon Carpenter&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;screen_name&quot;</span><span class="o">:</span> <span class="s2">&quot;bhcarpenter&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;location&quot;</span><span class="o">:</span> <span class="s2">&quot;Atlanta, GA&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;statuses_count&quot;</span><span class="o">:</span> <span class="mi">549</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;retweet_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">&quot;geo&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;coordinates&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="mf">33.80940075</span><span class="p">,</span> <span class="o">-</span><span class="mf">84.43679675</span> <span class="p">]</span>
-    <span class="p">}</span>
-<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">linkEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;testLink2&#39;</span><span class="p">);</span>
+<span class="nx">linkEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span>
 </pre></div>
 
-<p><a href="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=bhcarpenter">My Recent Posts Feed</a></p></section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="json.md">json.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              15/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: json.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>JSON</h1></header>
-            
-            
-            <section><p>Creating arrays and objects using [] and {} is so easy (and easy to read) that people have started organizing data this way all over the place. They even gave it a name: JavaScript Object Notation.</p>
-<p>Here are some places that you may run across JSON:</p>
+<p>The "default action" is different depending on the element you're listening to:</p>
 <ul>
-<li>Embedded into HTML on a web page by a backend programmer. (Web Dev 3 for Developers)</li>
-<li>As a response from a web service API, such as Twitter, Facebook, etc. (Web Dev 4)</li>
-<li>If you ever do any backend programming, sometimes people write configuration options in JSON format.</li>
-<li>And really a lot more.</li>
+<li>For &lt;a&gt; tags, the "default action" is to open the link.</li>
+<li>For &lt;form&gt; tags, the "default action" is to submit the form. You'll
+learn more about forms later.</li>
 </ul></section>
             
           </div>
@@ -693,11 +279,11 @@ window.names = ["Jim", "Jimmy", "Jill"];
           <footer>
             
             <aside class="source">
-              Source: <a href="json.md">json.md</a>
+              Source: <a href="dom_events.md">dom_events.md</a>
             </aside>
             
             <aside class="page_number">
-              16/17
+              5/5
             </aside>
           </footer>
         </div>
@@ -714,64 +300,7 @@ window.names = ["Jim", "Jimmy", "Jill"];
           <footer>
             
             <aside class="page_number">
-              /17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: final_notes.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>One Last Thing</h1></header>
-            
-            
-            <section><ul>
-<li>When comparing objcts, the <code>===</code> operator will only return true if values being compared reference the <em>same exact object</em>.</li>
-<li>If you need to see if two objects store identical properties then you must perform a <em>deep comparison</em>. Basically this just means that you have to check each property individually to see if they are equal.</li>
-</ul>
-<p>.</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">coord1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">5</span> <span class="p">};</span>
-<span class="kd">var</span> <span class="nx">coord2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">5</span> <span class="p">};</span>
-<span class="nx">log</span><span class="p">(</span><span class="nx">coord1</span> <span class="o">===</span> <span class="nx">coord2</span><span class="p">);</span>
-</pre></div>
-
-<p>Contrast the example above with:</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">coord1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">5</span> <span class="p">};</span>
-<span class="kd">var</span> <span class="nx">coord2</span> <span class="o">=</span> <span class="nx">coord1</span><span class="p">;</span>
-<span class="nx">log</span><span class="p">(</span><span class="nx">coord1</span> <span class="o">===</span> <span class="nx">coord2</span><span class="p">);</span>
-</pre></div>
-</section>
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="final_notes.md">final_notes.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              17/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source:  -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            
-          </div>
-            
-          <footer>
-            
-            <aside class="page_number">
-              /17
+              /5
             </aside>
           </footer>
         </div>
@@ -786,104 +315,32 @@ window.names = ["Jim", "Jimmy", "Jill"];
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Arrays</a></th>
+        <th><a href="#slide1">DOM Events</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">Iterating Over Arrays</a></th>
+        <th><a href="#slide2">Review: The DOM</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Dictionaries</a></th>
+        <th><a href="#slide3">DOM Events</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Dictionaries</a></th>
+        <th><a href="#slide4">Available Events</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Key Names</a></th>
+        <th><a href="#slide5">DOM Events</a></th>
         <td><a href="#slide5">5</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-6">
-        <th><a href="#slide6">[] Notation</a></th>
-        <td><a href="#slide6">6</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-7">
-        <th><a href="#slide7">[] Notation</a></th>
-        <td><a href="#slide7">7</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-8">
-        <th><a href="#slide8">For In Loop</a></th>
-        <td><a href="#slide8">8</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-9">
-        <th><a href="#slide9">Objects and Arrays</a></th>
-        <td><a href="#slide9">9</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-10">
-        <th><a href="#slide10">Objects in Objects</a></th>
-        <td><a href="#slide10">10</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-11">
-        <th><a href="#slide11">Arrays in Arrays</a></th>
-        <td><a href="#slide11">11</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-12">
-        <th><a href="#slide12">Arrays of Objects</a></th>
-        <td><a href="#slide12">12</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-13">
-        <th><a href="#slide13">Objects with Arrays</a></th>
-        <td><a href="#slide13">13</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-14">
-        <th><a href="#slide14">Arrays of Objects with Arrays</a></th>
-        <td><a href="#slide14">14</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-15">
-        <th><a href="#slide15">A More Complicated Example</a></th>
-        <td><a href="#slide15">15</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-16">
-        <th><a href="#slide16">JSON</a></th>
-        <td><a href="#slide16">16</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-17">
-        <th><a href="#slide17">One Last Thing</a></th>
-        <td><a href="#slide17">17</a></td>
       </tr>
       
       
