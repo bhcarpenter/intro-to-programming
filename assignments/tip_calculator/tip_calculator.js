@@ -34,9 +34,11 @@
  *    steps inside of your event listener instead:
  *    - Get the value of the billAmount text field
  *    - Get the value of the percentageToTip text field
- *    - Convert both values into numbers, and run them through your tip
- *      calculator.
- *    - Add the tip to the original amount and display the result 
+ *    - Convert both values into numbers
+ *    - Call your tipCalculator function with the bill amount and
+ *      tip percentage (AS NUMBERS!) as parameters, and store
+ *      the result in a variable.
+ *    - Add the result to the original amount and display the result 
  *      in the totalAmountToPay <div>
  *
  * Note: The currently entered text in any text field is stored as the "value"
@@ -44,5 +46,8 @@
  * one of the techniques that you know to turn a string into a number.
  */
 
-/* Step 4: Make the page look better by editing the CSS and HTML. */
+/* Step 4: Make the page look better by editing the CSS and HTML files. */
+// I WILL COUNT OFF IF YOU DON'T DO THIS
+// You don't have to use JavaScript for this part.
+
 
