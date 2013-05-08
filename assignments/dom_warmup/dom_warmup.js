@@ -1,6 +1,6 @@
 /*
 We're going to get some practice in working with the DOM by using the webpage
-in assignment2b.html as a starting point. We will change some styles and add to
+in dom_warmup.html as a starting point. We will change some styles and add to
 the page using JavaScript.
 
 You should see all of the changes that you make immediately when the page
@@ -36,17 +36,30 @@ Problem #2
 ----------
 Change the heading of the page using JavaScript!
 
-First, get a reference to the text node that is inside the H1 tag. Here's how:
-1. Start with a reference to the body tag.
+First, get the object that represents the text node that is inside the H1 tag.
+
+Here's how:
+
+1. Start with document.body tag.
+
 2. Get the first child of the body element. This will be a text node that
 contains the spaces between the start of the page and the H1 tag.
+
+Check out http://bhcarpenter.com/intro-to-programming/week4/#slide19
+to see the properties of HTML elements that you can use to *traverse* to
+different HTML elements in the DOM tree.
+
 3. Then get the next sibling of that text node. This will be the H1 tag.
+
 4. Then get the first child of the H1 tag. This will be the actual text node
 that you want to change.
 
+
 Then, change the value of that text node:
+
 1. Text nodes have a "nodeValue" property. Set this to be "ABC Corporation" and
 refresh the page to see your changes!
+
 */
 
 // TODO: Your code goes here!
@@ -59,12 +72,12 @@ Problem #3
 Changing styles directly through JavaScript is ugly. More often, we add (and
 remove) CSS classes by manipulating the "className" attribute of objects.
 
-1. Get a reference to the DOM node that represents the paragraph on the page by
+1. Get a the DOM node that represents the paragraph on the page by
 using document.getElementById()
 
 2. Set the "class" property of that DOM node to be "highlighted".
 
-3. Add some styles for the .highlighted class to assignments.css so that you can
+3. Add some styles for the .highlighted class to style.css so that you can
 tell that it's working.
 */
 
@@ -75,21 +88,17 @@ tell that it's working.
 /*
 Problem #4
 ----------
-Add your contact information to the page.
+We're going to take a HTML string and insert it into the page!
 
-1. Copy your "me" object declaration from Part A Problem #6 below.
-2. Copy your HTML generating code from Part A Problem #7 below.
-
-We're going to take that HTML string and insert it into the page!
-
-1. Get the DOM object that represents the "employees" div using
+1. Make up some HTML and store it in the employeesHTML variable.
+2. Get the DOM object that represents the "employees" div using
 document.getElementById.
-2. Set the innerHTML property of that DOM element to be HTML string
-that you generated in Problem #7 from Part A.
+3. Set the innerHTML property of that DOM element to equal employeesHTML.
 
 */
 
-// TODO: Your code goes here!
+var employeesHTML = ''; // TODO: Put some HTML in the string!
+
 
 
 
