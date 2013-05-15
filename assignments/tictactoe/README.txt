@@ -6,7 +6,7 @@ instructions.
 
 Part A - Due Monday, Feb 25th at 9pm
 ------------------------------------
-Complete steps 1-5 in the tictactoe.js and assignment6.js files. At the end of
+Complete steps 1-5 in the tictactoe.js and script.js files. At the end of
 this part you should have a fully-functional game board.
 
 
@@ -26,7 +26,7 @@ the "O" player has three in a row, horizontally, vertically, or diagonally.
 
 Step 2: Check to see if there is a winner after every button click.
 
-In the "genericButtonClick" function (in assignment6.js) that you wrote for
+In the "genericButtonClick" function (in script.js) that you wrote for
 STEP 4 of Part A, add a call to your new "winner" function (after everything
 else) and store the result into a variable.
 
