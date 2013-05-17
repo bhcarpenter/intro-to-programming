@@ -44,7 +44,7 @@ jQuery provides a replacement for most DOM manipulations.
 * `el.attr('attrName', 'new content'); // Set an attribute to a new value.`
 * `el.css('background', '#ff0000'); // Changes a CSS property`
 * `el.css('background'); // Retrieves the current value of a CSS property.`
-* `el.append('&lt;p&gt;Some HTML &lt;strong&gt;content&lt;/strong&gt;&lt;/p&gt;')`
+* `el.append('<p>Some HTML <strong>content</strong></p>')`
 * `el.val(); // Returns the value of an input, textarea, or select`
 * `el.val("A value"); // Sets the value of an input, textarea, or select`
 
