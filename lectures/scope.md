@@ -1,3 +1,4 @@
+---
 #Scope
 
 Scope is whether or not a particular line of code can access a particular variable.
