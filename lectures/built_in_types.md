@@ -143,7 +143,7 @@ Dates are super-useful object types in Javascript. You can *construct* a Date wo
 ##Specifying numbers for year, month, and date (and optionally include hour, minute, and second as well).
 
     !javascript
-    var date1 = new Date( 2012, 23, 05, 15, 35, 29 ); 
+    var date1 = new Date( 2012, 05, 23, 15, 35, 29 ); 
     log( "Date 1: " + date1 );
 
 ##Specifying a date string
