@@ -85,7 +85,7 @@ As you can probably tell, custom types are most useful if you are going to be de
 
         return html;
       }
-    }
+    };
 
     var todo1 = new Todo('Take out the trash', '3/8/2013');
     var todo2 = new Todo('Wash the dishes', '3/7/2013');
@@ -98,15 +98,13 @@ As you can probably tell, custom types are most useful if you are going to be de
 There's one more special feature of custom object types constructors. They have a built-in property called `prototype`. Any properties or methods set on the `prototype` property is automatically shared by all objects created by the constructor.
 
     !javascript
-    function Person(name) {
+    var Person = function(name) {
       this.name = name;
-    }
+    };
 
-    Person.prototype = {
-      greet: function() {
-        var greeting = this.name + ' says Hello!';
-        alert(greeting);
-      }
+    Person.prototype.greet = function() {
+      var greeting = this.name + ' says Hello!';
+      alert(greeting);
     };
 
     var brandon = new Person('Brandon Carpenter');
@@ -151,19 +149,17 @@ One word of warning. Inside of event listeners, JavaScript *changes the value of
     var MyWidget = function(name, element) {
       this.name = name;
       element.click(this._handleClick);
-    }
+    };
 
-    MyWidget.prototype = {
-      _handleClick: function(e) {
-        e.preventDefault();
+    MyWidget.prototype._handleClick = function(e) {
+      e.preventDefault();
 
-        // The value of `this` is the element that
-        // was clicked instead of the object you
-        // created with the MyWidget constructor.
-        // So this doesn't really work.
-        alert( this.name );
-      }
-    }
+      // The value of `this` is the element that
+      // was clicked instead of the object you
+      // created with the MyWidget constructor.
+      // So this doesn't really work.
+      alert( this.name );
+    };
 
     var widget = new MyWidget('name', $('#testLink'));
 
