@@ -25,7 +25,7 @@ pre, article {
   color: #333;
 }
 
-pre {
+code, pre {
   font-family: monospace;
 }
 
